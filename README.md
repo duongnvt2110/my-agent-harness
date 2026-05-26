@@ -10,6 +10,9 @@ required checks, evidence, review, and script-owned finalization.
 This template starts clean: no active task, no completed task history, no task
 evidence, no concrete reviews, and no example fixtures.
 
+Use `my_docs/` for human-owned input files you want to reference with file
+mentions. Agent-generated artifacts stay under `docs/`.
+
 ## Mental Model
 
 ```text
@@ -36,6 +39,7 @@ lifecycle transitions, gates, evidence, and completion.
 | `docs/PLANS.md` | Active plan schema and lane rules. |
 | `docs/TEST_MATRIX.md` | Generic harness acceptance mapping. |
 | `docs/exec-plans/active/current.md` | The single current task contract. |
+| `my_docs/` | Human-owned input files for context. |
 | `scripts/harness.sh` | Prints the current task packet and routes commands. |
 | `scripts/verify.sh` | Runs the hard verification gate. |
 | `scripts/finalize-task.sh` | Completes and archives the active plan. |
