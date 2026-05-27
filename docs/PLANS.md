@@ -1,6 +1,8 @@
 # Plan Contract
 
-Updated: 2026-05-26 20:56
+Updated: 2026-05-27 09:16
+Updated: 2026-05-26 23:43
+Updated: 2026-05-26 22:35
 
 The active plan is the single machine-readable task contract.
 
@@ -11,6 +13,19 @@ docs/exec-plans/active/current.md
 ```
 
 Only one active plan is allowed.
+
+`docs/exec-plans/active/current.md` is the authoritative active-plan lock.
+If it already exists, update that file in place. Do not create a second active
+plan while `current.md` is active.
+
+Create new active plans through the guarded command:
+
+```bash
+rtk ./scripts/create-active-plan.sh <task_id> "<title>"
+```
+
+The command refuses to create a new active plan when `current.md` already
+exists. Do not create docs/exec-plans/active/current.md manually.
 
 ## Required Frontmatter
 
@@ -95,6 +110,12 @@ DEFAULTS_APPROVED
 Named scopes are the primary way to keep task contracts short. Use them first,
 then add `approved_files` only for exceptions that do not fit a named scope.
 
+`my_docs/` is outside the default harness artifact lane. Treat it as
+human-owned input unless the human explicitly approves writing selected paths.
+When a task needs to write under `my_docs/`, list the narrowest practical path
+in `approved_files`; use broad patterns such as `my_docs/**` only for tasks
+whose purpose is to approve that lane.
+
 | Scope | Expands to |
 |---|---|
 | `harness_core` | `AGENTS.md`, `CONTEXT.md`, `README.md`, `WORKFLOW.md`, `scripts/**` |
@@ -115,6 +136,8 @@ then add `approved_files` only for exceptions that do not fit a named scope.
 - `baseline_ref` is required before implementation.
 - `approved_scopes` is required for every plan.
 - `approved_files` is optional and should be used for exceptions only.
+- `my_docs/` writes require explicit human approval and a matching
+  `approved_files` entry.
 - `approved_deletions` is required and may be empty.
 - `required_checks` is required and must use `rtk` commands by default.
 - `normal` and `high_risk` lanes require `review_required: true`.

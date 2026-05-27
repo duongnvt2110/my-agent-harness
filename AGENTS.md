@@ -19,9 +19,9 @@ Follow the task packet it prints. Do not implement directly from chat.
 - Do not edit files outside approved scopes or `approved_files` exceptions.
 - Do not delete files outside approved scopes or `approved_deletions`.
 - Do not start implementation unless the active plan allows it.
-- Keep generated task artifacts under `docs/`, not `my_docs/`.
-- Treat `my_docs/` as human-owned input only; it is tracked so humans can
-  reference files there with file mentions.
+- Keep generated task artifacts under `docs/` by default.
+- Treat `my_docs/` as human-owned input unless the active plan explicitly
+  allows selected `my_docs/` paths through `approved_files`.
 - Use `rtk` for shell commands by default.
 - Before renaming harness concepts, script commands, schema fields, or workflow
   docs, check `CONTEXT.md` and ADRs.

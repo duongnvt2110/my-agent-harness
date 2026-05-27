@@ -15,10 +15,12 @@ Current lifecycle phase: PLAN
 Active plan: missing
 
 Next allowed action:
-Create docs/exec-plans/active/current.md from docs/exec-plans/TEMPLATE.md and define the task contract.
+Create the active plan through the guarded command:
+rtk ./scripts/create-active-plan.sh <task_id> "<title>"
 
 Forbidden:
 - Do not implement without an active plan.
+- Do not create docs/exec-plans/active/current.md manually.
 - Do not edit outside the intended harness scope.
 EOF
       exit 1
@@ -39,6 +41,11 @@ Status: $(fm_value "$PLAN_PATH" "status")
 Lifecycle phase: $(fm_value "$PLAN_PATH" "lifecycle_phase")
 Lane: $(fm_value "$PLAN_PATH" "lane")
 Active plan: $PLAN_PATH
+
+Active plan lock:
+- current.md exists and is authoritative.
+- Do not create another active plan.
+- Continue this task only until it is verified and finalized.
 
 Next allowed action:
 Follow the active plan lifecycle phase and change only approved scopes.

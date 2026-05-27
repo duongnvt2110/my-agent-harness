@@ -1,5 +1,6 @@
 # Scratch Harness
 
+Updated: 2026-05-27 09:25
 Updated: 2026-05-26 20:56
 
 This repository is a minimal scratch harness for local coding agents.
@@ -11,7 +12,9 @@ This template starts clean: no active task, no completed task history, no task
 evidence, no concrete reviews, and no example fixtures.
 
 Use `my_docs/` for human-owned input files you want to reference with file
-mentions. Agent-generated artifacts stay under `docs/`.
+mentions. Agent-generated artifacts stay under `docs/` by default; a task may
+write selected `my_docs/` paths only when the active plan explicitly lists them
+in `approved_files`.
 
 ## Mental Model
 
@@ -40,6 +43,7 @@ lifecycle transitions, gates, evidence, and completion.
 | `docs/TEST_MATRIX.md` | Generic harness acceptance mapping. |
 | `docs/exec-plans/active/current.md` | The single current task contract. |
 | `my_docs/` | Human-owned input files for context. |
+| `scripts/create-active-plan.sh` | Guarded active plan creation. |
 | `scripts/harness.sh` | Prints the current task packet and routes commands. |
 | `scripts/verify.sh` | Runs the hard verification gate. |
 | `scripts/finalize-task.sh` | Completes and archives the active plan. |
@@ -51,6 +55,14 @@ rtk ./scripts/harness.sh next
 ```
 
 If no active plan exists, create one from `docs/exec-plans/TEMPLATE.md`.
+Use the guarded command:
+
+```bash
+rtk ./scripts/create-active-plan.sh <task_id> "<title>"
+```
+
+The command refuses to create a second active plan while
+`docs/exec-plans/active/current.md` exists.
 
 ## Verify
 
