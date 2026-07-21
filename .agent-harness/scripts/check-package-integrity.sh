@@ -31,14 +31,28 @@ fail() {
 [ -d "$root/.agent-harness/docs" ] || fail "Missing harness docs directory: $root/.agent-harness/docs"
 [ -d "$root/.agent-harness/docs/intake" ] || fail "Missing plan intake directory: $root/.agent-harness/docs/intake"
 [ -d "$root/.agent-harness/tests" ] || fail "Missing harness tests directory: $root/.agent-harness/tests"
-[ -d "$root/.agent-harness/benchmarks" ] || fail "Missing harness benchmarks directory: $root/.agent-harness/benchmarks"
-[ -f "$root/.agent-harness/benchmarks/result-schema.json" ] || fail "Missing benchmark result schema: $root/.agent-harness/benchmarks/result-schema.json"
-[ -d "$root/.agent-harness/benchmarks/project-build" ] || fail "Missing project-build benchmark suite: $root/.agent-harness/benchmarks/project-build"
-
 for file in AGENTS.md README.md WORKFLOW.md CONTEXT.md .gitignore; do
   [ -f "$root/$file" ] || fail "Missing package root file: $root/$file"
 done
 [ -f "$root/manifest.json" ] || fail "Missing package manifest: $root/manifest.json"
+
+export_mode="$(python3 - "$root/manifest.json" <<'PY_MODE'
+import json
+import pathlib
+import sys
+print(json.loads(pathlib.Path(sys.argv[1]).read_text()).get("mode", ""))
+PY_MODE
+)"
+case "$export_mode" in
+  clean-template|source-snapshot|audit-snapshot) ;;
+  *) fail "Unsupported or missing export mode: $export_mode" ;;
+esac
+
+if [ "$export_mode" != "clean-template" ]; then
+  [ -d "$root/.agent-harness/benchmarks" ] || fail "Missing harness benchmarks directory: $root/.agent-harness/benchmarks"
+  [ -f "$root/.agent-harness/benchmarks/result-schema.json" ] || fail "Missing benchmark result schema: $root/.agent-harness/benchmarks/result-schema.json"
+  [ -d "$root/.agent-harness/benchmarks/project-build" ] || fail "Missing project-build benchmark suite: $root/.agent-harness/benchmarks/project-build"
+fi
 
 python3 - "$root/manifest.json" "$root" <<'PY'
 import hashlib, json, pathlib, sys

@@ -145,6 +145,75 @@ write_file() {
   cp -p "$source" "$target"
 }
 
+write_clean_root_docs() {
+  local root="$1"
+  cat > "$root/AGENTS.md" <<'AGENTS'
+# Agent Harness Instructions
+
+Use the public harness entry point before repository work:
+
+```bash
+bash .agent-harness/harness.sh next
+```
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness
+
+The harness controller lives at `.agent-harness/harness.sh`.
+<!-- END AGENT-HARNESS -->
+AGENTS
+  cat > "$root/README.md" <<'README'
+# Agent Harness
+
+A repository-local control harness for bounded agent-assisted development.
+
+```bash
+bash .agent-harness/harness.sh status
+bash .agent-harness/harness.sh next
+bash .agent-harness/harness.sh verify
+bash .agent-harness/harness.sh finalize
+```
+
+The harness reports `enforcement_mode: AUDIT_ONLY`. It is a repository workflow
+control plane, not an OS-level sandbox.
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness
+
+Use `.agent-harness/harness.sh` as the public command surface.
+<!-- END AGENT-HARNESS -->
+README
+  cat > "$root/WORKFLOW.md" <<'WORKFLOW'
+# Agent Harness Workflow
+
+The harness manages the bounded lifecycle:
+`PLAN -> EXECUTE -> VERIFY -> REVIEW -> FINALIZE`.
+
+Use `.agent-harness/harness.sh next` before implementation and
+`.agent-harness/harness.sh verify` before completion. This is repository-local
+governance, not OS-level isolation or a security sandbox.
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness
+
+The public controller is `.agent-harness/harness.sh`.
+<!-- END AGENT-HARNESS -->
+WORKFLOW
+  cat > "$root/CONTEXT.md" <<'CONTEXT'
+# Agent Harness Context
+
+The active plan defines the approved scope, required checks, evidence, and
+completion state for the current task. Runtime state and event history are
+machine-managed; use the public harness commands for transitions.
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness
+
+Runtime and workflow details live under `.agent-harness/`.
+<!-- END AGENT-HARNESS -->
+CONTEXT
+}
+
 copy_tree_files() {
   local source_root="$1"
   local target_root="$2"
@@ -161,6 +230,9 @@ copy_tree_files() {
     rel="${source_file#"$source_root"/}"
     if [ "$mode" = "clean-template" ] && [ "$source_root" = "$HARNESS_ROOT/docs" ]; then
       case "$rel" in
+        PLANS.md|TEST_MATRIX.md|adr/*|decisions/*|design-docs/*|product-contracts/*|product-specs/*|prompts/*|reference/*)
+          continue
+          ;;
         exec-plans/active/*|exec-plans/completed/*)
           [ "$(basename "$rel")" = ".gitkeep" ] || continue
           ;;
@@ -180,6 +252,9 @@ copy_tree_files() {
           [ "$rel" = "reports/README.md" ] || continue
           ;;
         recovery/*)
+          continue
+          ;;
+        context/*)
           continue
           ;;
         tasks/*|intake/*.md)
@@ -294,7 +369,9 @@ copy_tree_files "$HARNESS_ROOT/runtime" "$output_dir/.agent-harness/runtime"
 copy_tree_files "$HARNESS_ROOT/policies" "$output_dir/.agent-harness/policies"
 copy_tree_files "$HARNESS_ROOT/recipes" "$output_dir/.agent-harness/recipes"
 if [ -d "$HARNESS_ROOT/benchmarks" ]; then
-  copy_tree_files "$HARNESS_ROOT/benchmarks" "$output_dir/.agent-harness/benchmarks"
+  if [ "$mode" != "clean-template" ]; then
+    copy_tree_files "$HARNESS_ROOT/benchmarks" "$output_dir/.agent-harness/benchmarks"
+  fi
 fi
 if [ -f "$HARNESS_REPO_ROOT/.gitignore" ]; then
   write_file "$HARNESS_REPO_ROOT/.gitignore" "$output_dir/.gitignore"
@@ -315,6 +392,7 @@ mkdir -p "$output_dir/.agent-harness/docs/tasks"
 
 case "$mode" in
   clean-template)
+    write_clean_root_docs "$output_dir"
     strip_runtime_state "$output_dir"
     reset_clean_runtime "$output_dir"
     reset_clean_policy_state "$output_dir"
@@ -331,19 +409,29 @@ if [ "$mode" = "clean-template" ]; then
 fi
 
 git_status_json="[]"
-if [ "${#git_status_lines[@]}" -gt 0 ]; then
+if [ "$mode" != "clean-template" ] && [ "${#git_status_lines[@]}" -gt 0 ]; then
   git_status_json="$(json_array "${git_status_lines[@]}")"
+fi
+
+manifest_source_commit="$source_commit"
+if [ "$mode" = "clean-template" ]; then
+  manifest_source_commit="not-available"
+fi
+
+template_files=(AGENTS.md README.md WORKFLOW.md CONTEXT.md .gitignore .agent-harness/scripts .agent-harness/docs .agent-harness/tests .agent-harness/runtime .agent-harness/policies .agent-harness/recipes)
+if [ "$mode" != "clean-template" ]; then
+  template_files+=(.agent-harness/benchmarks)
 fi
 
 cat > "$output_dir/manifest.json" <<EOF
 {
   "repo": "$(json_escape "$repo_name")",
-  "source_commit": "$(json_escape "$source_commit")",
+  "source_commit": "$(json_escape "$manifest_source_commit")",
   "exported_at": "$(json_escape "$(date '+%Y-%m-%d %H:%M:%S %z')")",
   "export_root": "$(json_escape "$manifest_export_root")",
   "mode": "$(json_escape "$mode")",
   "git_status_before_export": $git_status_json,
-  "template_files": $(json_array AGENTS.md README.md WORKFLOW.md CONTEXT.md .gitignore .agent-harness/scripts .agent-harness/docs .agent-harness/tests .agent-harness/runtime .agent-harness/policies .agent-harness/recipes .agent-harness/benchmarks),
+  "template_files": $(json_array "${template_files[@]}"),
   "placeholder_files": $(json_array .agent-harness/runtime/state.json .agent-harness/runtime/events.jsonl .agent-harness/runtime/current.md .agent-harness/runtime/v3-workflow.json .agent-harness/docs/epics/README.md .agent-harness/docs/exec-plans/TEMPLATE.md .agent-harness/docs/exec-plans/active/.gitkeep .agent-harness/docs/exec-plans/completed/.gitkeep .agent-harness/docs/evidence/README.md .agent-harness/docs/reviews/TEMPLATE.md .agent-harness/docs/tasks/tasks.jsonl)
 }
 EOF

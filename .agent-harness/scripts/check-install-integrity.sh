@@ -25,10 +25,22 @@ done
 
 [ -n "$root" ] || fail "Missing --root"
 
+[ -f "$root/manifest.json" ] || fail "Missing package manifest: $root/manifest.json"
+export_mode="$(python3 - "$root/manifest.json" <<'PY_MODE'
+import json
+import pathlib
+import sys
+print(json.loads(pathlib.Path(sys.argv[1]).read_text()).get("mode", ""))
+PY_MODE
+)"
+case "$export_mode" in
+  clean-template|source-snapshot|audit-snapshot) ;;
+  *) fail "Unsupported or missing export mode: $export_mode" ;;
+esac
+
 [ -d "$root/.agent-harness/scripts" ] || fail "Missing harness scripts directory: $root/.agent-harness/scripts"
 [ -d "$root/.agent-harness/docs" ] || fail "Missing harness docs directory: $root/.agent-harness/docs"
 [ -d "$root/.agent-harness/tests" ] || fail "Missing harness tests directory: $root/.agent-harness/tests"
-[ -d "$root/.agent-harness/benchmarks" ] || fail "Missing harness benchmarks directory: $root/.agent-harness/benchmarks"
 [ -d "$root/.agent-harness/runtime" ] || fail "Missing harness runtime directory: $root/.agent-harness/runtime"
 [ -d "$root/.agent-harness/policies" ] || fail "Missing harness policies directory: $root/.agent-harness/policies"
 [ -d "$root/.agent-harness/recipes" ] || fail "Missing harness recipes directory: $root/.agent-harness/recipes"
@@ -38,8 +50,11 @@ done
 [ -f "$root/.agent-harness/runtime/current.md" ] || fail "Missing generated runtime projection: $root/.agent-harness/runtime/current.md"
 [ -f "$root/.agent-harness/policies/state-schema-v1.json" ] || fail "Missing state schema policy: $root/.agent-harness/policies/state-schema-v1.json"
 [ -f "$root/.agent-harness/policies/v3-contract.json" ] || fail "Missing v3 contract registry: $root/.agent-harness/policies/v3-contract.json"
-[ -f "$root/.agent-harness/benchmarks/result-schema.json" ] || fail "Missing benchmark result schema: $root/.agent-harness/benchmarks/result-schema.json"
-[ -d "$root/.agent-harness/benchmarks/project-build" ] || fail "Missing project-build benchmark suite: $root/.agent-harness/benchmarks/project-build"
+if [ "$export_mode" != "clean-template" ]; then
+  [ -d "$root/.agent-harness/benchmarks" ] || fail "Missing harness benchmarks directory: $root/.agent-harness/benchmarks"
+  [ -f "$root/.agent-harness/benchmarks/result-schema.json" ] || fail "Missing benchmark result schema: $root/.agent-harness/benchmarks/result-schema.json"
+  [ -d "$root/.agent-harness/benchmarks/project-build" ] || fail "Missing project-build benchmark suite: $root/.agent-harness/benchmarks/project-build"
+fi
 [ ! -e "$root/.agent-harness/core" ] || fail "Legacy core directory must not exist: $root/.agent-harness/core"
 [ ! -e "$root/.agent-harness/state" ] || fail "Legacy state directory must not exist: $root/.agent-harness/state"
 [ ! -e "$root/.agent-harness/config" ] || fail "Legacy config directory must not exist: $root/.agent-harness/config"
