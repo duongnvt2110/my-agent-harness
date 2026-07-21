@@ -1,0 +1,95 @@
+# Behavior Baseline
+
+task_id: harness_enhancement_full
+behavior_tracking: existing_tests
+created_before_execution: true
+behavior_baseline_path: docs/evidence/harness_enhancement_full/behavior-baseline.md
+
+## Existing Behavior To Preserve
+
+- Preserve the behavior covered by the existing regression tests.
+
+## Existing Tests
+
+- tests/.DS_Store
+- tests/fixtures/baseline/approval-snapshot/README.md
+- tests/fixtures/baseline/approval-snapshot/output.json
+- tests/fixtures/baseline/brownfield-no-tests/README.md
+- tests/fixtures/baseline/brownfield-no-tests/src/app.txt
+- tests/fixtures/baseline/brownfield-with-tests/README.md
+- tests/fixtures/baseline/brownfield-with-tests/src/app.txt
+- tests/fixtures/baseline/brownfield-with-tests/tests/service_test.go
+- tests/fixtures/baseline/git-repo/README.md
+- tests/fixtures/baseline/git-repo/src/app.txt
+- tests/fixtures/baseline/greenfield/README.md
+- tests/fixtures/baseline/greenfield/src/app.txt
+- tests/fixtures/baseline/no-git-repo/README.md
+- tests/fixtures/baseline/no-git-repo/src/app.txt
+- tests/fixtures/context-retrieval/.gitkeep
+- tests/fixtures/failure-injection/.gitkeep
+- tests/fixtures/lifecycle/.gitkeep
+- tests/fixtures/repo-modes/brownfield/.github/workflows/ci.yml
+- tests/fixtures/repo-modes/brownfield/Dockerfile
+- tests/fixtures/repo-modes/brownfield/cmd/server/main.go
+- tests/fixtures/repo-modes/brownfield/docs/decisions/ADR-0001-brownfield-notes.md
+- tests/fixtures/repo-modes/brownfield/expected-repo-profile.yml
+- tests/fixtures/repo-modes/brownfield/internal/order/repository.go
+- tests/fixtures/repo-modes/brownfield/internal/order/service.go
+- tests/fixtures/repo-modes/brownfield/internal/order/service_test.go
+- tests/fixtures/repo-modes/brownfield/migrations/001_create_orders.sql
+- tests/fixtures/repo-modes/greenfield/README.md
+- tests/fixtures/repo-modes/greenfield/docs/decisions/ADR-0001-initial-architecture.md
+- tests/fixtures/repo-modes/greenfield/expected-repo-profile.yml
+- tests/fixtures/repo-modes/hybrid/docs/decisions/ADR-0001-hybrid-note.md
+- tests/fixtures/repo-modes/hybrid/docs/epics/new-worker/epic.md
+- tests/fixtures/repo-modes/hybrid/expected-repo-profile.yml
+- tests/fixtures/repo-modes/hybrid/internal/user/service.go
+- tests/fixtures/repo-modes/hybrid/internal/user/service_test.go
+- tests/fixtures/sample_harness_testing_tasks/clarifications.md
+- tests/fixtures/sample_harness_testing_tasks/epic-memory.md
+- tests/fixtures/sample_harness_testing_tasks/epic.md
+- tests/fixtures/sample_harness_testing_tasks/integration-contract.md
+- tests/fixtures/sample_harness_testing_tasks/progress.md
+- tests/fixtures/sample_harness_testing_tasks/stories.jsonl
+- tests/harness/run_all.sh
+- tests/harness/test_baseline_contract.sh
+- tests/harness/test_behavior_baseline_approval_snapshot.sh
+- tests/harness/test_behavior_baseline_brownfield_characterization.sh
+- tests/harness/test_behavior_baseline_brownfield_existing_tests.sh
+- tests/harness/test_behavior_baseline_greenfield_none.sh
+- tests/harness/test_benchmark_suite.sh
+- tests/harness/test_brownfield_benchmark_suite.sh
+- tests/harness/test_check_file_map_snapshot.sh
+- tests/harness/test_classify_repo_brownfield.sh
+- tests/harness/test_classify_repo_greenfield.sh
+- tests/harness/test_classify_repo_hybrid.sh
+- tests/harness/test_consume_plan_and_rollup.sh
+- tests/harness/test_context_adr_exact_match.sh
+- tests/harness/test_context_retrieval_quality.sh
+- tests/harness/test_create_baseline_snapshot.sh
+- tests/harness/test_detect_change_baseline_git.sh
+- tests/harness/test_detect_change_baseline_snapshot.sh
+- tests/harness/test_epic_story_task_lifecycle.sh
+- tests/harness/test_export_harness_package.sh
+- tests/harness/test_export_install_integrity.sh
+- tests/harness/test_failure_injection.sh
+- tests/harness/test_finalize_unique_completed_file.sh
+- tests/harness/test_finalize_updates_epic_progress.sh
+- tests/harness/test_harness_execution.sh
+- tests/harness/test_harness_regressions.sh
+- tests/harness/test_long_plan_workflow.sh
+- tests/harness/test_mode_aware_context_pack.sh
+- tests/harness/test_mode_aware_verification.sh
+- tests/harness/test_plan_decomposition.sh
+- tests/harness/test_plan_decomposition_semantic.sh
+- tests/harness/test_repository_intelligence.sh
+- tests/harness/test_test_runner_timeout.sh
+- tests/harness/test_verify_routing.sh
+
+## Required Regression Checks
+
+- Run the matching targeted tests before final verification.
+
+## Gaps
+
+- None.

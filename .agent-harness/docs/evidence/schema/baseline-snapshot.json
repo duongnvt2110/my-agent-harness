@@ -1,0 +1,3836 @@
+{
+  "created_at": "2026-07-12T08:30:01Z",
+  "files": [
+    {
+      "path": ".DS_Store",
+      "sha256": "cce3cc1b6d3344c9d5502f2edecdf3f24e2de1ce87901a03b35f08173c324566",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/.DS_Store",
+      "sha256": "103fa761b2a80d0dfa6544ec854310b1a55e1a378393ab05c7c606ff7b223a78",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/.DS_Store",
+      "sha256": "8d4f99578b90bae47e86defffb37848d1cc914a905457124b2bcab6633fe7ad7",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/README.md",
+      "sha256": "7131c599cce819bbd2ba00db29dee77a7ed13db3c9bc0cf1a2900eb6885ff66b",
+      "size": 1485,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/.DS_Store",
+      "sha256": "537aed3c6a1e485518e9e3f62e5fa9c758a8c885c2b4f5015c7de0f5ddeb03d7",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/expected.patch",
+      "sha256": "b7a7efe2c62886e2de8c51f4df260d79d67654d96f6b8d06b011a1808b240bb4",
+      "size": 1041,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/metadata.json",
+      "sha256": "dd366bda04756ef46e56682b258a2fd8eaa4dc80fd144ae243b46ee941ea5fa5",
+      "size": 492,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/repo/src/url_store.py",
+      "sha256": "0f984017237184feda5e329775fdbd90e738e176ca421bf79a817d95230b73d5",
+      "size": 684,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/solution/src/url_store.py",
+      "sha256": "e7e475ce162bcb94097b17a195aac037d75b4d8bcc424fc2d367eea3ac38e1e4",
+      "size": 1126,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/task.md",
+      "sha256": "6b62e368d370fc2b6a2e0fae1118fc7031aff245cb3c20517f7385c393c28037",
+      "size": 517,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/tests/fail_to_pass.sh",
+      "sha256": "141a8e04df9d474b94def04ea629c7c31101ca6b78ba38bfadd0bf1076d86884",
+      "size": 440,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/tests/pass_to_pass.sh",
+      "sha256": "6f0bfc26dd58ad3c63173db9f0f2ee77f1573aeb77a8750f0ce3a696e9e2f18b",
+      "size": 435,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/expected.patch",
+      "sha256": "295a5280895fe2273327c69e5559053b23e29bd1aac5dd5906a374065d9949da",
+      "size": 445,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/metadata.json",
+      "sha256": "ea74e8897ddcaf299eae5ee3a0f1f90b8398d9e26764f10e6b8b73589276f823",
+      "size": 491,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/repo/src/appctl.py",
+      "sha256": "7475393a9e5618305ef6578fd2e6c202fb5277d1a6ed437da068fdb42f989466",
+      "size": 649,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/solution/src/appctl.py",
+      "sha256": "c1ed02f97fcb9b81aeba7a5ccb25710c7deaf150caed75e06f0523bfbe1360b8",
+      "size": 664,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/task.md",
+      "sha256": "36c7b2bad16e193de6b54b1c43d07277ddcfef4056eb17ff1597c4d18454862b",
+      "size": 488,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/tests/fail_to_pass.sh",
+      "sha256": "b35457525d71d677a5fa29ee0e6425da8261e8087e288b883a84f269782ed95a",
+      "size": 172,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/tests/pass_to_pass.sh",
+      "sha256": "179d6ac899309696e85aa1db270d5fb05db78df400a38c65a42977497a815c35",
+      "size": 148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/expected.patch",
+      "sha256": "80529ab17c7acbc7befbd699d2ac6ac6094ecc782257cf65c852895a90283607",
+      "size": 786,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/metadata.json",
+      "sha256": "a7a822ed1738cf21d19a291da585cc167f10f0ada6f25753e3948aaf708d9464",
+      "size": 475,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/repo/src/statusctl.py",
+      "sha256": "a82793bdec7a0df31f25b0faa04be477a258ddac2950fe644798fb2f39bf6840",
+      "size": 464,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/solution/src/statusctl.py",
+      "sha256": "5e6a1a84ea32c2b0dc8bfcd26f048f2993310cbb79f8900c4677d2f989146ec1",
+      "size": 646,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/task.md",
+      "sha256": "cfebf07d09a9fbfb6d91af834223c27360e23570cd1084a38da3b14b64d6376c",
+      "size": 407,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/tests/fail_to_pass.sh",
+      "sha256": "1e444b4a3ed0035609e482cf72386708cdb4cddadaf493a42526561394517fad",
+      "size": 219,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/tests/pass_to_pass.sh",
+      "sha256": "693eb666b6cb68792e54020388c550a95e7aa4f0900f202b0236854e2874ad87",
+      "size": 114,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/expected.patch",
+      "sha256": "8fee0d66020217e7c8aef9b5ddb5fb538948b3a41899fbefa4495eba431885b6",
+      "size": 1886,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/metadata.json",
+      "sha256": "3567ca272e1b76d3336af26fd94a3b199f2063909d5948ab3abc1cee52e71458",
+      "size": 487,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/repo/src/report.py",
+      "sha256": "935c5bc8c83d698d895a9d29859d7e169b793fdfd31f9cb8bc0004cdceaeed23",
+      "size": 768,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/solution/src/report.py",
+      "sha256": "6812cf71a463f30cdfe6c150ed5fc86dfba31f65d9a0b676e93e0da82b08af78",
+      "size": 1774,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/task.md",
+      "sha256": "718336ea3999e8a73aec2cbf0fb836c8cb516085c4555eae6a6b5ea3d17911d4",
+      "size": 469,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/tests/fail_to_pass.sh",
+      "sha256": "8151d775069d0716221e439916a2743121aaac29562eceede0dca6c595b5487e",
+      "size": 418,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/tests/pass_to_pass.sh",
+      "sha256": "5be7e94ed8f612e51dac4d9176ca91ce71d9df9055d83e252f4b3a5d1b705cad",
+      "size": 248,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/expected.patch",
+      "sha256": "55fb15ef6e97a935f3237dc91b5edfb672e59abd664693f750e987295fe7eba5",
+      "size": 972,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/metadata.json",
+      "sha256": "7f23afb878943877171c38f49ac5b6233152dde92fe5834963f384fce83de4d0",
+      "size": 495,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/repo/src/repair_report.py",
+      "sha256": "e8959de222a1749448732445f5568517695f021cffd8444632846437e9b99cff",
+      "size": 662,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/solution/src/repair_report.py",
+      "sha256": "6b933e5a5ed04743fc4879388e20aa7141770b14f177d5e1d0af47a886412654",
+      "size": 1238,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/task.md",
+      "sha256": "9018db683ad66c6afd9f293c93dae9b5a224900021ea1f18b741dbedf063b08c",
+      "size": 461,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/tests/fail_to_pass.sh",
+      "sha256": "2b14104dde492b4accdace9bcc896a8370da749b745e75d3e2cb9f8fdcf93595",
+      "size": 431,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/tests/pass_to_pass.sh",
+      "sha256": "f55ac7272889e2cf14449bec4476076441922a8cf00764171ab5c693b322697c",
+      "size": 237,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/.DS_Store",
+      "sha256": "337a3a2429708e3061a94258bddc373d40a89e9db5d69546e698b41b04ac5a2d",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/acceptance.json",
+      "sha256": "c4db2d15e9b837da2ebd20417dfbb1441f1d12f3ca5df1d7d3789dddae137bfd",
+      "size": 160,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/src/bloggen.py",
+      "sha256": "e300d1bb1ee4b718a033dfe5aa2268047d19b8c91f185ace8848cb20c56da67f",
+      "size": 1536,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/task-spec.md",
+      "sha256": "16c366ad0cbb0146c6511d9146f0cb4891e872125c0b9334724f6202efec4e53",
+      "size": 239,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/tests/test.sh",
+      "sha256": "fdc28a0f562fd54dcc4dc695369380f7d6ef631a67354bfcbada5eb62fc9f79e",
+      "size": 282,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/acceptance.json",
+      "sha256": "7beac1c0622e6bf7c386ab394808c906cdfb027b57c7b5ccdf993f7dc40bdb29",
+      "size": 126,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/src/md2html.py",
+      "sha256": "c95e78ad6012c9d7bb65ee5823cbc179d4073b9de362194893128e5d44244fd6",
+      "size": 1447,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/task-spec.md",
+      "sha256": "45615ee3c4e641139753b5d6174d9b5b25d7a3c0431b270d7273f81ec9ca570b",
+      "size": 164,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/tests/test.sh",
+      "sha256": "f7d95cef106f9347e1f41801ca17f92fd08e525861d485c1e500a993a4ee3f61",
+      "size": 233,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/acceptance.json",
+      "sha256": "38f4e7564edfa7adb174e3a305c553d6d575d56ec152ec883c26f99f698a39e8",
+      "size": 131,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/src/log_analyzer.py",
+      "sha256": "6c5b8a29013278bf86649ec326339153fb7eaf3bea7132e7fd991b7f78c4877a",
+      "size": 1049,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/task-spec.md",
+      "sha256": "1d2367f99237700b8cdc6100f65b0b68088e005ba393547acb5d4978a99eac57",
+      "size": 131,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/tests/test.sh",
+      "sha256": "1af2d10f5ad6219075f29970d54e8e05a3fe0344033a5ef1efdf804ea3c9e97d",
+      "size": 409,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/acceptance.json",
+      "sha256": "fb85cad198b81d4654b2291f9596aad87d95e69f7648ad56e82b04d997575883",
+      "size": 113,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/src/url_shortener_api.py",
+      "sha256": "57bc081b8c0a858044866cecdaf805886c7c7143e4c41a90942c38ba7c470154",
+      "size": 1829,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/task-spec.md",
+      "sha256": "f79560e36ba19f33c71d081dd6ea6c9f752913b1db05bf11454305b226317da1",
+      "size": 185,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/tests/test.sh",
+      "sha256": "a3ff3c00b6037122f94e21647ae7e2a351588b35f130a4cc2b34c3eee56a9948",
+      "size": 1308,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/acceptance.json",
+      "sha256": "5684ee06f7f191d046fce1a45f205dc4433139c67488f59b2dc6b38c87041f7d",
+      "size": 137,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/src/benchmark_report.py",
+      "sha256": "16ea2a33b53fc1da3ecc134dce4779f1bb5a6819905cfa95a6c552831bf5285d",
+      "size": 968,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/task-spec.md",
+      "sha256": "f381b10b83945991301beeaf39b8b1565111ddb24698687103c82ff122034ed8",
+      "size": 176,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/tests/test.sh",
+      "sha256": "4f2a21155cf6868db57cb7a2599a8c608cf3e108d3d15201df4de99ad254968a",
+      "size": 348,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/benchmarks/result-schema.json",
+      "sha256": "31997e8ef9c3573d3a8752c676770cc81cd26986eabfa18187f3fcdd06828016",
+      "size": 1569,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/.DS_Store",
+      "sha256": "3e513b7c855013906a49a9cd424a80dcf95b43be912c0a74c25885265bd8e295",
+      "size": 10244,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/PLANS.md",
+      "sha256": "91c3361b843b54363cab5f29bdc810b297637f0ab97921588fd6cf67e31573ef",
+      "size": 4166,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/TEST_MATRIX.md",
+      "sha256": "628aee4ac6eecfa78283510721d7439e547fd34c8e3139e2a5a4096f860afd58",
+      "size": 4873,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/adr/README.md",
+      "sha256": "a5325400a7ada290c2973cdc6f1fc8eb2dfcb00f16f6407fe9893dd72d198629",
+      "size": 77,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/README.md",
+      "sha256": "0b3a4abc2a461f7083e107f575e2d42db80af7cd8a18ac0243e67010eba25470",
+      "size": 724,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/boundaries.md",
+      "sha256": "4c6aa053406436d7720ef5b07bf67958485c51f7411b31c6f478ffcd1499113d",
+      "size": 325,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/commands.md",
+      "sha256": "b2bff0764a32b19498a30cffcadfe23ab3c0a004912598c2c9f0ae001f11fb5c",
+      "size": 444,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/conventions.md",
+      "sha256": "8e87fba805d6c1c88df812c7f049eb246dff203752b97d5e4865544555107e71",
+      "size": 322,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/discussions.md",
+      "sha256": "ad54ef04d6aad9bef56b72e69a157f903c00277bb5ecc61e48c1151cf19fce6e",
+      "size": 168,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/known-errors.md",
+      "sha256": "957097c9fcb39a53fd9f229fe976fc925a0974af72594153c356da491673e225",
+      "size": 380,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/memory-index.json",
+      "sha256": "4640d04b1f81f79ba1bb7450fb5cb1e8e6478f46c98197dbfa7dbfb3afdd3f85",
+      "size": 1433,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repo-profile.md",
+      "sha256": "81ee7fcc9c60c1d2f00aa5163ebb6e3524318e59a8738997324fd0c9a150df47",
+      "size": 492,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/README.md",
+      "sha256": "4eaea98c0dc3c6d19ed822368f0e2d72ab462bb913941c8495dbeefdffcdf197",
+      "size": 512,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/api-contracts.md",
+      "sha256": "25b3b58262f4f34f1d381dd574031e7324c6dd563536f0103185c0e42fbc7db4",
+      "size": 350,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/architecture-map.md",
+      "sha256": "87b67ced7b383477c384c4a09e96c3de6c7312e982e89005969f2c1ca792540f",
+      "size": 364,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/brownfield-observations.md",
+      "sha256": "d6057a238f350c5faacc103202442760b2a807609bb0232316701b8c2f3bb349",
+      "size": 247,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/business-rules.md",
+      "sha256": "40a995f8c3bf3cb7c6feb48e68007fe0fe3efa8a2dbeb4a10bf9a887af1cbe84",
+      "size": 406,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/dangerous-areas.md",
+      "sha256": "a3d16f5ae2821a3a26779aa76f19c6a27cc04e3703f3d40b8e5cd272455faac3",
+      "size": 175,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/data-flow.md",
+      "sha256": "910ba4d1e2dbdef15fe89208c528a6d3862c130acdf9229a9980b6d0517a649f",
+      "size": 275,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/database-model.md",
+      "sha256": "33815b50f73710703c0cf773edbe65730ea5e03dd1016693cc8be91c8c5c1878",
+      "size": 295,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/dependency-map.md",
+      "sha256": "ee751ff41b7c9b77fb55b4664001496d4edf604e64fa3c3dcbe40639b620d0e2",
+      "size": 215,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/domain-model.md",
+      "sha256": "ce18b9365ecb7095e3d82327ec973dd5748cb355331bfe64f8a24e980abe7ded",
+      "size": 428,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/error-handling-style.md",
+      "sha256": "7eef1f4373a13ee754b9516f81fa591a5c5b9b55103e13c23919ed811aee93cc",
+      "size": 240,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/greenfield-decisions.md",
+      "sha256": "e1d59bfe84d00f8623388af1acc8e656cf21131956d8e5546519811fc91bd211",
+      "size": 291,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/implementation-patterns.md",
+      "sha256": "2f815fb12f0bc726af12e2367cdf7be43f8955bd1167e7b6073dff5f0b774588",
+      "size": 298,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/knowledge-index.json",
+      "sha256": "e8b212cf10bd274d33de24b54218a8d22c51882f6b21c5f6bb756a2b3538e010",
+      "size": 2260,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/legacy-constraints.md",
+      "sha256": "2dede2e5727d535ec5aeec676ed74394826a1a98a49a898f4d1e056e81a5e63e",
+      "size": 289,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/logging-style.md",
+      "sha256": "dce21280ae55076664912c1b26ae5c9e11888fc0663068c36644aa2f71f594d5",
+      "size": 187,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/module-boundaries.md",
+      "sha256": "6d414b92f78f4c839c8a7ec30aba0b2e69ec00cf2b2f0308233b43a305302828",
+      "size": 404,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/repo-map.md",
+      "sha256": "c1ada9b76f844aad468608889cdf6d17aff548897f348ee560648b8a89f26154",
+      "size": 573,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/repo-profile.yml",
+      "sha256": "fd991dc4fbf8c5680d84fd330d69b9d38a14effea5cf6ad76045c718a4c9fc2e",
+      "size": 645,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/testing-style.md",
+      "sha256": "f0d4e35eae052255d573aa636cd8b4d1f84b00cd1ea0732633b21124e47d0358",
+      "size": 258,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/transaction-patterns.md",
+      "sha256": "e90e141ed05e69da365a2575ae3e905bdd29c8ca14ceab92ee7f210614b8027f",
+      "size": 212,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/context/runbooks.md",
+      "sha256": "81329ce4ce18ce97c548fa12c63bff1362eb4430b389d279b891b5e021a8c808",
+      "size": 481,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0001-define-scratch-harness-lifecycle-terminology.md",
+      "sha256": "fd5c24ee3bdf0e88ea6c284ff57fa3c1419d19d95a4c643288f0ba41f573d04b",
+      "size": 2299,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0002-remove-harness-skill-selection-contract.md",
+      "sha256": "b1d1b89c03a63245e011fa1341eb2cf8f87d302c4dd26b4483f5c664d8aa588a",
+      "size": 1448,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0003-brownfield-agent-ready-execution-harness.md",
+      "sha256": "aebca397534bc744062dfdc6fbc632a38d59dd0d8c4f0ed97ef40c4b7c8a39fe",
+      "size": 1006,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0004-agent-harness-vnext-authority-model.md",
+      "sha256": "600a0a8a52767cedcc893ad51c8fb6b9aec9b263f05d01e44f2de62cc91c2b7a",
+      "size": 3030,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0005-v2-to-v3-explicit-migration-contract.md",
+      "sha256": "f245426bdc50e1f634cbc0b478e67ab6b75b5940571a36ac714fc53c52e70fb6",
+      "size": 2325,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/README.md",
+      "sha256": "6ed4b8fe5e72b1fc9127533a9298fbc70f05f98832230d09cbf522a36b01ea7a",
+      "size": 663,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/adr-index.json",
+      "sha256": "03467426370c1c303ae05cb847421780366068e48a49bfff6d2fafd20f7f5be0",
+      "size": 1745,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/design-docs/TEMPLATE.md",
+      "sha256": "921cbb702211c6d9bf9ba155a7c294d751b6dfe84dee176e09159256dac3f1c3",
+      "size": 148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/design-docs/index.md",
+      "sha256": "f497f8e6937bf573b909c825da8562115536a9c5a2d28c7648146aade12d6447",
+      "size": 111,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/README.md",
+      "sha256": "318c3b6eec7c17d12d39fa83faae2adcc49528bf5bf5244395446779cab4bf80",
+      "size": 353,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/clarifications.md",
+      "sha256": "06e4c45cdb984d555975d16e0a2f7c5be895374483c6c99b190f3eb460e5b763",
+      "size": 83,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/epic-memory.md",
+      "sha256": "97037cd6fc0d0c9b96473c39cd124006ef1130c54e58d0d49f0e75b74d96a2a5",
+      "size": 31042,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/epic.md",
+      "sha256": "56ba40adc53086f4276afa71073b508a4a8a30fd6f0bc209346148a782126493",
+      "size": 652,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/integration-contract.md",
+      "sha256": "7ecf841e2e00ff758ec890479b5bdf6e47cc7316de18d9a03325a739f270bf83",
+      "size": 145,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/progress.md",
+      "sha256": "ba9179429b3f8257db8dd35a32acdada1076108a7e77cfeb1fef3174d17cd895",
+      "size": 10512,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/epics/agent_harness_vnext_full_implementation_plan_epic/stories.jsonl",
+      "sha256": "897045dd615be1ce390a9e1ce5b60fb53517ce1115e1dfc813f91d6e1eb01830",
+      "size": 829,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/.DS_Store",
+      "sha256": "fc0ff1e67eaa47ef080fc5dc26b3a3fa55975aed551dc5fabebb6d161f4713c8",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/TEMPLATE.md",
+      "sha256": "a62c94880762efb245cba5a6836f7884e9c453191fbd4d6f9f807044abec8e97",
+      "size": 5323,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/active/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_02_114755_harness_contract_fix.md",
+      "sha256": "bedbf29fa9d820c5f7678d72e2058c074a1b87673d425b5f172d3d5ad9846bd4",
+      "size": 7429,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_02_141623_harness_enhancement_full.md",
+      "sha256": "4c102932b3ed70ba896a2774ef7abd7429ac049426c4bb7f18219d5da35d3bf2",
+      "size": 7744,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_10_141652_record_vnext_governance_contract.md",
+      "sha256": "e41f4c3cdfd3fdecbaa6119d77300060e3a9a72cdad9478b31336c26a9885aae",
+      "size": 10364,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_10_225507_v3_core_bootstrap_contract_and_baseline.md",
+      "sha256": "2899cfe2d1391fd914620697ce434b75e4bf0e44acd7fff98ab329ae606aeedc",
+      "size": 11779,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_103510_v3_core_canonical_artifact_kernel.md",
+      "sha256": "a588c6514c686b1de4a0de8e9437ad05ee94eff9627a6c797e8ae04101b65ca9",
+      "size": 10041,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_104346_benchmark_framework.md",
+      "sha256": "be3ed06199c0576147225d5675905c9d59921b127d6d26b8522fad2e87fbcc3b",
+      "size": 5887,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_110724_validate_the_current_state.md",
+      "sha256": "a4138910824b2434f4446691086c267945e4f20549051c59a9ddbd7e7fa758be",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_111314_validate_the_requested_transition.md",
+      "sha256": "b561b137cee8e9fe1cad9197b8452004f83f70bc4004e62c1d7dd1432eada67c",
+      "size": 4656,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_111750_update_the_state_atomically.md",
+      "sha256": "858ca42619b7a67d1aa5dd448ba68d51d5778c51de01f643c8bbbc9c879d5e5d",
+      "size": 4572,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_112123_implement_approved_changes.md",
+      "sha256": "6667da0ec918e45444b092381c63fcd2a74f894ebb81d988c5ecae9781dd2170",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_112341_add_a_migration_adr.md",
+      "sha256": "2b6dc2c46d731d3a68b1ebc9c078b8806415019bf84a2ad65bed7bfc9a712bd1",
+      "size": 4460,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_112850_schema.md",
+      "sha256": "d7e56323027f257be5cfe0cdd63d4a29bfd3b02853667159ddca3be4cf7f9d00",
+      "size": 4328,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_115127_create_a_baseline_snapshot_for.md",
+      "sha256": "10187ad5fdc8cfbe3b6e1cfc12fa0ca3f247d53df993a51ec5f14b12a38b5291",
+      "size": 4614,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_115417_validate_ac_coverage.md",
+      "sha256": "f9cd1f84af116c00cf221f205db27460862b4d730f03c3218501e099660c03ea",
+      "size": 4474,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_143555_validate_verification_pass_evidence.md",
+      "sha256": "08f652c55e047b57ad511502d1e8ae5019f7e5631202770dfe3ada946f5bbb46",
+      "size": 4684,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_150750_validate_independent_verifier_verdict.md",
+      "sha256": "f62044efa443f31c5b568c9f1bea9794447c34eab23236777d2c02212d625a50",
+      "size": 4712,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_151040_validate_completion_judge.md",
+      "sha256": "6895600d3e4fcb9c3284d2ccdf8624e89bdb23cb2e7ab4ac8a8bfbf48fe47256",
+      "size": 4544,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_151527_validate_remediation_history.md",
+      "sha256": "32ea41fcbf5d5a92e686f0b98f06a00e81cfa4f8474d401c7dd0b53fa4bcc4a0",
+      "size": 4641,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_152057_validate_final_report.md",
+      "sha256": "b655a15e5fb77c685f0e2e8f9d87e063ffca350950f5336c7e79bb3ddf339ff3",
+      "size": 4488,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_152333_validate_required_review.md",
+      "sha256": "4aba940454baf0ac8a4cf0ec271f830daa6ca10008983a58036611e79873a3c6",
+      "size": 4530,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_152614_update_story_and_epic_rollups.md",
+      "sha256": "98b69f2cabae3f4d46bcda2210a2da35103ef99f3e29146fe0d7d2d904ae9a10",
+      "size": 4600,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_152837_validate_test_report.md",
+      "sha256": "3a3de3bd867b6d84d22cefc32ce40cfd1cfc4182d046f997789868c5d1517660",
+      "size": 4519,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_153107_validate_adr_impact.md",
+      "sha256": "5eca768e0bd6a92ce081033183f773c4ba75d3d324f70173e4b3b3ba2d26bccc",
+      "size": 4460,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_153732_implement_v3_intake_spec_lock.md",
+      "sha256": "34f22107a3b069137ae7050a880765fe8330d16a865b1bf7f3e533266d4c2588",
+      "size": 6339,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_160058_implement_v3_run_event_chain.md",
+      "sha256": "18de9b3f865bdbdc24f77dc668225532c50d32ca7b17539da1b20dfd1feece93",
+      "size": 6127,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_160256_implement_v2_v3_dispatch.md",
+      "sha256": "2c755ae0d741e882f842cad927cec2d995b118336c24b1c7fe255e3cfe9cba68",
+      "size": 5964,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_160606_implement_v3_intake_graph.md",
+      "sha256": "c681cc1970d4b7da9eb58fbf800aee2fa61aa228e246c274282861c1cd055144",
+      "size": 6078,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_160755_implement_policy_binding_artifact.md",
+      "sha256": "2cca4ab49b70a4e96163c2bf95b8ddd520dc156bcd455ea3338db4d503e1d05d",
+      "size": 5865,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_161204_implement_writer_lease_fencing.md",
+      "sha256": "0094ee7ce44dec805dabf5ff783cb96617bfca0bcf442436de9a0345a10df383",
+      "size": 5953,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_161449_implement_role_capabilities.md",
+      "sha256": "b4e0744efa0602bc316a90d84463887271d4dd1aa2fcf955a653ccfa506497c9",
+      "size": 5805,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_161736_implement_contextual_approvals.md",
+      "sha256": "a8c1a5fd149932bc8b974715a691ffb570b9b4d428a922866625799aa43c7389",
+      "size": 5910,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_161953_implement_evidence_retention_safety.md",
+      "sha256": "f90a4b67c915253045b9f630299dd88e2ff1b4f70013543f49fe2f053c9f7afe",
+      "size": 5907,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_162249_implement_network_capability.md",
+      "sha256": "9b68097fb824fa37e886f044ad1c8b2bcdc2e6800bccbf866c333797c84f1889",
+      "size": 5940,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_162606_implement_package_identity.md",
+      "sha256": "9210a0170b7fc6b4da6c18d1fe363b870396febbb357d884352d992a1cc5e063",
+      "size": 5761,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_162929_implement_transition_recovery_journal.md",
+      "sha256": "5a1d98b1fb773a48f3ed07c2ede30784fd8443996f5a6fe23a51397372e88fd7",
+      "size": 5972,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_163355_implement_workspace_writer_guard.md",
+      "sha256": "2d3ce996f38f09dedffef1621e3c0b7b71bfd7f3f320eb0f3c91b937059a821a",
+      "size": 5911,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_163636_implement_enforcement_gate.md",
+      "sha256": "a27d3f346de75731ee5788fa3883f74f688b3d81664d43c059ff1253bbe2ec2b",
+      "size": 5902,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_164002_implement_trusted_time_guard.md",
+      "sha256": "f7e797f064f85697886fd727e27484ac4ce1b5265fa3fe2a833233c943dfaeaa",
+      "size": 5826,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_164318_implement_v2_v3_migration.md",
+      "sha256": "cf2ad77e5557fcd9b47006b37ef89b151a650323d55841bec88885bc7d234e44",
+      "size": 5933,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_164653_implement_external_saga_journal.md",
+      "sha256": "21d792c937f55b4ace1541c91993bf0a3851a1c518f5b6ba8faec300508287a9",
+      "size": 5860,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_164954_implement_budget_guard.md",
+      "sha256": "a1e238d8719449947a9beda42046b468ff83e877ff37851e49da31678218dc18",
+      "size": 5761,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_165418_implement_release_invariants.md",
+      "sha256": "b3207e8156ce059d3ab863ddcf02f6e50c3233e112615c88deed8e728358edde",
+      "size": 5854,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_170547_implement_isolated_worktree_adapter.md",
+      "sha256": "22a443b194b994b7fe6020fb3e18e97ca51bf9a604c863ec6fb585258f0a7cec",
+      "size": 8073,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_171248_implement_sandbox_adapter_enforcement.md",
+      "sha256": "4af99f01406f853772f42d70f23830f8bf20cba8d1f4e7cb75f90ad7eaae0375",
+      "size": 7670,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_171949_implement_verifier_adapter_enforcement.md",
+      "sha256": "7d063889f82b529f25c2a0cf67c83ceb7b84a19634edbc299ae114dc20c46399",
+      "size": 7158,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_172608_implement_request_scoped_network_adapter.md",
+      "sha256": "9c0c7abdd0613951279b037c542b5004beb506767261d31c344e2e2c4d737231",
+      "size": 7585,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_173559_implement_independent_release_attestation.md",
+      "sha256": "0ab1399dc2ee0136f5414d04cf5212f04a921183528bd8c83e188019e165161b",
+      "size": 7391,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_174357_implement_complete_checkpoint_contract.md",
+      "sha256": "ef62bfbb7fdce21bf6b7ecabdc56bd5d2213c2260c688c6a6b785b9d1471510d",
+      "size": 7490,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_190513_implement_declarative_workflow_recipes.md",
+      "sha256": "201471badb0ab04bfee6729ee8e38784a4c6ef854bbdddfaaa94615c4c4e2d32",
+      "size": 7292,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_191705_implement_deterministic_budget_routing.md",
+      "sha256": "c79641d7274b3234b47dd8a1aeac84f7828e5f466ce06d5e5d2a6aabba7dae17",
+      "size": 7184,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_192748_implement_v3_projection_replay_audit.md",
+      "sha256": "38b853f29b7b0acb7019f7cb204d5f5d51e0c24024077302d90016604d35da46",
+      "size": 7381,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_194337_implement_template_cleanliness_and_export_modes.md",
+      "sha256": "99c24a4583a6a73c3271b9f1a8f9992b95fc94611de2baa67fe2bc4f8dd9cc93",
+      "size": 7718,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_195607_implement_v3_finalization_transaction.md",
+      "sha256": "9b30915f308d32e01c78f01d99071788257fa59deadb1d80458570b143398620",
+      "size": 7517,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_200704_implement_release_fixture_inventory.md",
+      "sha256": "8ea5671d3116abbd6285823b9b130e21ef5fa1e0f6017781b57a8a827696e1f6",
+      "size": 7490,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_201458_integrate_release_fixture_gate.md",
+      "sha256": "d37e0f49f3c2a63c37ff23cbdade8c7230e3190d155e3d65ee71d9430946b0b5",
+      "size": 7146,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_202309_implement_offline_capability_guard.md",
+      "sha256": "0c48a6bbb5751a2245be0a2ec414dda831441af1579f19cfe0d357746bd77d32",
+      "size": 7412,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_11_203158_implement_run_successor_lineage.md",
+      "sha256": "13670e09270671406f5b4e0f28e00cd7fd978553e307634b57998465c69405f0",
+      "size": 7092,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_055652_implement_emergency_revocation_authority.md",
+      "sha256": "0cab30695001270b0f4cebbce25bd16ee7f0e676b17708b0a5ba32e22fae3fb1",
+      "size": 7318,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_060612_implement_approved_changes.md",
+      "sha256": "eb0d18c1fa8d0eafe2b8b113bf2331fcc4d2cdfcd904bf0bb824778df97aec06",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_085807_benchmark_framework.md",
+      "sha256": "dde33db477a011da74409012e53fc9674b8eb991b31adf956e2d3dccdd970ca4",
+      "size": 4515,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_092220_validate_the_current_state.md",
+      "sha256": "c5ed1dcf0578ed7daa41eba37a3a90d4a5f897043f01ad5092475f75a4d5ae26",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_092944_validate_the_requested_transition.md",
+      "sha256": "0f7295a2f711cf59df4970c447568f550af581769e1c40b7bbfdd1d9f45aa83f",
+      "size": 4656,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_105300_validate_verification_pass_evidence.md",
+      "sha256": "795e3ceec029a625501acc0b8ac3fe06e377593782212c1a8fa02f5a276ef121",
+      "size": 4684,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_110300_update_the_state_atomically.md",
+      "sha256": "9192788a69ef90f2882a853b80541d4ab66b858640d867e9491831b465702273",
+      "size": 4572,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_130814_add_a_migration_adr.md",
+      "sha256": "660acc560614d844aa118a0d857ffa2f70369ae8ce07bc5acf800bdc606bfefa",
+      "size": 4460,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_133821_create_a_baseline_snapshot_for.md",
+      "sha256": "2b9e545ecf1563ee116b82b9f49473d1122971a9a361d607649888f7dc2e85c2",
+      "size": 4614,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_134614_validate_ac_coverage.md",
+      "sha256": "618b8bf4645cae87d5fc07061c208b9d878140947d9313323d5ac60aaff11ef2",
+      "size": 4474,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_135454_validate_completion_judge.md",
+      "sha256": "64095133732aaf6646480826f5cde2b5045e4e33fa406bdeed7ce83ba9242e3d",
+      "size": 4544,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_140421_validate_independent_verifier_verdict.md",
+      "sha256": "40d16b3ee850b59000c615c3e571c90e265ff015d770b6b3c3d3f5e5d2af5f26",
+      "size": 4712,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/2026_07_12_152946_validate_adr_impact_successor.md",
+      "sha256": "ae8c153880499f2b4467ca391c4726071dd1101954f5e2f6f19617c49adacdae",
+      "size": 4559,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/recovery/20260712T081838Z_validate_adr_impact.md",
+      "sha256": "55f1708c84f1097a396adfd24b6441d71b63405c98c1a12320ecc851640efb1c",
+      "size": 4423,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/intake/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/intake/agent-harness-vnext-full-implementation-plan.md",
+      "sha256": "d50b841644e68faf446ab4875e33da2176783713c7d1052bfb6feaadf376e657",
+      "size": 47177,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/product-contracts/TEMPLATE.md",
+      "sha256": "4440b7c17b55f8b35d9aaf50bcd9243ade06e63431e7e5a65294659ed876300f",
+      "size": 178,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/product-contracts/index.md",
+      "sha256": "8799af67099fb20c53c97615b74042b1e3990d5c1407bbce685aea84e60329b0",
+      "size": 123,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/product-specs/TEMPLATE.md",
+      "sha256": "f627d42e38a7022d1bc7898809633e78e0c506cb53a1e549f0d8e232fa85b017",
+      "size": 164,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/product-specs/index.md",
+      "sha256": "feb572f0ae4dfd2d948e63f5492e7fbfec6525ba7f61b155189b8f4b189cb901",
+      "size": 115,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/01-plan.md",
+      "sha256": "7216777635c859a203040c269dc716edb9b299584c703bf10bd8d457f7540723",
+      "size": 1171,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/02-execute.md",
+      "sha256": "d00a3d06dec6282fd751b7082d4c44eab7bef5f451533ab7adc1b225175c3896",
+      "size": 304,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/03-verify.md",
+      "sha256": "7694db73c2ea060a2f8ad9cdb1305084e43330ae44a8f5d928cb3365418d6711",
+      "size": 255,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/04-review.md",
+      "sha256": "e741384f10395f4343376847683712f7469be1f7904843f29478841d604702cd",
+      "size": 282,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reference/README.md",
+      "sha256": "2af41b4aa7da8b03725db2ac976c1f2cc11e2be41c53626611b3cbea64500128",
+      "size": 147,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/.DS_Store",
+      "sha256": "238776c3fba97fb6baf6fe83a1c94e6566a2638a2a529c68b8b6280a49cb2f95",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/README.md",
+      "sha256": "7791f6e45dea85887b99fc19e7b97009c61461a668da7a877cd2fadb39d8f418",
+      "size": 415,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/benchmark/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/benchmark/latest.json",
+      "sha256": "fd7b53c83d45f45a98e68ae78911a03891c200a3c188475fa0c4a9e43f0069d7",
+      "size": 15512,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/benchmark/latest.md",
+      "sha256": "f0170dfdc45165cc2c5a9444663ffe9309f9b4783330755c5b3b39f0dbd68acd",
+      "size": 1194,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/harness-quality-score.md",
+      "sha256": "91277c35dc9b90d51ec4c284c25c0d8ee6c9645c9c62f80b1ac20035989d1340",
+      "size": 362,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/plan-decomposition-approval.md",
+      "sha256": "d60dab3cf70eb6a752742a3258222f6b26f6c2746d9ee1122615585ffdd81273",
+      "size": 6425,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/plan-decomposition.md",
+      "sha256": "5410622a0f8c62f27fa579e8cb020eff63af1901eb1e82109905eca3fbdd6720",
+      "size": 1945,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/release-check.md",
+      "sha256": "6d7ec0ef16ff184e57fc7a402e585c7310fc593260a1d1a9d3320cc72dbe91a7",
+      "size": 291,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reports/vnext-baseline.md",
+      "sha256": "74231d9ff6a958791d00771eb01d7b97993dc506dc197128bc3ea36f30b087a6",
+      "size": 4845,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_10_record_vnext_governance_contract.md",
+      "sha256": "2d47536a1de21dd6f1b19b7b1ff1968a9c1a7abd0c300bf8190b38a3eedc4d77",
+      "size": 1724,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_10_v3_core_bootstrap_contract_and_baseline.md",
+      "sha256": "00a8a7e48a3e2e6f8688da67148ac230d7221bf9f0d6c6d0cc305f81b59ee000",
+      "size": 1883,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_10_v3_core_canonical_artifact_kernel.md",
+      "sha256": "7efdb85cf641133fdd8ca9ecc6a0d11817496cddf96b0c1886127c6f21bddd04",
+      "size": 1206,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_add_a_migration_adr.md",
+      "sha256": "cbc25df9be03c202643269abaeb4016832d6ec0a1b04a2ba4317e7a9f45b7203",
+      "size": 948,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_benchmark_framework.md",
+      "sha256": "458a0c6b626331ea1f79bdb22559945c0ebc3038a8272a750bc278b71cae6ed7",
+      "size": 819,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_create_a_baseline_snapshot_for.md",
+      "sha256": "c153f6583f8f061474aad113f0d19667f7e34dcf0d94f9df924cd17d4fc61a0b",
+      "size": 982,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_approved_changes.md",
+      "sha256": "068e48f9c3c5d6c807beebebbc0f2db797fbf00a58e00cb004088e612199340f",
+      "size": 969,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_complete_checkpoint_contract.md",
+      "sha256": "bf35d70f6deb2d5a4ac855a9ddffbd0185114d67f2419f78f9631df8b6c8616f",
+      "size": 1200,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_contextual_approvals.md",
+      "sha256": "e403f13e8c72053e6a0e9cfbbc6c9701754ac8f3d91a6104cfba973bfda3df69",
+      "size": 1029,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_declarative_workflow_recipes.md",
+      "sha256": "dadbb35fd0eac0e99dec5ae8c8f9a3fd25af10063da5faef45bde80c7c50b35e",
+      "size": 981,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_deterministic_budget_routing.md",
+      "sha256": "fc0ba4f884208d02ad1a89a73ba08447cb233aa79e324e721187fba6786f62ab",
+      "size": 1012,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_evidence_retention_safety.md",
+      "sha256": "31ae2ffa3c9174fd72a1240dbf2f618094f8197ad5d0a689cc06934f3d659d28",
+      "size": 1000,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_independent_release_attestation.md",
+      "sha256": "32fa1865c0df03cfc52dfbea85546557ba3a4475d36ef04e1642b563c60a97e8",
+      "size": 1107,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_isolated_worktree_adapter.md",
+      "sha256": "22c6de2bedb5b2bdb1a4ee0e8008c4593db56f7ec205de263fb8c3cd2d0dd337",
+      "size": 1158,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_network_capability.md",
+      "sha256": "b1e9905fd8bebd9bc6935444319d3f35b4bacea8cc6e033cc07407ccc089656d",
+      "size": 987,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_offline_capability_guard.md",
+      "sha256": "d35be7e854245561d5507efb2e9fbf657ba9e2e264f2e349d8af093754f36d91",
+      "size": 944,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_package_identity.md",
+      "sha256": "5354d5d352aca68198697102930baa43c4d4e8ea5aaedf0beb5e1de93619cd9a",
+      "size": 962,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_policy_binding_artifact.md",
+      "sha256": "f757cc56bc67005e4c6ec7bef50f05bf76f513ad354315cb8cd5f79234cd979f",
+      "size": 951,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_release_fixture_inventory.md",
+      "sha256": "7f70263d7ffacf2f7b7ec419321b67da0291356fc8958db1cfa151b96922246d",
+      "size": 934,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_request_scoped_network_adapter.md",
+      "sha256": "23f15aebddbe1afd1b9815a2775b19cb9354879e73cb40538c9ac8ca7f162749",
+      "size": 1154,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_role_capabilities.md",
+      "sha256": "1be6a34bc0c02ea4158ea4aaa3c79506145f15cb8e3817058933f9f302617e31",
+      "size": 961,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_run_successor_lineage.md",
+      "sha256": "a10d0c355cbc2b0c8ed5ae9f389c4e7eb743051f23b50562e7dbae2524dd5967",
+      "size": 920,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_sandbox_adapter_enforcement.md",
+      "sha256": "e336ca9c0b7ec321b6b8aeba7ad35a4d2d9c99a176e59ce632d4ea2b9a172e18",
+      "size": 1191,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_template_cleanliness_and_export_modes.md",
+      "sha256": "b3f6edcf02804feb4fd586be012a72553050fb83501b73fb400ff3303019d93d",
+      "size": 1063,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_transition_recovery_journal.md",
+      "sha256": "4f9fcc848c5bb423c4344ba42d367e93005e01a0886f8a7d43a652b3086a349b",
+      "size": 1047,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v2_v3_dispatch.md",
+      "sha256": "e37d20a0f20fd7c61c5f9068b7a666cbe769cfac7e883c4e9bdd91a962afa691",
+      "size": 943,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v3_finalization_transaction.md",
+      "sha256": "1a0871cdba5a77eb130e8c587113fa10e9525d51ddb36c268b4953e9d522341f",
+      "size": 949,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v3_intake_graph.md",
+      "sha256": "4bb03fd366f7296ca07055ed6d411d900e97c1ad95ea76af94a0f9639d14c405",
+      "size": 1018,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v3_intake_spec_lock.md",
+      "sha256": "51b0282142284228ae832c3cf7bc5c21e55c3efb46c2de349deede8583088a8c",
+      "size": 1140,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v3_projection_replay_audit.md",
+      "sha256": "47d442f9363d70c3e02230cf5c0213365aa4c9b6a3f45f93a9d91e24da616851",
+      "size": 1017,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_v3_run_event_chain.md",
+      "sha256": "504925ed9d1fdef6b8fdc95aea465b59c7ce64a7530f4ad425976e837ac29cb5",
+      "size": 1053,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_verifier_adapter_enforcement.md",
+      "sha256": "fe397efe78fa3b00333114c80cacd1605995ac438decedccec1455ee59bd7f01",
+      "size": 1139,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_workspace_writer_guard.md",
+      "sha256": "4f24a28869219b1441c08d524bf27119415b5987dd3be4d3e43a8ceca14a84d8",
+      "size": 893,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_implement_writer_lease_fencing.md",
+      "sha256": "228adecf029010ee07c41a8df585721d7ee1d1e3530c8295514cb08b7141213a",
+      "size": 1081,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_integrate_release_fixture_gate.md",
+      "sha256": "c9ed0af87cfed11041a50de43a058bebc0f9c96d198ca6938d37a546a07c954a",
+      "size": 869,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_schema.md",
+      "sha256": "697c68d75dcc6af05f13b91f249508dde6641b7bd63322db26cb99bf69442358",
+      "size": 1070,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_update_story_and_epic_rollups.md",
+      "sha256": "401af2c06e22efffcef63927a58279a2b03817ec5124ee39b36b3092756411a0",
+      "size": 831,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_update_the_state_atomically.md",
+      "sha256": "7150390c333a6f5170aa2acddcfcef71098b35e249219e8b2eddae4060975407",
+      "size": 1084,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_ac_coverage.md",
+      "sha256": "a492e7b1679bc646ee900507bcfc33aa088b644ffc5f817115cfaad47d556947",
+      "size": 1000,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_adr_impact.md",
+      "sha256": "505f7a0abb6ba3c5a4cb26b04cf97ed6ac2b73ad7bf4f8a5aef06cf3bca5dc30",
+      "size": 867,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_completion_judge.md",
+      "sha256": "2a5d0a7370d134124da203a36a3a261253b67ed2053e7e3524ebde9786df3d49",
+      "size": 959,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_final_report.md",
+      "sha256": "20f7df8c40484757a2da5814ce2ff187cbe9a21682b30a827a62a4f3d2742c38",
+      "size": 1136,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_independent_verifier_verdict.md",
+      "sha256": "7c64cb644717fe896f25dea61c9a39cf1c4ebfd08bff0b4f485be38caf43d9cb",
+      "size": 1011,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_remediation_history.md",
+      "sha256": "363ac97dc15496262793ab67b9b79433ad8a4bc1b0b8bbea46c4b17b2a86e763",
+      "size": 1027,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_required_review.md",
+      "sha256": "8481ddaef242abf4a131dea8aa86d003afdbeedcf1e360fdd1fe0b993f39d19e",
+      "size": 950,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_test_report.md",
+      "sha256": "ced0ac0c472c0befc50bf48eee32830e73e57679e73270f782a340b8c0fd1af9",
+      "size": 833,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_the_current_state.md",
+      "sha256": "9842d4afacc16a4a774c9bb09b2214f66547c428fcb7f12ab4b0cd5a6500637e",
+      "size": 1047,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_the_requested_transition.md",
+      "sha256": "ee7efe8901173017eb9f9c09008d535e718034389fb1acc5350db9629220d208",
+      "size": 1095,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_11_validate_verification_pass_evidence.md",
+      "sha256": "187b50fa5de0cf8f2dae12dc8719e79b1901739b8c457f52edc4901415cd0f31",
+      "size": 1002,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_add_a_migration_adr.md",
+      "sha256": "3cbaabbced6b07bfb7c0e21b7b3145179ea35c1130ef00d1743f2954e012809e",
+      "size": 716,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_benchmark_framework.md",
+      "sha256": "825abe03a2084e3c88f6c71e6a46931375a89c32b134222e394be8bdd6c0b749",
+      "size": 722,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_create_a_baseline_snapshot_for.md",
+      "sha256": "1c53fb5d8c82e58d4e635da7f46a8df346677db79688717d6d2f0bc3aebc35ad",
+      "size": 744,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_approved_changes.md",
+      "sha256": "c56514347ec1ef98732bd115bfa0b6adf00f41bb1ecfe4dc3981a19ee43c915f",
+      "size": 877,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_budget_guard.md",
+      "sha256": "344936ae7b072d9ca14b62a01a1964c2d44496917572bbbd77d54d99fb90a072",
+      "size": 831,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_emergency_revocation_authority.md",
+      "sha256": "aaac3ab2a5a2a4c9ae66f96a63fa8a92e896d005efbd223e36d8d2531f94f182",
+      "size": 886,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_enforcement_gate.md",
+      "sha256": "885c2a62f7a7451c71ace96526a9752220b001efc32666afebff01220b1b14cc",
+      "size": 977,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_external_saga_journal.md",
+      "sha256": "d288d71e2ab5b4d60e12a25044ab0507c74055cdc6a9fc8e006b7955fd1cd718",
+      "size": 892,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_release_invariants.md",
+      "sha256": "e8e7c2753786795da1fe7d9720c4eb58866d6245cd088184cd02489c53b578d7",
+      "size": 914,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_trusted_time_guard.md",
+      "sha256": "12a06efdee69e1c3d8c054719ddc4e088fc88d562f19f491a87c3b37d01a2eab",
+      "size": 909,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_implement_v2_v3_migration.md",
+      "sha256": "ebf007ed6fe97258c84e202209fffd89123b0b07e29aeb63dbfea9cdfb3963f3",
+      "size": 997,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_update_the_state_atomically.md",
+      "sha256": "a7e2e681fd50a8d64fe5f1eb810f1d3acfd332fb4a1076079b4471ae260fe4e4",
+      "size": 809,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_ac_coverage.md",
+      "sha256": "5c97473f28647d630eac80b9d22df957dbb89e4fb488c7c84b2785b83119329e",
+      "size": 677,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_adr_impact.md",
+      "sha256": "6af89e28b8be0f135df8265bf39f62116bce9457510bd65733af5df74f0ee23c",
+      "size": 932,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_adr_impact_successor.md",
+      "sha256": "d6e05b82792b05ada1fa9ab3717d0734aa77e61ba895012176a76068c983e4c7",
+      "size": 952,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_completion_judge.md",
+      "sha256": "e2da2565ed7bd9aabfdaa74c2c9c0cd0854874d4c5358bcc9b0db859112a023d",
+      "size": 707,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_independent_verifier_verdict.md",
+      "sha256": "cc7c7fffa3166db39aee91a44549a27ee50b7d7da5aa947382664e5d20021ccc",
+      "size": 692,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_the_current_state.md",
+      "sha256": "4bf58d3128ee27755075b85244352b838b456a86bd6507ae4105565a7bb9d282",
+      "size": 713,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_the_requested_transition.md",
+      "sha256": "3efc16c01f2732a2fd45c5ce7fd7789ba5a8b0a41388026cf3657e45a91148cc",
+      "size": 672,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/2026_07_12_validate_verification_pass_evidence.md",
+      "sha256": "d1e3e53ada56451fc6acd4240c3452f3a0dbe44408beed6b3f88e94f31fb8629",
+      "size": 727,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/TEMPLATE.md",
+      "sha256": "0fe2db74541dcb71559adc9fc4be9e1535e26b29de7c35f95542c102b78f1444",
+      "size": 425,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/harness_enhancement_full.md",
+      "sha256": "1842abbc52aa21248b79b7340ed9c53b82f5689acd6f412f495cbdcb56d41039",
+      "size": 247,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/add_a_migration_adr/acceptance.md",
+      "sha256": "d1d4c80e68c5526e993597b389933ec2457efb649e418f38c79b41b8a1ef696b",
+      "size": 124,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/add_a_migration_adr/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/add_a_migration_adr/implementation-plan.md",
+      "sha256": "660acc560614d844aa118a0d857ffa2f70369ae8ce07bc5acf800bdc606bfefa",
+      "size": 4460,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/benchmark_framework/acceptance.md",
+      "sha256": "564c6b5f20d80a71a7585e56cb3535909f186e86de72eecad18f3f849fdaf92b",
+      "size": 124,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/benchmark_framework/file-map.md",
+      "sha256": "339126494b4de54c46cbdae492c6ab5a57b70c65ba334d14e840432748ebab98",
+      "size": 125,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/benchmark_framework/implementation-plan.md",
+      "sha256": "dde33db477a011da74409012e53fc9674b8eb991b31adf956e2d3dccdd970ca4",
+      "size": 4515,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/consume_plan_rollup/implementation-plan.md",
+      "sha256": "a7cec1fca024728872383d1c5a7678ffef47655d784407c5863f74e0f7a3988b",
+      "size": 3094,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/create_a_baseline_snapshot_for/acceptance.md",
+      "sha256": "b4ff637cabdf1697bd03bc99ec055577c66c68a564b0ddb46f58a2ebdd053745",
+      "size": 135,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/create_a_baseline_snapshot_for/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/create_a_baseline_snapshot_for/implementation-plan.md",
+      "sha256": "2b9e545ecf1563ee116b82b9f49473d1122971a9a361d607649888f7dc2e85c2",
+      "size": 4614,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/harness_contract_fix/implementation-plan.md",
+      "sha256": "d2258d127c3976e5dd06b82798f88b23e43f0e1496eab9f4353349445697e554",
+      "size": 7394,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/harness_enhancement_full/implementation-plan.md",
+      "sha256": "4c102932b3ed70ba896a2774ef7abd7429ac049426c4bb7f18219d5da35d3bf2",
+      "size": 7744,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/harness_execution_temp/implementation-plan.md",
+      "sha256": "37d76b8bc055e9d294b7cbc39c5f62e2b9f87585b9c3b7def9149242387776fc",
+      "size": 2164,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_approved_changes/acceptance.md",
+      "sha256": "783f9c2bcf98aa80b72b1f478a6d483c6657619f5f34332aa3e2761b776dd1cb",
+      "size": 131,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_approved_changes/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_approved_changes/implementation-plan.md",
+      "sha256": "eb0d18c1fa8d0eafe2b8b113bf2331fcc4d2cdfcd904bf0bb824778df97aec06",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_budget_guard/implementation-plan.md",
+      "sha256": "a1e238d8719449947a9beda42046b468ff83e877ff37851e49da31678218dc18",
+      "size": 5761,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_complete_checkpoint_contract/implementation-plan.md",
+      "sha256": "ef62bfbb7fdce21bf6b7ecabdc56bd5d2213c2260c688c6a6b785b9d1471510d",
+      "size": 7490,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_contextual_approvals/implementation-plan.md",
+      "sha256": "a8c1a5fd149932bc8b974715a691ffb570b9b4d428a922866625799aa43c7389",
+      "size": 5910,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_declarative_workflow_recipes/implementation-plan.md",
+      "sha256": "201471badb0ab04bfee6729ee8e38784a4c6ef854bbdddfaaa94615c4c4e2d32",
+      "size": 7292,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_deterministic_budget_routing/implementation-plan.md",
+      "sha256": "c79641d7274b3234b47dd8a1aeac84f7828e5f466ce06d5e5d2a6aabba7dae17",
+      "size": 7184,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_emergency_revocation_authority/implementation-plan.md",
+      "sha256": "0cab30695001270b0f4cebbce25bd16ee7f0e676b17708b0a5ba32e22fae3fb1",
+      "size": 7318,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_enforcement_gate/implementation-plan.md",
+      "sha256": "a27d3f346de75731ee5788fa3883f74f688b3d81664d43c059ff1253bbe2ec2b",
+      "size": 5902,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_evidence_retention_safety/implementation-plan.md",
+      "sha256": "f90a4b67c915253045b9f630299dd88e2ff1b4f70013543f49fe2f053c9f7afe",
+      "size": 5907,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_external_saga_journal/implementation-plan.md",
+      "sha256": "21d792c937f55b4ace1541c91993bf0a3851a1c518f5b6ba8faec300508287a9",
+      "size": 5860,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_independent_release_attestation/implementation-plan.md",
+      "sha256": "0ab1399dc2ee0136f5414d04cf5212f04a921183528bd8c83e188019e165161b",
+      "size": 7391,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_isolated_worktree_adapter/implementation-plan.md",
+      "sha256": "22a443b194b994b7fe6020fb3e18e97ca51bf9a604c863ec6fb585258f0a7cec",
+      "size": 8073,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_network_capability/implementation-plan.md",
+      "sha256": "9b68097fb824fa37e886f044ad1c8b2bcdc2e6800bccbf866c333797c84f1889",
+      "size": 5940,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_offline_capability_guard/implementation-plan.md",
+      "sha256": "0c48a6bbb5751a2245be0a2ec414dda831441af1579f19cfe0d357746bd77d32",
+      "size": 7412,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_package_identity/implementation-plan.md",
+      "sha256": "9210a0170b7fc6b4da6c18d1fe363b870396febbb357d884352d992a1cc5e063",
+      "size": 5761,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_policy_binding_artifact/implementation-plan.md",
+      "sha256": "2cca4ab49b70a4e96163c2bf95b8ddd520dc156bcd455ea3338db4d503e1d05d",
+      "size": 5865,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_release_fixture_inventory/implementation-plan.md",
+      "sha256": "8ea5671d3116abbd6285823b9b130e21ef5fa1e0f6017781b57a8a827696e1f6",
+      "size": 7490,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_release_invariants/implementation-plan.md",
+      "sha256": "b3207e8156ce059d3ab863ddcf02f6e50c3233e112615c88deed8e728358edde",
+      "size": 5854,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_request_scoped_network_adapter/implementation-plan.md",
+      "sha256": "9c0c7abdd0613951279b037c542b5004beb506767261d31c344e2e2c4d737231",
+      "size": 7585,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_role_capabilities/implementation-plan.md",
+      "sha256": "b4e0744efa0602bc316a90d84463887271d4dd1aa2fcf955a653ccfa506497c9",
+      "size": 5805,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_run_successor_lineage/implementation-plan.md",
+      "sha256": "13670e09270671406f5b4e0f28e00cd7fd978553e307634b57998465c69405f0",
+      "size": 7092,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_sandbox_adapter_enforcement/implementation-plan.md",
+      "sha256": "4af99f01406f853772f42d70f23830f8bf20cba8d1f4e7cb75f90ad7eaae0375",
+      "size": 7670,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_template_cleanliness_and_export_modes/implementation-plan.md",
+      "sha256": "99c24a4583a6a73c3271b9f1a8f9992b95fc94611de2baa67fe2bc4f8dd9cc93",
+      "size": 7718,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_transition_recovery_journal/implementation-plan.md",
+      "sha256": "5a1d98b1fb773a48f3ed07c2ede30784fd8443996f5a6fe23a51397372e88fd7",
+      "size": 5972,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_trusted_time_guard/implementation-plan.md",
+      "sha256": "f7e797f064f85697886fd727e27484ac4ce1b5265fa3fe2a833233c943dfaeaa",
+      "size": 5826,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v2_v3_dispatch/implementation-plan.md",
+      "sha256": "2c755ae0d741e882f842cad927cec2d995b118336c24b1c7fe255e3cfe9cba68",
+      "size": 5964,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v2_v3_migration/implementation-plan.md",
+      "sha256": "cf2ad77e5557fcd9b47006b37ef89b151a650323d55841bec88885bc7d234e44",
+      "size": 5933,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v3_finalization_transaction/implementation-plan.md",
+      "sha256": "9b30915f308d32e01c78f01d99071788257fa59deadb1d80458570b143398620",
+      "size": 7517,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v3_intake_graph/implementation-plan.md",
+      "sha256": "c681cc1970d4b7da9eb58fbf800aee2fa61aa228e246c274282861c1cd055144",
+      "size": 6078,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v3_intake_spec_lock/implementation-plan.md",
+      "sha256": "34f22107a3b069137ae7050a880765fe8330d16a865b1bf7f3e533266d4c2588",
+      "size": 6339,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v3_projection_replay_audit/implementation-plan.md",
+      "sha256": "38b853f29b7b0acb7019f7cb204d5f5d51e0c24024077302d90016604d35da46",
+      "size": 7381,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_v3_run_event_chain/implementation-plan.md",
+      "sha256": "18de9b3f865bdbdc24f77dc668225532c50d32ca7b17539da1b20dfd1feece93",
+      "size": 6127,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_verifier_adapter_enforcement/implementation-plan.md",
+      "sha256": "7d063889f82b529f25c2a0cf67c83ceb7b84a19634edbc299ae114dc20c46399",
+      "size": 7158,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_workspace_writer_guard/implementation-plan.md",
+      "sha256": "2d3ce996f38f09dedffef1621e3c0b7b71bfd7f3f320eb0f3c91b937059a821a",
+      "size": 5911,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/implement_writer_lease_fencing/implementation-plan.md",
+      "sha256": "0094ee7ce44dec805dabf5ff783cb96617bfca0bcf442436de9a0345a10df383",
+      "size": 5953,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/integrate_release_fixture_gate/implementation-plan.md",
+      "sha256": "d37e0f49f3c2a63c37ff23cbdade8c7230e3190d155e3d65ee71d9430946b0b5",
+      "size": 7146,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/mode_verify_brownfield/implementation-plan.md",
+      "sha256": "45137bf1c4c5965e2960f02bb9aebe24956a650cd4f0009eb794a929531bd743",
+      "size": 2184,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/mode_verify_greenfield/implementation-plan.md",
+      "sha256": "974ee327f3ac14d3fca45359680ea203a90299d9b267576c98d36da607557110",
+      "size": 2184,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/mode_verify_hybrid/implementation-plan.md",
+      "sha256": "74c45f9dbf10b4c71c6292c7efa9b3af46a156dd9b1942e90e3b71d97e6cffda",
+      "size": 2152,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/record_vnext_governance_contract/implementation-plan.md",
+      "sha256": "e41f4c3cdfd3fdecbaa6119d77300060e3a9a72cdad9478b31336c26a9885aae",
+      "size": 10364,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/repository_intelligence_temp/implementation-plan.md",
+      "sha256": "5c638b490dd161a959c53ada8bf8955f165bbfcf15afe0d191622ca95d97bdf5",
+      "size": 2051,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/schema/acceptance.md",
+      "sha256": "1c2f147a0cd3599abd85e09454c214ba1e69b0fa73a8e8f33e1815d18a9f3fe2",
+      "size": 110,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/schema/file-map.md",
+      "sha256": "339126494b4de54c46cbdae492c6ab5a57b70c65ba334d14e840432748ebab98",
+      "size": 125,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/schema/implementation-plan.md",
+      "sha256": "fcb146ca192e1bde69b214252355f34ac96b17d90944ca6a8233911be42a0d30",
+      "size": 507,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/tasks.jsonl",
+      "sha256": "d141afcfb9507b7ebdd595c635ef122561048b457625e6ec4df2b67ba67c48d0",
+      "size": 54714,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_story_and_epic_rollups/acceptance.md",
+      "sha256": "27a3db8d47a0b1eebad5683b314b5b3fdc897b9e9d97507bc9a553dccf5d0026",
+      "size": 134,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_story_and_epic_rollups/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_story_and_epic_rollups/implementation-plan.md",
+      "sha256": "b1a9976b8c77017bd848e97a3a0aca00c36f2ef756b4a6e88f01136aa85df195",
+      "size": 579,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_the_state_atomically/acceptance.md",
+      "sha256": "1e5ab802f76afd280be698ce822a3a00d071bd235a7b025e7b7f26a97cca0849",
+      "size": 132,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_the_state_atomically/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/update_the_state_atomically/implementation-plan.md",
+      "sha256": "9192788a69ef90f2882a853b80541d4ab66b858640d867e9491831b465702273",
+      "size": 4572,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/v3_core_bootstrap_contract_and_baseline/implementation-plan.md",
+      "sha256": "2899cfe2d1391fd914620697ce434b75e4bf0e44acd7fff98ab329ae606aeedc",
+      "size": 11779,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/v3_core_canonical_artifact_kernel/implementation-plan.md",
+      "sha256": "a588c6514c686b1de4a0de8e9437ad05ee94eff9627a6c797e8ae04101b65ca9",
+      "size": 10041,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_ac_coverage/acceptance.md",
+      "sha256": "f2b5b7199811ab93b2e1ba1f6bcb2c0645db742855eb4d547693bede691f15c4",
+      "size": 125,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_ac_coverage/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_ac_coverage/implementation-plan.md",
+      "sha256": "618b8bf4645cae87d5fc07061c208b9d878140947d9313323d5ac60aaff11ef2",
+      "size": 4474,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_adr_impact/acceptance.md",
+      "sha256": "d086ae9374f91080ca5bfa5b822737c548081dab40e6dbe2932f37e7f0c3d2e1",
+      "size": 124,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_adr_impact/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_adr_impact/implementation-plan.md",
+      "sha256": "ae9131492de05c4c323a288dd83329efc39d018cb4263489cf777c5cce91d0a0",
+      "size": 549,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_adr_impact_successor/implementation-plan.md",
+      "sha256": "ae8c153880499f2b4467ca391c4726071dd1101954f5e2f6f19617c49adacdae",
+      "size": 4559,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_completion_judge/acceptance.md",
+      "sha256": "8cad94c5342bd6fb77ad94a630a9c36f453ea34725fd8d0e9b2942456168ae5c",
+      "size": 130,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_completion_judge/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_completion_judge/implementation-plan.md",
+      "sha256": "64095133732aaf6646480826f5cde2b5045e4e33fa406bdeed7ce83ba9242e3d",
+      "size": 4544,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_final_report/acceptance.md",
+      "sha256": "f2e63a8903a5db7e8202a6b862891867c14866f39e5bf110cbb0f532245152f3",
+      "size": 126,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_final_report/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_final_report/implementation-plan.md",
+      "sha256": "6f14ffbaabadc8f5d7980a2542ff4b816ac441d8e5a1640295009b5c76437f88",
+      "size": 555,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_independent_verifier_verdict/acceptance.md",
+      "sha256": "0b38ebeb948e203f3eae3ec5660ec9f3a4c9b22716ec5d10122604bb5ffd481c",
+      "size": 142,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_independent_verifier_verdict/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_independent_verifier_verdict/implementation-plan.md",
+      "sha256": "40d16b3ee850b59000c615c3e571c90e265ff015d770b6b3c3d3f5e5d2af5f26",
+      "size": 4712,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_remediation_history/acceptance.md",
+      "sha256": "6cc638525490e8c235d4424d19ce9e3f45dc471d3ec0dc055b87bc94f899eb61",
+      "size": 133,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_remediation_history/file-map.md",
+      "sha256": "339126494b4de54c46cbdae492c6ab5a57b70c65ba334d14e840432748ebab98",
+      "size": 125,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_remediation_history/implementation-plan.md",
+      "sha256": "4d87239fbbc6b7f530270d8876adbc68b36b8692c93a977269b64964a8c7e514",
+      "size": 576,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_required_review/acceptance.md",
+      "sha256": "ddaf5c3a2325194b67b58d17f3db842d32119c7e875e4888770584e2132af1db",
+      "size": 129,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_required_review/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_required_review/implementation-plan.md",
+      "sha256": "5f27cc05f48f819c301c1912f54da54ca88c21bcb5bc1cde1a2cbf96144ab565",
+      "size": 564,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_test_report/acceptance.md",
+      "sha256": "6f2ae98ade628c05d3076be53cd7a44bb27ffa0844a3b50040b7f4d159eff76a",
+      "size": 125,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_test_report/file-map.md",
+      "sha256": "213187136b3834dc083787bd0c88717a6f203c9022c53b5f50f07d2a4111e4fc",
+      "size": 120,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_test_report/implementation-plan.md",
+      "sha256": "453f74f7915668c98e222bbc332c6acb22f993ece0160b7a5457a56fbb42ae7e",
+      "size": 552,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_current_state/acceptance.md",
+      "sha256": "434143964936f94fa4ff62c9a7cd3fe8a8d15b8b45a84968233a050d21833256",
+      "size": 131,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_current_state/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_current_state/implementation-plan.md",
+      "sha256": "c5ed1dcf0578ed7daa41eba37a3a90d4a5f897043f01ad5092475f75a4d5ae26",
+      "size": 4558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_requested_transition/acceptance.md",
+      "sha256": "9b05338c8b3011d694652122ecfa637d68f37fd3b4cc4e134b396f447195cb54",
+      "size": 138,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_requested_transition/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_the_requested_transition/implementation-plan.md",
+      "sha256": "0f7295a2f711cf59df4970c447568f550af581769e1c40b7bbfdd1d9f45aa83f",
+      "size": 4656,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_verification_pass_evidence/acceptance.md",
+      "sha256": "08bbe83631e21bfbba7d1348735eeecfb062275c7c3f4282b1333808f0f3b016",
+      "size": 140,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_verification_pass_evidence/file-map.md",
+      "sha256": "29b15b036cf5613fb693b39bfab1f19e6bf31e19e263b386925e9766594b7eab",
+      "size": 101,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/validate_verification_pass_evidence/implementation-plan.md",
+      "sha256": "795e3ceec029a625501acc0b8ac3fe06e377593782212c1a8fa02f5a276ef121",
+      "size": 4684,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/harness.sh",
+      "sha256": "3a81738356423e7a39355c76faf8f0e59f354cb454b2b17ce6694bfcd1a4ad2d",
+      "size": 421,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/canonicalization-v1.json",
+      "sha256": "15805158b569a5bf051f8fd4cdedee3e1a66710b4e9e6c7831452cfd8e3509fa",
+      "size": 164,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/policy-bundle-v1.json",
+      "sha256": "d66422981f9e202d4cd5640aaf60dc2c9e973c9e4242ab77797469e776e5e191",
+      "size": 493,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/release-fixtures-v1.json",
+      "sha256": "c95361bc67f1c8ddea5132f6b54e531433fe68bbb44770308c9c2c37c8baf96f",
+      "size": 2110,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/risk-classification-v1.json",
+      "sha256": "0c79092a0c9217b14cd7941ea3709bd28279c81db147f3f5569a437e4027e7c6",
+      "size": 902,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/run-budget-v1.json",
+      "sha256": "ef45d90d104a27ac7d07890026fba15809f4aa34adaf2c443025f8d8f98f0b8e",
+      "size": 974,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/sandbox-profiles.yaml",
+      "sha256": "943541e38984b37b5f36a15e10c0566e4e00adc0591e55dc712cd36a4d1669d5",
+      "size": 587,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/state-schema-v1.json",
+      "sha256": "fc4f95a5768839c3ea4ccb7bc7c1441da22c401c32cdc0f557e9b79d482c3593",
+      "size": 847,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/policies/state-transitions.yaml",
+      "sha256": "2a2eb0f7d0f1aaedf05e5bec57b8fbb234ccdc6e62df2d647408376bca6bdf48",
+      "size": 1271,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/bugfix.yaml",
+      "sha256": "391b38b900b1e78172f73e11ff91d7a8363a34ac28889c5f5a3a8e7a5fe1e1d1",
+      "size": 385,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/feature.yaml",
+      "sha256": "9ddb53978411d9f91a296edbab317b7009327facd4b0a6798db29cabdb832f0d",
+      "size": 382,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/harness-change.yaml",
+      "sha256": "5a8a9eae11851b8aa4dfa5b13b8c57d23c8f768e59d29fd602b58cf9e32b2215",
+      "size": 372,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/migration.yaml",
+      "sha256": "bcb3adae3478a51956898cea81ad5aef31b4a00ff41a0ae3c7137633fae60e4d",
+      "size": 367,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/refactor.yaml",
+      "sha256": "99c577a9d0ca24241ebae2d0610353289d9b19390ef852975bbfbf465deb4e66",
+      "size": 383,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/recipes/review-only.yaml",
+      "sha256": "5dc98831556151fd8f334ba90d4fc45907e8643fa8291eada37c66614b8a6774",
+      "size": 349,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/adr.sh",
+      "sha256": "1f98985c810ef32b3a1a30149f0b61f0f5f2e043c8e645e0e80af9b8c4a35a65",
+      "size": 4904,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/approval.sh",
+      "sha256": "9e1a58830af7af00414dae9ac424e2ee29b513e9996de435ecc84245b177cae5",
+      "size": 3667,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-active-task.sh",
+      "sha256": "499c22e974ca42aa1483a158690c5e7210bb4a6145d76b254139d847e315b67a",
+      "size": 3427,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-decomposition.sh",
+      "sha256": "d812d9d8758c64579d8541b5085995707138da236993c18fe98589c431d21725",
+      "size": 4181,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-plan.sh",
+      "sha256": "fffb30f3de067c76c9f1c3d0258346eaa8b2b7a5392c78dfd4b3e253ab005e61",
+      "size": 2803,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/benchmark.py",
+      "sha256": "9fc0bf22c5fcd0d0010853cd062fdc13e7f4addaf8ff8e9c7b06eeafe41795db",
+      "size": 37091,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/benchmark.sh",
+      "sha256": "4eaaa911b337e99e3c8d3129a0222e0b8c578c6deb8c3aca3a07ae7c4eebc8e8",
+      "size": 230,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/bind-policy.sh",
+      "sha256": "32043d39d226c00d84638e8c1de458d892089087c3dcb2d31a6bf66167439de3",
+      "size": 2214,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/bootstrap-runner.sh",
+      "sha256": "e4d02e3bd9784a8ea755f785b07f231746cbc9deff6541b9748d0bcd4671ee5d",
+      "size": 4108,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/budget-guard.sh",
+      "sha256": "ffa99ce552398c54214e8c6796504a6213ec217d8905ceff31599061d02d4766",
+      "size": 1369,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/calculate-run-budget",
+      "sha256": "ca543ef876a770129ef66861ddc1c5e399d985e50547fda41a4d8204dceb7abf",
+      "size": 2589,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/capability.sh",
+      "sha256": "bacd59123c251f26446ad39d8750bad98444cdb36fadad5dd3752e0a8e8778a1",
+      "size": 3428,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-ac-coverage.sh",
+      "sha256": "48b5ddc6555f945e25f7365d9ba19c288a45c5666cc03a5b680acdaa96729e5b",
+      "size": 3431,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-ac-evidence.sh",
+      "sha256": "c32330a7d248a0df68eea870a40230efa86056ea3b0bb85c676f854b6ac45071",
+      "size": 3912,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-active-plan-contract.sh",
+      "sha256": "307a4be7351811df98d8b51eeb06abca3db7d850ce8f47609803e4ea40b15a1c",
+      "size": 10113,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-adr-awareness.sh",
+      "sha256": "adc70f2ba1d567477149c6ebeb0ee1af613d0360499bd83bc9d1e9b5ff63e786",
+      "size": 3189,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-adr-impact.sh",
+      "sha256": "f0e2b4469cf41708bce9714ea7e82a9b15495062ee1c5afcf10f00dbab908de7",
+      "size": 2770,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-baseline-contract.sh",
+      "sha256": "e2edebe26831a60172d5fe0ba3f340c0d687a79a048afda61202673944a8819f",
+      "size": 3156,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-baseline-snapshot.sh",
+      "sha256": "52cfc073c04517c5fa5669b713a51c5d5317b4ddd1a5043c185dcf4975d8fd9e",
+      "size": 3269,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-behavior-baseline.sh",
+      "sha256": "bd3fd9c107d84eabd43573eef7792f135be7ab961c217edcd3e810d669b002be",
+      "size": 3918,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-change-baseline.sh",
+      "sha256": "308350abe958082a03ea8fa61615fc4a4b3d6720e113feeadf211b994e476630",
+      "size": 2161,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-completion-judge.sh",
+      "sha256": "0aa133385d39733f6bd1e678586aa80ebb4666607a1d794b2264a1ee03304439",
+      "size": 2916,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-adr-exact-match.sh",
+      "sha256": "7901a580eebddcc940c27127d1796b818f5fe26740ee6e73f198df09da86c0fe",
+      "size": 2162,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-budget.sh",
+      "sha256": "f764e56fdd9eaec17932fcbfa3199f531d76183ae91bcd7dc183c73b0d42117e",
+      "size": 1016,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-pack.sh",
+      "sha256": "54e440b40dd7c4f0eecbe329d44e814aca72a9bb295196675342578a35c124d2",
+      "size": 6108,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-evidence.sh",
+      "sha256": "7d1dfcc3dd0db309e8357bbcaee862241871410c1a9e065d66d67f6a36aee251",
+      "size": 2421,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-failure-history.sh",
+      "sha256": "8f1d2c87bd9e98bfeedb18a7eb30008849c1451ddbee3605615f3e8457131fa9",
+      "size": 964,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-file-map.sh",
+      "sha256": "e3ba661ee710f5a6770f8ed964b5038cc4582ff9ba6b287f940fcf973af465da",
+      "size": 8877,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-full-context.sh",
+      "sha256": "b2fe0e6e48162cbc24cc41d6916a8217a8a3e476783cbe0d87c0189f5de537d6",
+      "size": 1461,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-install-integrity.sh",
+      "sha256": "eefacf6e6af4787ef6428eb0d8801522ffc9b19820c3acb332afd67d4939661b",
+      "size": 2953,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-package-integrity.sh",
+      "sha256": "bcfeb9847a31bfa73b5e96f3b59c8d59c0a6f92b61d698e7de98a0978387a1cd",
+      "size": 5997,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-plan-decomposition-semantic.sh",
+      "sha256": "e61a1795822b970a779906c01f5c0f1d7692257c5bacb93b5104bcf5c4d7c278",
+      "size": 10694,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-plan-decomposition.sh",
+      "sha256": "f96e061cabe85105efedbcaab8fdc9d3a66511113b50f5be86166c58c6aa66d3",
+      "size": 942,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-release-fixtures",
+      "sha256": "bad50f1d1aaafda44cc908b1a9c6d180120a7f59b3aa58ab72fe16831ed8ee76",
+      "size": 3005,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-remediation-trace.sh",
+      "sha256": "5906e89f8d87e9ac2f19485f792521b0466b115c6fe38496e84912bab1660cd4",
+      "size": 696,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-reviews.sh",
+      "sha256": "ae3ef30e3d9258313a3464170b7a7f004b5df63d29db087ac4f8c6c9a8260ce0",
+      "size": 1890,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-script-interface.sh",
+      "sha256": "a4712f7b620023e06b8c06310c874390f7e60c3b450d9e882eb16531fff238a1",
+      "size": 4508,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-spec-clarification.sh",
+      "sha256": "827d322d58b2f95a39e7ebabfce37d7346b5775cbb44d4d7d141a680a2ddd62c",
+      "size": 5290,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-state-schema.sh",
+      "sha256": "f4b1d9c0f214e187bb9daf7eed74b809229e088519f19758caa46e1425bb7e2f",
+      "size": 1980,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-target-safety.sh",
+      "sha256": "ca2cb31e47d2eec8aa6d9d4cc54ee74df08aafd09fd701b66eab046e953534c3",
+      "size": 794,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-template-cleanliness",
+      "sha256": "3c7662fc38cae1b4dcdaaedd348d553f7a327b7cef5c0444fbbd99b82f49ad4f",
+      "size": 2622,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-test-contract.sh",
+      "sha256": "ab7ab14faa60c4e4b26dfc1175af88a6a20cc2464de1fb63a73ecb7099b55499",
+      "size": 2438,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-v3-projections",
+      "sha256": "1327d681582196e3985f8a70e6a56b81c9bf5364d19f1d4f38758c3ffaa54038",
+      "size": 6602,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-verifier-verdict.sh",
+      "sha256": "4235ad0854301c828f3526a3906182a0bc7dac2bafa3a9da16441b1f64bdea19",
+      "size": 2818,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/check-work-alignment.sh",
+      "sha256": "26dbe869b2c2b5ed6a957ce98ad3ad16e0f50f442fe23e3c9b16d7dff132a395",
+      "size": 7665,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/classify-plan-size.sh",
+      "sha256": "85d6818c9ad47cb6ea93326f46728c780b66b493dfe0877c8f0c434789abf47e",
+      "size": 4485,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/classify-risk.sh",
+      "sha256": "9ff26322399b26b7000b32c733714ee94caf6e5dcfe464ac2b569052df430669",
+      "size": 2683,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/consume-plan.sh",
+      "sha256": "209f5a056b435e69ba0337f2ef2a260c1c45ddb5c763bc301642451c9e9a8a96",
+      "size": 5316,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/context.sh",
+      "sha256": "c7e948c49fac9697d1a9d2d84b2692156eb3cc71df3c5f623014e12321cd006f",
+      "size": 17006,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-active-plan.sh",
+      "sha256": "0b834436de85909faee527cd709d109a3bb3e58923aacaf22f863a23c02798b5",
+      "size": 11901,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-baseline-snapshot.sh",
+      "sha256": "e1955192a3515d0935d262dc224351736fccc08b6fd1a4e806239e36dff48c5d",
+      "size": 6071,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-behavior-baseline.sh",
+      "sha256": "82cce9988d4b83aaa04dc6f060ede596696954669d752c9c627e5a1b363496fd",
+      "size": 6076,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-checkpoint.sh",
+      "sha256": "a11cfda8a13fb167761b2c24c46cb33780d9a154ad069c9443f534d9b7c2318f",
+      "size": 5262,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-full-context.sh",
+      "sha256": "06e15ab5dc2b7ec76b5623ef086236d190509144e368072a38c4dbde0c843809",
+      "size": 6990,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-repair-plan.sh",
+      "sha256": "ae2b173fc2ce6873818cc5b00ed9280d1903161b48bb20a9a043d82a1f778d84",
+      "size": 1769,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/create-worktree",
+      "sha256": "4111b36eb0f9b27d1e2a9b8c75243c8f3aaa105330b90fed0cf783dc1d540998",
+      "size": 11284,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/decompose-plan.sh",
+      "sha256": "533b10a0ad1ae130e7bb6ccd825e1a5cce62b0549e53c2dc792f203f4dd31bb2",
+      "size": 14766,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/detect-behavior-baseline.sh",
+      "sha256": "8c5a7267aae9b1d27558dca25e8e9388a668f9edc90c331f4159b9d7666636cf",
+      "size": 1913,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/detect-change-baseline.sh",
+      "sha256": "5245cd55ad6c3aee91641dc81f521e909541388e3388ecb5a381cc688367de7d",
+      "size": 2441,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/diagnose-failure.sh",
+      "sha256": "f0b5b4a95160ca04f5ae6e1b69b69e4116cbd2baabbf8c20709b40bcf73e8e6e",
+      "size": 1569,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/emergency-revoke",
+      "sha256": "bbc1f71f30c2646899a3f6e34cac4d507fdff1cc0a1243c83be4a11bc987e4bb",
+      "size": 2636,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/enforcement-gate.sh",
+      "sha256": "0db4935b89bb73fc4f29670ebed9bcc4e6aff9a2c4dd2401f85fd6214822ef2e",
+      "size": 1989,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/epic.sh",
+      "sha256": "43387476f735cdfb01c989d8f7b33c80119b0f30035cdb7a204674d9e2b6cc8d",
+      "size": 4082,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/export-harness-package.sh",
+      "sha256": "bc3cdb5a0a1ba3e583820abe6e1c60ed24b7ef2343bb259b7ca573183b313365",
+      "size": 8803,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/external-saga.sh",
+      "sha256": "7f4f2245b8a9cad406665713deeac7cf246d88a9974351794730f14ee51a611e",
+      "size": 2914,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/finalize-task.sh",
+      "sha256": "87c358b56ae81cfb52d2311609b44eab7c51742fbfad1e0d77ae92b0e65f66fe",
+      "size": 7311,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/finalize-v3-run",
+      "sha256": "1e2e60cf9236e5ccdff8857ccdf47a2fe07ad6d68aa9b8d52aeca218ad1678b7",
+      "size": 7411,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/generate-autonomous-run-report.sh",
+      "sha256": "5b2de4a4ef6bf0dc1690b4936e209c5a29dc4511971ee524fe31671e984e807c",
+      "size": 5496,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/generate-test-report.sh",
+      "sha256": "274c2bd3ee7077e7238e86ffd7b69cf820be147dbe168707385f583b348ead50",
+      "size": 2063,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/harness-lib.sh",
+      "sha256": "aac0634d7d864a18062c91cff956b120edbb188ef4c9e8690ecfdf0349ac7699",
+      "size": 8961,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/harness.sh",
+      "sha256": "1a935f0a3f935ee0eae4e4ab838274f6a83eec6dc4bea4606a034f503219d396",
+      "size": 16142,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/install-harness.sh",
+      "sha256": "daa1f7dae66302baf87388ca5d76ceb2e6e45eba93334ae7353918f9c0c61274",
+      "size": 3902,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/intake-graph.sh",
+      "sha256": "cd784a6a9860dad347d8cc7023e2d5a9afe4810650c72665f173518462d5156e",
+      "size": 6853,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/list-baseline-changes.sh",
+      "sha256": "58d7d51aa6b2483f9aab4ec7a450650aaf78fbf1964cb5d1276391e687ea616f",
+      "size": 4884,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/load-recipe",
+      "sha256": "813b9dd069edef810c5097156a9c35971e1337d26143bced182c0de3c74e8ecd",
+      "size": 3171,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/migrate-v2-v3.sh",
+      "sha256": "704149dfd7263e0945b633404caa902cc025377707706fbb9673e7c3494051ff",
+      "size": 2845,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/network-capability.sh",
+      "sha256": "c705d55e4c0e988ae75ce045e89400533846fae149b7c89a72772d94fd303426",
+      "size": 3458,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/network-request",
+      "sha256": "b390db054e7be98be972d85e2b5df363801f3c0943a61995df2d906383154ef9",
+      "size": 4484,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/offline-capability",
+      "sha256": "a8b508a1126b31c5fc3b89f26da73594db52f87253d500a88c15944307280bea",
+      "size": 3981,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/record-decision.sh",
+      "sha256": "443b5cf7361c9989de31933c75882f29435f891dc1052cc9fdfd7171ff8380d6",
+      "size": 4396,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/record-failure.sh",
+      "sha256": "15f93b92611db6b85ae0817b3e6465700e4073dc57c8eae0b32ef3de1b488927",
+      "size": 3618,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/recover-finalization.sh",
+      "sha256": "67947a5dec9c5984ac1d033573cadbb78f5282373021ad717e7a0efd6f603b10",
+      "size": 5990,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/release-attest",
+      "sha256": "8bcd8ee433fc4e25a37cee7ef3b56e69d643e6e14b54fba8e1adbdf954accf37",
+      "size": 2948,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/release-check.sh",
+      "sha256": "0e9b5388af183c221d34fd3115d530877d37d45f73159daae0260564f431af3a",
+      "size": 3887,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/release-invariants.sh",
+      "sha256": "00370f0aa7378cff9ff6e9033ede88ea6ae6d06b58115c41c17f7a5968791e87",
+      "size": 960,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/remediate.sh",
+      "sha256": "176b751793e74c41040937c26a79ca9828b5e6c7b271841c9d08f7feddc059ea",
+      "size": 947,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/repository-intelligence.sh",
+      "sha256": "80ce724e06d9ad4650f9d9fe5add923a7ebc693bc26f7df8cc2bd96d72b6ddb3",
+      "size": 24853,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/resolve-file-map-violation.sh",
+      "sha256": "e5a687a59f313a8b081ef7eedb70b0727a9ace877316a1e18415c99a1b0d2bd5",
+      "size": 2473,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/restore-checkpoint.sh",
+      "sha256": "3819168c85d9e58fe9a4ebebe97805c798081078b4d8f2b142753cb7776a109f",
+      "size": 1959,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/run-events.sh",
+      "sha256": "9dd129ad74a92015396aa0076feda5fd368662787ea6f1fcddc956318b93cbf4",
+      "size": 4337,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/run-in-env.sh",
+      "sha256": "329d9bef2bd753b082b8bfd8b9c9e7d080f0c9de2426c62ec4987fcb502d65d8",
+      "size": 641,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/run-in-sandbox",
+      "sha256": "d5998821d32675bd9c2412bb46aa1aab588f64e1ca460db31c90ac244c71b744",
+      "size": 6575,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/run-required-checks.sh",
+      "sha256": "381ce65785cf4c1b71d949fa4fbfbcf0bf85365b9877cab524bbdd4000b65468",
+      "size": 2584,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/run-targeted-checks.sh",
+      "sha256": "96625ecd5998cf1acc4e53a3e1e1ffd9b94c8d14cd3d2b8ab76cd5e1a07ad7ce",
+      "size": 1641,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/score-harness.sh",
+      "sha256": "27c450b5d25deedb4009d0a5bc027ade186b282bb4f33c5d6547f207618ccef0",
+      "size": 5742,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/setup-env.sh",
+      "sha256": "0ab059ea9ad93906607bededabb76f6eeccf6da795306b8ca36f951559b10bee",
+      "size": 1796,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/spec-lock.sh",
+      "sha256": "134fe85d6903e4e65cc177bc6cb63e0bcfced278e9d94adc783be3159f0ce078",
+      "size": 3679,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/story.sh",
+      "sha256": "39544ac949c231453c00c578e3766288192567c4374a698fc59d081d355bb465",
+      "size": 9190,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/task.sh",
+      "sha256": "e7009e56e8e466cc28a6b91bfa25652177bf6c22fb81f4326eeb6cc75a7afd2f",
+      "size": 11204,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/transition-state",
+      "sha256": "156c639c980315d548f7902b2c504a8f6cd553642bc0fdeb74348117736ac0ac",
+      "size": 16060,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/trusted-time.sh",
+      "sha256": "638c6d199761b5caf5476df338b770e4efcf79372f20e5ee8994b161149546b1",
+      "size": 1857,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/update-epic-progress.sh",
+      "sha256": "e7f63e9483a323f0ac37e884a366929e3f07e5d9a233d638d48387afa98f09fd",
+      "size": 2750,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/validate-current-state.sh",
+      "sha256": "82ab557ae835db1bbc2a87dc9a7dfa0c52df69b067c11729d7b2bf4948c6789e",
+      "size": 7189,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/verifier-adapter",
+      "sha256": "f21614aff5f3db25731d5cf90cade975806fadcda41e2c16656e0776b92132c9",
+      "size": 7644,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/verify-checkpoint.sh",
+      "sha256": "95e7e8d2ea0eab2722a102edea68b95677934f1335adc0c21e8a33ffae305085",
+      "size": 2465,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/verify.sh",
+      "sha256": "0a868ea5aaa3019b1a7635a15ee4173f23291033c956f526a9adee1f172d67d9",
+      "size": 5075,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/workflow-dispatch.sh",
+      "sha256": "75442c1dcdea8e4ab326e254e13cf6ea0db6ba12c7040e2fffbcc4339d4f92f1",
+      "size": 1319,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/workspace-guard.sh",
+      "sha256": "ee0441a42503f817d028c202069723f635798082f04996eae7254d89c7b4d4a9",
+      "size": 2502,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/scripts/writer-lease.sh",
+      "sha256": "81037b6a6a679b470f83c8b89875e832b75649ae33ac2fd0f781055561cbded5",
+      "size": 2738,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/.DS_Store",
+      "sha256": "dd62eb65ab2547755f7d946497a0b612b1d7a8432d61c6fa3458e82a7d4aa42b",
+      "size": 6148,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/approval-snapshot/README.md",
+      "sha256": "2179d62ad98ffa12529ce11abc892c72771aa62b281c7cb76716dbebd264ebf6",
+      "size": 86,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/approval-snapshot/output.json",
+      "sha256": "6489d6d7a33c5d40e18fc61eeb6c34c341279ee61816394dde5189aa4ad8fae5",
+      "size": 16,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-no-tests/README.md",
+      "sha256": "b3844d64b927ad844356e68c7f6d8b470c8b1e07cc3fcdbe77cb4ebf328f3cb3",
+      "size": 73,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-no-tests/src/app.txt",
+      "sha256": "052e8ba2f09cfa869570582b61a3710c39dd1bd43d8718bee3fa565568e09c61",
+      "size": 35,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/README.md",
+      "sha256": "07e3e2cdb0dec37306f7e61565180b2bd26a8bd388dd166ba46962561ba738c5",
+      "size": 81,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/src/app.txt",
+      "sha256": "b00982b2ccb6fc391ac221bcfeee39c541f74090d0c06ec52636c9935eadead3",
+      "size": 32,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/tests/service_test.go",
+      "sha256": "dcc85a4b4969dba433128ecf0b967cfcd0764ff2ab8c9635a1392282ad0a9645",
+      "size": 37,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/git-repo/README.md",
+      "sha256": "792d97b5bbf1a3527d810cb3526a6e0e291f2e974a800c34766db48af641a09f",
+      "size": 64,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/git-repo/src/app.txt",
+      "sha256": "8c0f0f99ab9162a28a6fc226b65d02f32167791cb45f1790c0a45fa37a8ed15f",
+      "size": 25,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/greenfield/README.md",
+      "sha256": "7ec6ed048bac5d9e4a5630e0ec27e4fd23c850598663e50b2e44a93373d54aa3",
+      "size": 73,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/greenfield/src/app.txt",
+      "sha256": "f0ede7692891118d522d54602a294f4005c682550148c964859761909c1b8b09",
+      "size": 27,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/no-git-repo/README.md",
+      "sha256": "87ba404497e94ac6b837bde3fff4f77bdb412320f50cf4fb0db212b4f3d5fe36",
+      "size": 72,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/no-git-repo/src/app.txt",
+      "sha256": "7daf0f5533516bcd4ea6db1396da9231869437231c5e516b205c23471d92fc09",
+      "size": 25,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/context-retrieval/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/failure-injection/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/lifecycle/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/.github/workflows/ci.yml",
+      "sha256": "a50fa4267ee2d0b154eb373894e539acc529cc0250e53f12c1ac3061bfd603a7",
+      "size": 21,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/Dockerfile",
+      "sha256": "399c98da6fe3e39c63f902fdd192a6e931b60e2f4496dd6f1c2aee6fac62929c",
+      "size": 17,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/cmd/server/main.go",
+      "sha256": "55a60bb97151b2b4b680462447ce60ec34511b14fa10d77440c97b9777101566",
+      "size": 29,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/docs/decisions/ADR-0001-brownfield-notes.md",
+      "sha256": "c2bdd7bfcbed1864b2122c86a441759037af32fa345f2b2ebad1e055a08c2cd8",
+      "size": 85,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/expected-repo-profile.yml",
+      "sha256": "29af967d9834907ae178c7289cb79185e104bf289f5bd17560617d351bb007fd",
+      "size": 90,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/repository.go",
+      "sha256": "8a92597fec1260e3cac36e03cb6629636e395c0cf51e4292a07e08c59e20d3db",
+      "size": 40,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/service.go",
+      "sha256": "c9e44bb436b42067737ca63b9f013c34effcdd7350bc79e404df66f086ed819a",
+      "size": 37,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/service_test.go",
+      "sha256": "68aa3acf9908fa1fe19f7acb4b3090f9c1e2e2bf1529ec32b4e6aa61e1b485f0",
+      "size": 67,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/migrations/001_create_orders.sql",
+      "sha256": "9e531187827caebc897099d210909070e16bf5cb83d515e9cafc0a811e9ac9c0",
+      "size": 46,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/README.md",
+      "sha256": "a26a92e373e320cf79a5da8ae6a340e0bbc464042d8e065a63503f238d9b5a46",
+      "size": 93,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/docs/decisions/ADR-0001-initial-architecture.md",
+      "sha256": "7668209df9a813ee71999476a91439fc09ca86c051439647d4dd37cbe85d3cce",
+      "size": 93,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/expected-repo-profile.yml",
+      "sha256": "590005519fee7a2e81211317f5f0c8ebf69145387453fb2036a1affca5842a68",
+      "size": 89,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/docs/decisions/ADR-0001-hybrid-note.md",
+      "sha256": "23ee71aa11b1dee0667811bf1a72cdba4a9a8b93b384ab8e99fa7846716cd805",
+      "size": 92,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/docs/epics/new-worker/epic.md",
+      "sha256": "efb212a5e30adf518f219458b86a0d2624d74386e235b59d3ed58ff739fab073",
+      "size": 95,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/expected-repo-profile.yml",
+      "sha256": "48f055deda1d08c4d2f481a9f2b324a252eccd2e630a305ab96fe969634c8aef",
+      "size": 86,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/internal/user/service.go",
+      "sha256": "89c1cf5f37a8f80c0ef4d4fbbb69c1c87649b5eb8b47193e3050696b2c5cc120",
+      "size": 36,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/internal/user/service_test.go",
+      "sha256": "99b480350479bc2c67f503b0db203e64f8e8a00888135db2352784e8a13c06e7",
+      "size": 66,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/clarifications.md",
+      "sha256": "dfed136c0e2258db48508c368f9baa0de01ccde63fae7258d7782eda275b093c",
+      "size": 95,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/epic-memory.md",
+      "sha256": "6c4ba034e7908fc1bf390077ae417aacbcb24077618b7c4e5275fc92f4462575",
+      "size": 145,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/epic.md",
+      "sha256": "9c444cea014c039b089f041e82b104d8b1e28a1046c2b794f33a09d883c8cb40",
+      "size": 560,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/integration-contract.md",
+      "sha256": "47fba39edb6c28f2d373b50e5b0e915d9cf72abeaf36567f8555d216679e4ddc",
+      "size": 139,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/progress.md",
+      "sha256": "952b82036225d65606f059d448a968b122c60db84785c3e7ea9c54040307538a",
+      "size": 118,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/stories.jsonl",
+      "sha256": "bba6881523fd7129dd19fd813f5ede6d262b73a96cee66283e52bfb6900c5c30",
+      "size": 345,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/run_all.sh",
+      "sha256": "d3a1cdc1d3373f5dd0d87c2d3bc8985c9ac8f944dac986e13ce0ec1c3a296864",
+      "size": 4009,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_ac_coverage.sh",
+      "sha256": "7fd5cc76d7d20af8b163e4ce5f00efa74a27cffc3beeac454dad4ce6ce24cbbe",
+      "size": 1769,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_ac_evidence.sh",
+      "sha256": "8e6987e7fae0837257c41b5aa0008ab4db1ca00cb02fa326710d094513390c2c",
+      "size": 1460,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_adr_review_binding.sh",
+      "sha256": "fb802e553c37a0b4f89b5220fc72e4a8872e4c9430d4c37e12886302388937ec",
+      "size": 519,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_approval.sh",
+      "sha256": "fb99e6cd0411f4d506ea14c3e29c7050f2e7b453d9954abea9d14e688cc9ed66",
+      "size": 644,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_baseline_contract.sh",
+      "sha256": "f14ab26e00b3d190b498397182ad8637ba03047c65cbb7e291a768d09ee5e8ec",
+      "size": 854,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_approval_snapshot.sh",
+      "sha256": "e109ebadb65c39a9c3f9e751684a4c96b4d384d30c82439303670c4929ea8a2f",
+      "size": 964,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_brownfield_characterization.sh",
+      "sha256": "ad3429e933e164218efaa1ed290ef0a850aad625c275bff5fe9d9e50e52d0b84",
+      "size": 863,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_brownfield_existing_tests.sh",
+      "sha256": "ea64ef94eb3f9989eea0f8c2aa86ce48bca1479c9dd05ed6a83085887c558ab6",
+      "size": 857,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_greenfield_none.sh",
+      "sha256": "bee431318e096b3a93330426c860c20d75d50a572d188a860d8e0b84c9d96950",
+      "size": 786,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_benchmark_suite.sh",
+      "sha256": "74d786325def6d2b2252dfb752059e35aa2a8029f4f113d571750c724610da8d",
+      "size": 1777,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_bootstrap_runner.sh",
+      "sha256": "422e80eff096a1b548be6cf55490fcd141aeb79fd1fb05ed39503d41be2f724d",
+      "size": 1391,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_brownfield_benchmark_suite.sh",
+      "sha256": "d5296830534f1f59dfa9449cafd03b849ff460b11c6ac973ecd7e5728ffaf7e7",
+      "size": 1155,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_budget_guard.sh",
+      "sha256": "2295979fd8c7f27e807e42c871bb72e424ce5e9ea321facbbe6ec1ca80c8c0a6",
+      "size": 492,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_budget_routing.sh",
+      "sha256": "082403b7a1881bcca11367c3029aa16ec4f0018e39dde3031952305e7f6a8c62",
+      "size": 1226,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_capability.sh",
+      "sha256": "724a92600cf2a1127ad644649b6d4f92cfbf7bd9765982debd1a95578e5eaef6",
+      "size": 582,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_check_file_map_snapshot.sh",
+      "sha256": "b249c57e75acf476148a7044e9d0c7fbd9f0424a5e2feff9baeaf5ba9be43a37",
+      "size": 1865,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_checkpoint_contract.sh",
+      "sha256": "374832f8b405405733478b71390058675535080e0ab80e4a22293a95a0c81c54",
+      "size": 1825,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_brownfield.sh",
+      "sha256": "403fded43b559d4f15da5cd74282914fc6ff944511256ccda1211b1750725599",
+      "size": 793,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_greenfield.sh",
+      "sha256": "d0ca71890550ecc1b32a8f2002310be3e918e7446a208131443932ad3f439f0e",
+      "size": 792,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_hybrid.sh",
+      "sha256": "c36576f6c0e64f3e42e40671ab356073f44826def981ba354d34dbc3511325c6",
+      "size": 765,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_completion_judge.sh",
+      "sha256": "4b3825806dd802adb8a6d2001457fdcad2d21c849f90a222ce169a4633d094ff",
+      "size": 1739,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_consume_plan_and_rollup.sh",
+      "sha256": "86d0f5efbff2b3476ae125bb034afea38885cac6972738e0721a981d6b4efb80",
+      "size": 4992,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_context_adr_exact_match.sh",
+      "sha256": "fdff68c584e43cfe00058ffa06ea1c2a16c03dee205c5f4627f9bd48dde64133",
+      "size": 3554,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_context_retrieval_quality.sh",
+      "sha256": "f5fd16e058a91f3cb7f6a49d660edfd9d6e8fbc2f0b7a7435e66e621b5e7560c",
+      "size": 2834,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_create_baseline_snapshot.sh",
+      "sha256": "2f30c673dbe67ec07daa3b0f3f76ef0b0d7299054726edbadc9eb625f1a41302",
+      "size": 2436,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_current_state_event_chain.sh",
+      "sha256": "8c8303b85ad3694d97994d4f89deec61c4ee81dfcdda357edd51f0a493817c62",
+      "size": 1624,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_current_state_validator.sh",
+      "sha256": "88241811934b9428e593cdf7d69ea327119ed05a68ac96abec35936301c4aa1a",
+      "size": 1582,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dependency_artifact_contract.sh",
+      "sha256": "501ca9797bc4584c3f464704752660d54c55c32e530333debc2afb74bf28b77f",
+      "size": 1618,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_detect_change_baseline_git.sh",
+      "sha256": "1d740005f38654b4aa3439569ffbc1863858eeda3665f88d3e968aa68e1e6898",
+      "size": 861,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_detect_change_baseline_snapshot.sh",
+      "sha256": "ea323d049daa5e1fa0323aa49b6d50c4968fae7db113e11fc1144cf9977fb93f",
+      "size": 832,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dirty_git_active_plan_baseline.sh",
+      "sha256": "2bc97c17f1e09ad207bf004229816ffb7a414ca31577b13835d2a1bf1ab967ff",
+      "size": 2320,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dirty_git_baseline_snapshot.sh",
+      "sha256": "726658572d723914090c102fe38ce1a675a23d7d48d5f86201cfd9e1cf48a4c5",
+      "size": 2704,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_emergency_revocation.sh",
+      "sha256": "2c4120e906f4d8dc76b5b4a26ee47df4dce8660852828a92bfca41e1238802a9",
+      "size": 768,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_enforcement_gate.sh",
+      "sha256": "5b2b64d1815946b4defce74922e265c72b99335a25162c28e7999dc391f6bc82",
+      "size": 576,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_epic_story_task_lifecycle.sh",
+      "sha256": "eb275494229c5c3b8cdb928b17c9dae6c2727654e7ab2728c0aa9ba0cf1c4654",
+      "size": 3593,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_export_harness_package.sh",
+      "sha256": "ec7119c793e4fd7d27c8fe146ca778059d4e9b714c8729ebfc752176a5c48412",
+      "size": 1462,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_export_install_integrity.sh",
+      "sha256": "a91cd85fd362f15fcbbb4f9f1ed18eaca231cd67b6ad8521c05147e4654d66ac",
+      "size": 765,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_external_saga.sh",
+      "sha256": "a96b1e01b561bca649ad90f65e6d1eeac8e871aae00ebe77ebd0e6083b9ec087",
+      "size": 550,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_failure_history_contract.sh",
+      "sha256": "22829e4638e78c4b5193e02b205fa8a5c18847d516d28b93388d60af0af1a205",
+      "size": 1304,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_failure_injection.sh",
+      "sha256": "0eaccc83bcd8b68d364239d67f2d301dc5af9aa52e6f09b9d1543a37329614e3",
+      "size": 683,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_finalize_unique_completed_file.sh",
+      "sha256": "a40807b011902ddb8e47951cd4a1dabf783812c779d1e87d2cea164d63da2713",
+      "size": 1128,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_finalize_updates_epic_progress.sh",
+      "sha256": "9983fdbe72183c2fdf878c4a009c94e48e3846fa62434c51cbd15f317d65d1b6",
+      "size": 8954,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_harness_execution.sh",
+      "sha256": "3a2da12ff0f7eb08d4640937d2c20db377f11aac26a9396355d35bc40a1da02d",
+      "size": 3817,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_harness_regressions.sh",
+      "sha256": "df69cbf2fc6457b0475fc575db4e09bf5147271920fa931d94e6386c0a0eb9ec",
+      "size": 1612,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_intake_graph.sh",
+      "sha256": "2b515cc8b209f76ffda40ce772c838d23025a539594521a9a591710ab27c832c",
+      "size": 1272,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_long_plan_workflow.sh",
+      "sha256": "e2113b8e04b596482e100a1fb9a80365f86c74dbb43f182c0822b8f9ed56597d",
+      "size": 3182,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_mode_aware_context_pack.sh",
+      "sha256": "f850d99f8fb94973a80428ab0393e450fc1a57e6b75469da255ad42f53bce384",
+      "size": 3586,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_mode_aware_verification.sh",
+      "sha256": "bdbc795dd7fbab3630caf00ce0eed380d173460a3b32c61ca52a7a3586b9e0ce",
+      "size": 4355,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_network_capability.sh",
+      "sha256": "f104c7d8aafb4a6ff9ab510d6bc6d17406c9e34cc8bbdd02531dae7b69ba794a",
+      "size": 889,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_network_request_adapter.sh",
+      "sha256": "3a62b2413ba52966c09339d4f9558bd5e204d2b5fcc4dbb551e7879c98c48b58",
+      "size": 1857,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_offline_capability_guard.sh",
+      "sha256": "4b27770fe8c26fdb0adf109278fb132f91276bea3fbe33b357e376874484598c",
+      "size": 1014,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_plan_decomposition.sh",
+      "sha256": "946a438fcc7515691ff97c81538882a36bd6212693937af80fbe2c494181be82",
+      "size": 6166,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_plan_decomposition_semantic.sh",
+      "sha256": "3376b38179825ed26adbe8e3f7cd56a6d295a8cc396c21bca344fb6d9f1aec4d",
+      "size": 6981,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_policy_binding_artifact.sh",
+      "sha256": "160ab905843d48d0d442d831cba57bb639b5c886dffe6318a5277ac2f6e4207f",
+      "size": 786,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_policy_risk_binding.sh",
+      "sha256": "b1612a34af9267afbf31a96b4f2192d3dcaeb798ccfe677d89c41c2bc135dc78",
+      "size": 1333,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_public_cli_compatibility.sh",
+      "sha256": "ba50b84a7c43489d31ccd9265053ede1cd69c988e382d86473770d29faeccbc9",
+      "size": 798,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_recipe_loader.sh",
+      "sha256": "31251c8e98e0115747a8f40c0040bd8e895a1662adae77e6969328365533b1bd",
+      "size": 1021,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_recover_finalization.sh",
+      "sha256": "e9f07bf8bd4775eb45ca4a48996c5a4fa28280440c35729631e82b2d3a2471a2",
+      "size": 1624,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_release_attestation.sh",
+      "sha256": "9f44e008ed1d09a32ea2f612e5952b3fe53286a53d1e7c2a5296ad415ac873f9",
+      "size": 1556,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_release_fixture_inventory.sh",
+      "sha256": "de08ddc441303414b7329570fc9aa0cc67e2e8b1a4383ba6e0e86dd857cd492c",
+      "size": 681,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_release_invariant_fixture_gate.sh",
+      "sha256": "94e2459437d7f872412edff39a9e7bdb5eca1e088178db4719b99c3cee8d0428",
+      "size": 691,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_repository_intelligence.sh",
+      "sha256": "b24a9474829fd29b05a65c55312322c3831e512c1231f6dcccbe26e88a102639",
+      "size": 3892,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_required_review_contract.sh",
+      "sha256": "e0804ca251e29d7a092d970503f368180d04f6b267aa93632f7cfe05c3e088c3",
+      "size": 1095,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_run_events.sh",
+      "sha256": "2de90afb835f0d45256e0783d319c66b0ab22fe9cbdddd140486f9c85516c196",
+      "size": 964,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_run_successor_lineage.sh",
+      "sha256": "ba9b4163a4fd09e4b0bd59a0b92c2439d8bed7a0296cd3916e058414fe24a055",
+      "size": 855,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_sandbox_adapter.sh",
+      "sha256": "4c78a114434fbc668537a763cc0f133076100b61d1e99ba3d03cbee879351f59",
+      "size": 1737,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_spec_lock.sh",
+      "sha256": "7a6029795980768278c932698f1e853fe1e60e19f5e58392ed09f4f8e1679af6",
+      "size": 1076,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_template_cleanliness.sh",
+      "sha256": "9703b2bb2a913ab3ff968c476f3d8873c8306919cd94aafda703af2f992eb6ee",
+      "size": 962,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_test_report_contract.sh",
+      "sha256": "d455c2f22aa63b6ebc64a90d443975d144b3efdfc5f353f0005682f799e6bfc3",
+      "size": 615,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_test_runner_timeout.sh",
+      "sha256": "0419cb9033d1888012a9da10d8263f287096915f442cf337fc7ea0d27b0536d9",
+      "size": 1468,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_transition_state_chain_guard.sh",
+      "sha256": "3df86a00f0fd76f9922e6a3fc5ab9424717cd4c23966af4af047bf07399b1aa1",
+      "size": 1359,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_transition_state_validation.sh",
+      "sha256": "b0838c78118acea274974ffe9ca83c339c27265ccb0d428ac2d64cb08f27a146",
+      "size": 2532,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_trusted_time.sh",
+      "sha256": "d530c8755514fd690a0ee793549b072ae7bf9cb8ac9ad3206734dc97ed14f6fd",
+      "size": 644,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v2_v3_migration.sh",
+      "sha256": "bdd8dfebb907bbbf1f5276e81e69999e5cb6f10c77c4f89d9441047b80470440",
+      "size": 1225,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_finalization_transaction.sh",
+      "sha256": "189363f59666a7299442dde483eb1425ad8ea9943607d40e1749a574b9f6651a",
+      "size": 3306,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verification_pass_contract.sh",
+      "sha256": "6a72cb4fe3daee7882a54d7e1a192c931f54e154029cd5ab0fe3396a5582eb49",
+      "size": 1445,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verifier_adapter.sh",
+      "sha256": "2cfa7e4f8e0973e6f1fe198c6078777f3870dea43782e7b47b7b7d23687d3a53",
+      "size": 2558,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verifier_verdict.sh",
+      "sha256": "1d2038a9d42d1b1430dd92995034ae4262d9afb6adabc910691cbe5d25d4cc00",
+      "size": 1987,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verify_routing.sh",
+      "sha256": "6805e2f0efcaf9f90e277233e038a4a7f5f2ad71703650e0d88e613bcc50c806",
+      "size": 649,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_workflow_dispatch.sh",
+      "sha256": "49066884b0ea5375f99a8e8b323f1071250776b267b50548072e3380b32a0d16",
+      "size": 944,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_workspace_guard.sh",
+      "sha256": "20d3cafd539478a4d6504e0cef99fefe5678e9e374c6387d6cc59438d85fee4f",
+      "size": 658,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_worktree_integration.sh",
+      "sha256": "dfaf96b6eb9004770cc1ebae1ac3246f11e06d8765401171bb11430443e6229f",
+      "size": 2385,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_writer_lease.sh",
+      "sha256": "4147ec81bc3361ed56fbbe7c0fc06778a77452c552756c9e141db30224058281",
+      "size": 830,
+      "type": "file"
+    },
+    {
+      "path": ".agent-harness/tests/test_v3_projection_replay_audit.sh",
+      "sha256": "6378ca70fc2dd88d7546002cf8681fe2a2e461d3b8973d8e47243aa0d9f8c079",
+      "size": 2164,
+      "type": "file"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "de964ca8509d1668a5df9702365c5c5314ae18a0a9a15eaf3dcc21849df4790d",
+      "size": 524,
+      "type": "file"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "5f4a03a1ec0472468e05d26bdb7afdfc3b74e1f5db3aec6ba828c581898fac3e",
+      "size": 2115,
+      "type": "file"
+    },
+    {
+      "path": "Archive.zip",
+      "sha256": "9a5d1c368b20ee58b0af9da41ba26748455054c2664fb418e1c0fd8ccff8352c",
+      "size": 586139,
+      "type": "file"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "7ebf931fafe18b5ccc901b32612283df1d1f156b7a5a74c17e694b3473ff4155",
+      "size": 3016,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2a5ea64a6ef8d5b8ec9c4c379fdfb227d4348d34ddab81b3461ae745341e0359",
+      "size": 2753,
+      "type": "file"
+    },
+    {
+      "path": "WORKFLOW.md",
+      "sha256": "417a26ef8db321eb2b1f037e25dc5ea5d8f77dd6983bec349375a59b8dcadfe8",
+      "size": 6655,
+      "type": "file"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "b83de122d8edfc4ac3e657a5e4fb348e834999ac21839ceb057a8c62b690a706",
+      "size": 1152,
+      "type": "file"
+    },
+    {
+      "path": "my_docs",
+      "sha256": "3191e6398e38dc8aafb22f0f60ce35d121945773e4738d646b92bc8f5a05d0fc",
+      "size": 111,
+      "type": "symlink"
+    }
+  ],
+  "mode": "snapshot",
+  "snapshot_hash": "7f5a81a9bcd04159d7827b238da9821d127321b478a1997e8d32a3ad060f7be6",
+  "task_id": "schema"
+}

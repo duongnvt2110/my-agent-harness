@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-12T09:22:52.101788+00:00",
+  "finalized_at": "2026-07-12T09:22:53.584613+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-12T09:22:52.130101+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T09:22:52.159798+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T09:22:52.247577+00:00",
+      "expected_after_hash": "de644a1a4f27aa96a752f618c594269853c9815083c9ba699a27827ef2c4c722",
+      "expected_before_hash": "e681ed66f684d6e5ddc64458e1dcb13673f345e84efdcca1d2bfc0f39185eab4",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T09:22:52.302263+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T09:22:53.555808+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T09:22:53.584509+00:00",
+      "expected_after_hash": "de644a1a4f27aa96a752f618c594269853c9815083c9ba699a27827ef2c4c722",
+      "expected_before_hash": "de644a1a4f27aa96a752f618c594269853c9815083c9ba699a27827ef2c4c722",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "update_story_and_epic_rollups_successor",
+  "updated_at": "2026-07-12T09:22:53.584613+00:00"
+}

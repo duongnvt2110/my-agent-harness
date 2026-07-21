@@ -12,8 +12,14 @@ finalization.
 
 ## Task Packet
 
-The bounded instruction packet printed by `scripts/harness.sh next` for the current
-task state.
+The bounded instruction packet printed by `.agent-harness/harness.sh next` for
+the current task state.
+
+## Full Context
+
+The repo-grounded pre-breakdown artifact generated before epic, story, or task
+decomposition. It captures the current implementation understanding, selected
+docs, constraints, unknowns, and recommended breakdown.
 
 ## Active Plan
 
@@ -44,7 +50,7 @@ next worker turn.
 ## Verification
 
 Script-owned gate execution against the task contract, check contract, file
-map, evidence, review requirements, and test matrix.
+map, evidence, review requirements, and required checks.
 
 ## Review
 
@@ -79,3 +85,14 @@ The process of completing and archiving a task after required gates pass.
 ## Finalizer Script
 
 The script that performs finalization. It is not a separate agent role.
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness Context
+
+Harness plans, evidence, reviews, epics, and task docs live under
+`.agent-harness/docs/`.
+Managed harness scripts live under `.agent-harness/scripts/`.
+Managed harness tests live under `.agent-harness/tests/`.
+The public entrypoint is `.agent-harness/harness.sh`.
+Full-context evidence lives under `.agent-harness/docs/evidence/<task_id>/`.
+<!-- END AGENT-HARNESS -->

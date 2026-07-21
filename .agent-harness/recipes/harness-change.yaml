@@ -1,0 +1,1 @@
+{"schema_version":1,"canonicalization_version":1,"name":"harness-change","version":1,"required_states":["INTAKE","UNDERSTANDING_GATE","SPEC_LOCKED","PLAN_READY","IMPLEMENTING","VERIFYING","FINALIZED"],"verification_profile":"full","checkpoint_policy":"always","oracle_policy":"on_repeated_failure","human_approval_policy":"always"}

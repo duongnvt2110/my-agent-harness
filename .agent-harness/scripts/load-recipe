@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+recipe_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../recipes" && pwd)"
+name="${1:-}"
+if [ -z "$name" ] || [ "$name" = "--all" ]; then
+  mode="all"
+else
+  mode="one"
+fi
+
+python3 - "$recipe_root" "$name" "$mode" <<'PY'
+from __future__ import annotations
+import hashlib, json, pathlib, sys
+
+root = pathlib.Path(sys.argv[1])
+name = sys.argv[2]
+mode = sys.argv[3]
+allowed = {"schema_version","canonicalization_version","name","version","required_states","verification_profile","checkpoint_policy","oracle_policy","human_approval_policy"}
+states = {"INTAKE","UNDERSTANDING_GATE","CLARIFICATION_REQUIRED","SPEC_LOCKED","PLAN_READY","IMPLEMENTING","VERIFYING","FINALIZED"}
+profiles = {"targeted","full","read_only"}
+checkpoints = {"before_edit","always"}
+approvals = {"on_scope_expansion","always"}
+names = [name] if mode == "one" else sorted(path.stem for path in root.glob("*.yaml"))
+if mode == "one" and ("/" in name or "\\" in name or name not in {path.stem for path in root.glob("*.yaml")}):
+    raise SystemExit("unknown recipe")
+loaded = []
+for recipe_name in names:
+    path = root / f"{recipe_name}.yaml"
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"invalid recipe {recipe_name}: {exc}")
+    if set(data) != allowed:
+        unknown = sorted(set(data) - allowed)
+        missing = sorted(allowed - set(data))
+        raise SystemExit(f"recipe {recipe_name} schema mismatch unknown={unknown} missing={missing}")
+    if data["schema_version"] != 1 or data["canonicalization_version"] != 1 or data["version"] != 1:
+        raise SystemExit(f"recipe {recipe_name} has unsupported version")
+    if data["name"] != recipe_name or not isinstance(data["required_states"], list):
+        raise SystemExit(f"recipe {recipe_name} identity or list fields invalid")
+    if not {"INTAKE","SPEC_LOCKED","VERIFYING","FINALIZED"}.issubset(data["required_states"]):
+        raise SystemExit(f"recipe {recipe_name} weakens mandatory lifecycle states")
+    if any(state not in states for state in data["required_states"]):
+        raise SystemExit(f"recipe {recipe_name} contains unknown state")
+    if data["verification_profile"] not in profiles or data["checkpoint_policy"] not in checkpoints or data["human_approval_policy"] not in approvals:
+        raise SystemExit(f"recipe {recipe_name} weakens verification, checkpoint, or approval policy")
+    if data["oracle_policy"] not in {"on_repeated_failure","never"}:
+        raise SystemExit(f"recipe {recipe_name} contains unknown oracle policy")
+    recipe_hash = hashlib.sha256(json.dumps(data, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    loaded.append({**data, "recipe_hash": recipe_hash, "source": str(path)})
+if mode == "one":
+    print(json.dumps(loaded[0], sort_keys=True))
+else:
+    print(json.dumps({"recipe_loader_version":1,"recipes":loaded}, sort_keys=True))
+PY

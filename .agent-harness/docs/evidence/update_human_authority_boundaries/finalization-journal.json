@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-07-15T09:33:45.226147+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZING",
+  "steps": [
+    {
+      "completed_at": "2026-07-15T09:39:02.917256+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T09:39:02.949016+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T09:39:03.051285+00:00",
+      "expected_after_hash": "0e77d5b76d2af59818735697a7700b0ea10677e26f60154326489a2373c6ac00",
+      "expected_before_hash": "1d4845dbef549b141116c40079de41dba5b1a8b74c43f4d4332c80395d88e5e3",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T09:39:03.118570+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "name": "reports",
+      "status": "PENDING"
+    },
+    {
+      "name": "move_plan",
+      "status": "PENDING"
+    }
+  ],
+  "task_id": "update_human_authority_boundaries",
+  "updated_at": "2026-07-15T09:39:03.118671+00:00"
+}

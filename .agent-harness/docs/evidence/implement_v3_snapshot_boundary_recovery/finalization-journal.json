@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-15T15:35:45.641838+00:00",
+  "finalized_at": "2026-07-15T15:35:46.558728+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-15T15:35:45.676543+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T15:35:45.712591+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T15:35:45.828181+00:00",
+      "expected_after_hash": "5a185e4e31981779a17b0ff8f2149c1c8f86e9ae7269cb038728e4720efd3cfc",
+      "expected_before_hash": "ca0a165c1529926a1cab077ebc4c39c5ced8252f3de011c03b9d648dfb8fc3e4",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T15:35:45.903618+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T15:35:46.527361+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T15:35:46.558622+00:00",
+      "expected_after_hash": "5a185e4e31981779a17b0ff8f2149c1c8f86e9ae7269cb038728e4720efd3cfc",
+      "expected_before_hash": "5a185e4e31981779a17b0ff8f2149c1c8f86e9ae7269cb038728e4720efd3cfc",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "implement_v3_snapshot_boundary_recovery",
+  "updated_at": "2026-07-15T15:35:46.558728+00:00"
+}

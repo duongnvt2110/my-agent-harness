@@ -1,0 +1,309 @@
+{
+  "budget": 5000,
+  "compiler_version": "v4-context-compiler-1",
+  "critical_requirements": [
+    "Verifier binds the verdict to immutable plan and workspace hashes",
+    "Verifier runs checks from the plan instead of trusting agent claims",
+    "Forged success, changed plan, changed source, and failed checks produce failure",
+    "Only a harness-produced PASSED verdict can be accepted for finalization"
+  ],
+  "estimated_tokens": 3254,
+  "omissions": [
+    {
+      "path": "docs/context/repository-intelligence/greenfield-decisions.md",
+      "reason": "not selected by the locked task and repository-mode compiler"
+    },
+    {
+      "path": "docs/context/repository-intelligence/repository-inventory.json",
+      "reason": "not selected by the locked task and repository-mode compiler"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 1433,
+      "path": "docs/context/memory-index.json",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "4640d04b1f81f79ba1bb7450fb5cb1e8e6478f46c98197dbfa7dbfb3afdd3f85"
+    },
+    {
+      "bytes": 492,
+      "path": "docs/context/repo-profile.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "81ee7fcc9c60c1d2f00aa5163ebb6e3524318e59a8738997324fd0c9a150df47"
+    },
+    {
+      "bytes": 896,
+      "path": "docs/context/commands.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "4a7ac7b98c4d9fd88198effd74fc9bc18fe38723f6b3563654bb8bd752fdb8f4"
+    },
+    {
+      "bytes": 325,
+      "path": "docs/context/boundaries.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "4c6aa053406436d7720ef5b07bf67958485c51f7411b31c6f478ffcd1499113d"
+    },
+    {
+      "bytes": 322,
+      "path": "docs/context/conventions.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "8e87fba805d6c1c88df812c7f049eb246dff203752b97d5e4865544555107e71"
+    },
+    {
+      "bytes": 481,
+      "path": "docs/context/runbooks.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "81329ce4ce18ce97c548fa12c63bff1362eb4430b389d279b891b5e021a8c808"
+    },
+    {
+      "bytes": 380,
+      "path": "docs/context/known-errors.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "957097c9fcb39a53fd9f229fe976fc925a0974af72594153c356da491673e225"
+    },
+    {
+      "bytes": 168,
+      "path": "docs/context/discussions.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "ad54ef04d6aad9bef56b72e69a157f903c00277bb5ecc61e48c1151cf19fce6e"
+    },
+    {
+      "bytes": 399,
+      "path": "docs/evidence/v4_slice_4_independent_verification/working-memory.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "a2c0c4418c268e431837a0adf1a45fea74591057af6e7eb3e9a24ef87fb310f3"
+    },
+    {
+      "bytes": 243,
+      "path": "docs/evidence/v4_slice_4_independent_verification/localization.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "06a42a20ab6a7c62fd93b070f7ae227c34952364fd8bb7a20b2e321c645d258b"
+    },
+    {
+      "bytes": 260,
+      "path": "docs/evidence/v4_slice_4_independent_verification/brownfield-conventions.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "49d5bf492970f622d36e4b2e96d0a97d4e45706c875c02988f85acea0fd5e3d8"
+    },
+    {
+      "bytes": 1423,
+      "path": "docs/evidence/v4_slice_4_independent_verification/repo-knowledge-selection.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "78d27cfeac05701744fc53efabedb6c1ac7abe7224e96e66ef40cee11dd91471"
+    },
+    {
+      "bytes": 492,
+      "path": "docs/evidence/v4_slice_4_independent_verification/impact-scan.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "24a39fbe33d156cd36aa120794d4f8e95d54737e7cd3e333941d9b4a6e4b6f03"
+    },
+    {
+      "bytes": 391,
+      "path": "docs/evidence/v4_slice_4_independent_verification/convention-awareness.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "05c98a346d76b0a82967e4107a9160fb3570273acb8b7fa2ec75226df21973a5"
+    },
+    {
+      "bytes": 325,
+      "path": "docs/evidence/v4_slice_4_independent_verification/business-rule-awareness.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "092b72f3c459b37c6d6e40bbcee226d5fcd508986f7f326b664ca277983932f6"
+    },
+    {
+      "bytes": 241,
+      "path": "docs/evidence/v4_slice_4_independent_verification/regression-scope.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "785f2023f6b0f48f6d11cd565ecd15839c6465cba99332390a711ef55d1b5615"
+    },
+    {
+      "bytes": 197,
+      "path": "docs/evidence/v4_slice_4_independent_verification/verification-scope.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "f51f230b50bd4b0090fd057da0f4aa8c144c926ecc1a498c797815c0e46dd4a2"
+    },
+    {
+      "bytes": 336,
+      "path": "docs/evidence/v4_slice_4_independent_verification/environment-state.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "a68081d83e81ee8318b56e50e28119ccc8d26887a33a16a652aa170bd6a2b3fd"
+    },
+    {
+      "bytes": 175,
+      "path": "docs/evidence/v4_slice_4_independent_verification/human-approval.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "65c3eae37f62efb6cdf312d7af7f4f44293b980005dc4e499be4eec1bf255185"
+    },
+    {
+      "bytes": 810,
+      "path": "docs/evidence/v4_slice_4_independent_verification/adr-review.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "a907fde25b9f6afd5c2610997af33c29dbd4856c6f6fe8a7bf363f6a151ab94d"
+    },
+    {
+      "bytes": 366,
+      "path": "docs/decisions/adr-index.json",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "88c27d7cae5488f4984bbac2eb04d76e7ced08458c8b6e0160320f60e36188bf"
+    },
+    {
+      "bytes": 512,
+      "path": "docs/context/repository-intelligence/README.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "4eaea98c0dc3c6d19ed822368f0e2d72ab462bb913941c8495dbeefdffcdf197"
+    },
+    {
+      "bytes": 595,
+      "path": "docs/context/repository-intelligence/repo-profile.yml",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "45d580bcf916511c3ce894e8ec0a1abd49ca581af4d0ef808f322337e9e377b6"
+    },
+    {
+      "bytes": 573,
+      "path": "docs/context/repository-intelligence/repo-map.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "c1ada9b76f844aad468608889cdf6d17aff548897f348ee560648b8a89f26154"
+    },
+    {
+      "bytes": 364,
+      "path": "docs/context/repository-intelligence/architecture-map.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "87b67ced7b383477c384c4a09e96c3de6c7312e982e89005969f2c1ca792540f"
+    },
+    {
+      "bytes": 404,
+      "path": "docs/context/repository-intelligence/module-boundaries.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "6d414b92f78f4c839c8a7ec30aba0b2e69ec00cf2b2f0308233b43a305302828"
+    },
+    {
+      "bytes": 428,
+      "path": "docs/context/repository-intelligence/domain-model.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "ce18b9365ecb7095e3d82327ec973dd5748cb355331bfe64f8a24e980abe7ded"
+    },
+    {
+      "bytes": 406,
+      "path": "docs/context/repository-intelligence/business-rules.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "40a995f8c3bf3cb7c6feb48e68007fe0fe3efa8a2dbeb4a10bf9a887af1cbe84"
+    },
+    {
+      "bytes": 275,
+      "path": "docs/context/repository-intelligence/data-flow.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "910ba4d1e2dbdef15fe89208c528a6d3862c130acdf9229a9980b6d0517a649f"
+    },
+    {
+      "bytes": 350,
+      "path": "docs/context/repository-intelligence/api-contracts.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "25b3b58262f4f34f1d381dd574031e7324c6dd563536f0103185c0e42fbc7db4"
+    },
+    {
+      "bytes": 295,
+      "path": "docs/context/repository-intelligence/database-model.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "33815b50f73710703c0cf773edbe65730ea5e03dd1016693cc8be91c8c5c1878"
+    },
+    {
+      "bytes": 298,
+      "path": "docs/context/repository-intelligence/implementation-patterns.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "2f815fb12f0bc726af12e2367cdf7be43f8955bd1167e7b6073dff5f0b774588"
+    },
+    {
+      "bytes": 258,
+      "path": "docs/context/repository-intelligence/testing-style.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "f0d4e35eae052255d573aa636cd8b4d1f84b00cd1ea0732633b21124e47d0358"
+    },
+    {
+      "bytes": 215,
+      "path": "docs/context/repository-intelligence/dependency-map.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "ee751ff41b7c9b77fb55b4664001496d4edf604e64fa3c3dcbe40639b620d0e2"
+    },
+    {
+      "bytes": 175,
+      "path": "docs/context/repository-intelligence/dangerous-areas.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "a3d16f5ae2821a3a26779aa76f19c6a27cc04e3703f3d40b8e5cd272455faac3"
+    },
+    {
+      "bytes": 289,
+      "path": "docs/context/repository-intelligence/legacy-constraints.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "2dede2e5727d535ec5aeec676ed74394826a1a98a49a898f4d1e056e81a5e63e"
+    },
+    {
+      "bytes": 2260,
+      "path": "docs/context/repository-intelligence/knowledge-index.json",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "e8b212cf10bd274d33de24b54218a8d22c51882f6b21c5f6bb756a2b3538e010"
+    },
+    {
+      "bytes": 240,
+      "path": "docs/context/repository-intelligence/error-handling-style.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "7eef1f4373a13ee754b9516f81fa591a5c5b9b55103e13c23919ed811aee93cc"
+    },
+    {
+      "bytes": 187,
+      "path": "docs/context/repository-intelligence/logging-style.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "dce21280ae55076664912c1b26ae5c9e11888fc0663068c36644aa2f71f594d5"
+    },
+    {
+      "bytes": 212,
+      "path": "docs/context/repository-intelligence/transaction-patterns.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "e90e141ed05e69da365a2575ae3e905bdd29c8ca14ceab92ee7f210614b8027f"
+    },
+    {
+      "bytes": 247,
+      "path": "docs/context/repository-intelligence/brownfield-observations.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "d6057a238f350c5faacc103202442760b2a807609bb0232316701b8c2f3bb349"
+    },
+    {
+      "bytes": 654,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/epic.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "f534a7d1974fac83612013594dfe1fa8bf8f1d706077a61359e9130aabdf3470"
+    },
+    {
+      "bytes": 1903,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/epic-memory.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "36517b92f88ea090e1e690a41cf0b6ea43ea68e52764f685fc862ee34561f8e6"
+    },
+    {
+      "bytes": 145,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/integration-contract.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "7ecf841e2e00ff758ec890479b5bdf6e47cc7316de18d9a03325a739f270bf83"
+    },
+    {
+      "bytes": 83,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/clarifications.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "06e4c45cdb984d555975d16e0a2f7c5be895374483c6c99b190f3eb460e5b763"
+    },
+    {
+      "bytes": 3051,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/progress.md",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "adc65006e3e8f84cc1afb35e60dd222e803e327534d89699a86fcabe008cf66c"
+    },
+    {
+      "bytes": 1037,
+      "path": "docs/epics/agent_harness_v4_detailed_implementation_plan_epic/stories.jsonl",
+      "selection_reason": "task, repository mode, or required harness evidence",
+      "sha256": "c9531e568478d2a3e2bdc7b1a94155c0d3213758e1b75ace39e0c09e50f418b0"
+    }
+  ],
+  "status": "generated",
+  "task_id": "v4_slice_4_independent_verification",
+  "within_budget": true
+}

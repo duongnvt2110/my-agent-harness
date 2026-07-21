@@ -1,0 +1,29 @@
+repo:
+  mode: brownfield
+  confidence: high
+  brownfield_score: 95
+  greenfield_score: 5
+
+signals:
+  existing_source_code: true
+  existing_tests: true
+  database_migrations: true
+  api_routes: true
+  domain_logic: true
+  production_config: true
+  ci_config: false
+  adr_docs: true
+  conventions: true
+  backward_compatibility: true
+
+controls_required:
+  repo_knowledge: true
+  impact_scan: true
+  convention_awareness: true
+  business_rule_awareness: true
+  regression_scope: true
+  architecture_decision_alignment: false
+
+last_scan:
+  root: /Users/exe-macbook/duong/ai/harness-scratch-template
+  scanned_at: 2026-07-18T11:44:32Z

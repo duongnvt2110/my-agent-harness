@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/harness-lib.sh"
+resolve_harness_paths
+cd "$HARNESS_ROOT"
+command_name="${1:-}"; shift || true
+case "$command_name" in
+  issue)
+    [ "$#" -eq 10 ] || fail "Usage: scripts/offline-capability issue OUTPUT INTAKE TASK RUN SPEC_HASH POLICY_HASH WORKSPACE SESSION OPERATIONS_JSON TTL_SECONDS"
+    python3 - "$@" <<'PY'
+import hashlib,hmac,json,os,pathlib,sys,time,uuid
+out,intake,task,run,spec,policy,workspace,session,operations,ttl=sys.argv[1:]
+key=os.environ.get('OFFLINE_CAPABILITY_SIGNING_KEY')
+if not key: raise SystemExit('offline capability issuer key unavailable')
+try: ops=json.loads(operations); assert isinstance(ops,list) and ops
+except Exception: raise SystemExit('operations must be a JSON list')
+allowed={'inspect','analyze','plan','read','record_observation'}
+if any(op not in allowed for op in ops): raise SystemExit('offline issue permits only bounded read-only operations')
+record={'schema_version':1,'capability_id':str(uuid.uuid4()),'intake_id':intake,'task_id':task,'run_id':run,'spec_hash':spec,'policy_hash':policy,'workspace_hash':workspace,'session_id':session,'operations':ops,'issued_epoch':int(time.time()),'expires_epoch':int(time.time())+int(ttl),'provisional':True}
+canonical=json.dumps(record,sort_keys=True,separators=(',',':')).encode(); record['signature']=hmac.new(key.encode(),canonical,hashlib.sha256).hexdigest(); pathlib.Path(out).write_text(json.dumps(record,sort_keys=True,indent=2)+'\n'); print(json.dumps({'valid':True,'capability_id':record['capability_id'],'provisional':True,'operations':ops},sort_keys=True))
+PY
+    ;;
+  validate)
+    [ "$#" -eq 8 ] || fail "Usage: scripts/offline-capability validate CAPABILITY RUN SPEC_HASH POLICY_HASH WORKSPACE SESSION OPERATION NOW_EPOCH"
+    python3 - "$@" <<'PY'
+import hashlib,hmac,json,os,pathlib,sys,time
+cap_path,run,spec,policy,workspace,session,operation,now=sys.argv[1:]
+errors=[]; key=os.environ.get('OFFLINE_CAPABILITY_SIGNING_KEY')
+try: data=json.loads(pathlib.Path(cap_path).read_text())
+except Exception as exc: data={}; errors.append(f'invalid capability: {type(exc).__name__}')
+if not key: errors.append('offline validator key unavailable')
+required={'intake_id','task_id','run_id','spec_hash','policy_hash','workspace_hash','session_id','operations','issued_epoch','expires_epoch','provisional','signature'}
+if not required.issubset(data): errors.append('capability missing required binding')
+unsigned=dict(data); signature=unsigned.pop('signature',None)
+expected=hmac.new(key.encode() if key else b'',json.dumps(unsigned,sort_keys=True,separators=(',',':')).encode(),hashlib.sha256).hexdigest()
+if signature != expected: errors.append('capability signature mismatch')
+if data.get('run_id') != run or data.get('spec_hash') != spec or data.get('policy_hash') != policy or data.get('workspace_hash') != workspace or data.get('session_id') != session: errors.append('capability context mismatch')
+try: now_value=int(now)
+except Exception: now_value=int(time.time()); errors.append('trusted control-plane time required')
+if now_value >= int(data.get('expires_epoch',0)): errors.append('capability expired')
+if operation not in data.get('operations',[]): errors.append('operation is not authorized by capability')
+if operation not in {'inspect','analyze','plan','read','record_observation'}: errors.append('offline high-risk or irreversible operation denied')
+if data.get('provisional') is not True: errors.append('offline evidence must remain provisional')
+result={'offline_capability_version':1,'valid':not errors,'decision':'ALLOW_PROVISIONAL' if not errors else 'DENY','provisional':True,'assurance_limitations':['control-plane reconciliation required before authority is granted'],'errors':errors}
+print(json.dumps(result,sort_keys=True)); raise SystemExit(0 if not errors else 1)
+PY
+    ;;
+  *) fail "Usage: scripts/offline-capability issue|validate ...";;
+esac

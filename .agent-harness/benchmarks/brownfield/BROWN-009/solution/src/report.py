@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+import argparse
+import json
+from pathlib import Path
+
+def compare(current: dict, previous: dict | None) -> dict:
+    if previous is None:
+        return {"previous_total_score": None, "delta_score": None, "trend": "first_run"}
+    current_score = int(current.get("summary", {}).get("total_score", 0))
+    previous_score = int(previous.get("summary", {}).get("total_score", 0))
+    delta = current_score - previous_score
+    if delta > 0:
+        trend = "improved"
+    elif delta < 0:
+        trend = "regressed"
+    else:
+        trend = "unchanged"
+    return {"previous_total_score": previous_score, "delta_score": delta, "trend": trend}
+
+def render(current: dict, previous: dict | None = None) -> str:
+    summary = current.get("summary", {})
+    history = compare(current, previous)
+    lines = [
+        "# Benchmark Report",
+        "",
+        f"total_score: {summary.get('total_score', 0)}",
+        f"max_score: {summary.get('max_score', 0)}",
+        f"result: {summary.get('result', 'unknown')}",
+        "",
+        "## History Comparison",
+        "",
+        f"previous_total_score: {history['previous_total_score']}",
+        f"delta_score: {history['delta_score']}",
+        f"trend: {history['trend']}",
+        "",
+    ]
+    return "\n".join(lines)
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("current")
+    parser.add_argument("output")
+    parser.add_argument("--previous")
+    args = parser.parse_args(argv)
+    current = json.loads(Path(args.current).read_text())
+    previous = json.loads(Path(args.previous).read_text()) if args.previous else None
+    Path(args.output).write_text(render(current, previous))
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

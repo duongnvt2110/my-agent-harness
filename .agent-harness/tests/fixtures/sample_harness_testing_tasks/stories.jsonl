@@ -1,0 +1,2 @@
+{"id":"sample_harness_story_alpha","title":"Validate epic and story plumbing","status":"READY","depends_on":[],"acceptance":["Epic and story plumbing validates."],"notes":""}
+{"id":"sample_harness_story_beta","title":"Validate task registry linkage","status":"READY","depends_on":[],"acceptance":["Task registry linkage validates."],"notes":""}

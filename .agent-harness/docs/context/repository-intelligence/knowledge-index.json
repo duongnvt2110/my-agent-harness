@@ -1,0 +1,101 @@
+[
+  {
+    "id": "repo-profile",
+    "type": "classification",
+    "path": "docs/context/repository-intelligence/repo-profile.yml",
+    "summary": "Repository mode classification and scan summary.",
+    "tags": [
+      "repo-mode",
+      "classification",
+      "scan"
+    ],
+    "mode": [
+      "greenfield",
+      "brownfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  },
+  {
+    "id": "repo-map",
+    "type": "overview",
+    "path": "docs/context/repository-intelligence/repo-map.md",
+    "summary": "High-level map of the repository's major areas.",
+    "tags": [
+      "map",
+      "overview",
+      "harness"
+    ],
+    "mode": [
+      "greenfield",
+      "brownfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  },
+  {
+    "id": "business-rules",
+    "type": "rule",
+    "path": "docs/context/repository-intelligence/business-rules.md",
+    "summary": "Harness rules that must be preserved while extending the workflow.",
+    "tags": [
+      "rules",
+      "harness",
+      "verification"
+    ],
+    "mode": [
+      "brownfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  },
+  {
+    "id": "testing-style",
+    "type": "convention",
+    "path": "docs/context/repository-intelligence/testing-style.md",
+    "summary": "How harness regression tests are organized and executed.",
+    "tags": [
+      "testing",
+      "convention",
+      "regression"
+    ],
+    "mode": [
+      "greenfield",
+      "brownfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  },
+  {
+    "id": "brownfield-observations",
+    "type": "observation",
+    "path": "docs/context/repository-intelligence/brownfield-observations.md",
+    "summary": "Current repo observations that shape brownfield work.",
+    "tags": [
+      "brownfield",
+      "observations",
+      "legacy"
+    ],
+    "mode": [
+      "brownfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  },
+  {
+    "id": "greenfield-decisions",
+    "type": "architecture_policy",
+    "path": "docs/context/repository-intelligence/greenfield-decisions.md",
+    "summary": "Intended architecture guidance for greenfield tasks.",
+    "tags": [
+      "greenfield",
+      "architecture",
+      "policy"
+    ],
+    "mode": [
+      "greenfield",
+      "hybrid"
+    ],
+    "source": "repo_scan"
+  }
+]

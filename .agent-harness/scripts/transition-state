@@ -1,0 +1,480 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/harness-lib.sh"
+resolve_harness_paths
+cd "$HARNESS_ROOT"
+
+state_path=""
+target_state=""
+format="text"
+check_only="false"
+operation_set="false"
+spec_hash=""
+package_path=""
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --state)
+      state_path="${2:-}"
+      [ -n "$state_path" ] || fail "--state requires a path"
+      shift 2
+      ;;
+    --to)
+      target_state="${2:-}"
+      [ -n "$target_state" ] || fail "--to requires a lifecycle state"
+      shift 2
+      ;;
+    --check)
+      check_only="true"
+      operation_set="true"
+      shift
+      ;;
+    --apply)
+      check_only="false"
+      operation_set="true"
+      shift
+      ;;
+    --json)
+      format="json"
+      shift
+      ;;
+    --spec-hash)
+      spec_hash="${2:-}"
+      [ -n "$spec_hash" ] || fail "--spec-hash requires a package hash"
+      shift 2
+      ;;
+    --package)
+      package_path="${2:-}"
+      [ -n "$package_path" ] || fail "--package requires a locked Change Package path"
+      shift 2
+      ;;
+    -h|--help)
+      cat <<'USAGE'
+Usage: scripts/transition-state --state PATH --to STATE (--check|--apply) [--json]
+
+Validate a v3 lifecycle transition, or apply it with an atomic state update.
+The apply path owns the run lock, event append, state replacement, and
+run-local current.md projection.
+USAGE
+      exit 0
+      ;;
+    *)
+      fail "Unknown argument: $1"
+      ;;
+  esac
+done
+
+[ -n "$state_path" ] || fail "--state is required"
+[ -n "$target_state" ] || fail "--to is required"
+[ "$operation_set" = "true" ] || fail "transition-state requires explicit --check or --apply"
+
+python3 - "$state_path" "$target_state" "$format" "$check_only" "$HARNESS_ROOT/policies/state-transitions.yaml" "$spec_hash" "$package_path" <<'PY'
+from __future__ import annotations
+
+import ast
+import datetime as dt
+import hashlib
+import json
+import os
+import pathlib
+import subprocess
+import sys
+import tempfile
+
+state_path = pathlib.Path(sys.argv[1])
+target = sys.argv[2]
+output_format = sys.argv[3]
+check_only = sys.argv[4] == "true"
+apply_requested = not check_only
+policy_path = pathlib.Path(sys.argv[5])
+spec_hash = sys.argv[6]
+package_path = pathlib.Path(sys.argv[7]) if sys.argv[7] else None
+sys.path.insert(0, str(policy_path.parent.parent / "scripts"))
+from event_store import append as append_event, build as build_event, load as load_events, validate as validate_events
+
+result: dict[str, object] = {
+    "validator_version": 1,
+    "policy_schema_version": None,
+    "state_path": str(state_path),
+    "from_state": None,
+    "to_state": target,
+    "valid": False,
+    "decision": "DENY",
+    "errors": [],
+    "applied": False,
+}
+
+def parse_list(value: str) -> list[str]:
+    value = value.strip()
+    if not (value.startswith("[") and value.endswith("]")):
+        raise ValueError("policy list must use bracket syntax")
+    inner = value[1:-1].strip()
+    if not inner:
+        return []
+    return [item.strip().strip("\\\"'") for item in inner.split(",")]
+
+def parse_policy(path: pathlib.Path) -> tuple[int | None, set[str], dict[str, list[str]]]:
+    schema = None
+    terminals: set[str] = set()
+    transitions: dict[str, list[str]] = {}
+    in_transitions = False
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line == "transitions:":
+            in_transitions = True
+            continue
+        if in_transitions and not raw.startswith("  "):
+            in_transitions = False
+        if line.startswith("schema_version:"):
+            schema = int(line.split(":", 1)[1].strip())
+        elif line.startswith("terminal_states:"):
+            terminals = set(parse_list(line.split(":", 1)[1]))
+        elif in_transitions and ":" in line:
+            source, values = line.split(":", 1)
+            transitions[source.strip()] = parse_list(values)
+    return schema, terminals, transitions
+
+try:
+    policy_schema, terminals, transitions = parse_policy(policy_path)
+    result["policy_schema_version"] = policy_schema
+except (OSError, ValueError, SyntaxError) as exc:
+    result["errors"] = [f"invalid transition policy: {exc}"]
+    policy_schema, terminals, transitions = None, set(), {}
+
+try:
+    data = json.loads(state_path.read_text(encoding="utf-8"))
+except (OSError, json.JSONDecodeError) as exc:
+    result["errors"].append(f"invalid state.json: {exc}")
+    data = {}
+
+if state_path.suffix != ".json":
+    result["errors"].append("lifecycle authority must be a state.json file")
+required = ("schema_version", "canonicalization_version", "run_id", "task_id", "state", "active_function", "updated_at")
+for key in required:
+    if not data.get(key):
+        result["errors"].append(f"missing required field: {key}")
+
+source = data.get("state")
+result["from_state"] = source
+function_for_state = {
+    "INTAKE": "intake",
+    "UNDER_REVIEW": "intake",
+    "CLARIFICATION_REQUIRED": "intake",
+    "HUMAN_APPROVED": "intake",
+    "SPEC_LOCKED": "intake",
+    "IMPLEMENTING": "execution",
+    "VERIFYING": "verification",
+    "REMEDIATING": "remediation",
+    "RETHINK_REQUIRED": "remediation",
+    "HUMAN_FINAL_REVIEW": "finalization",
+    "CONFLICT_REVIEW_REQUIRED": "intake",
+    "RECOVERY_REQUIRED": "recovery",
+    "POST_APPROVAL_CHANGE_DETECTED": "verification",
+    "FINALIZED": "finalization",
+    "CANCELLED": "cancellation",
+}
+if data.get("schema_version") != 1:
+    result["errors"].append("unsupported state schema_version")
+if data.get("canonicalization_version") != 1:
+    result["errors"].append("unsupported canonicalization_version")
+if source not in transitions:
+    result["errors"].append("current state is not defined by the transition policy")
+if target not in transitions:
+    result["errors"].append("requested state is not defined by the transition policy")
+if target == "SPEC_LOCKED":
+    if not spec_hash or len(spec_hash) != 64:
+        result["errors"].append("SPEC_LOCKED requires the exact Change Package hash")
+    elif data.get("spec_hash") and data.get("spec_hash") != spec_hash:
+        result["errors"].append("state specification hash does not match the requested lock")
+elif spec_hash:
+    result["errors"].append("--spec-hash is only valid for SPEC_LOCKED")
+if source == "SPEC_LOCKED" and target != "CANCELLED":
+    if not isinstance(data.get("spec_hash"), str) or len(data.get("spec_hash", "")) != 64:
+        result["errors"].append("SPEC_LOCKED state requires a valid spec_hash before execution")
+    if data.get("spec_lock_status") != "VERIFIED":
+        result["errors"].append("SPEC_LOCKED state requires verified package binding before execution")
+if source == "SPEC_LOCKED" and target == "IMPLEMENTING":
+    if package_path is None or not package_path.is_file():
+        result["errors"].append("SPEC_LOCKED -> IMPLEMENTING requires an existing locked Change Package")
+    else:
+        package_path = package_path.resolve()
+        try:
+            package = json.loads(package_path.read_text(encoding="utf-8"))
+            unsigned = dict(package)
+            observed_package_hash = unsigned.pop("package_hash", None)
+            expected_package_hash = hashlib.sha256((json.dumps(unsigned, sort_keys=True, separators=(",", ":"), ensure_ascii=True) + "\n").encode()).hexdigest()
+            if package.get("kind") != "CHANGE_PACKAGE" or package.get("status") != "SPEC_LOCKED":
+                result["errors"].append("implementation package must be a locked Change Package")
+            if observed_package_hash != expected_package_hash:
+                result["errors"].append("implementation package hash is invalid")
+            if observed_package_hash != data.get("spec_hash"):
+                result["errors"].append("implementation package hash does not match state spec_hash")
+            if package.get("task_id") != data.get("task_id") or package.get("run_id") != data.get("run_id"):
+                result["errors"].append("implementation package task/run identity does not match state")
+            if not result["errors"]:
+                verifier = policy_path.parent.parent / "scripts" / "intake-control.sh"
+                completed = subprocess.run(["bash", str(verifier), "verify", str(package_path)], capture_output=True, text=True)
+                if completed.returncode != 0:
+                    result["errors"].append(completed.stderr.strip() or completed.stdout.strip() or "locked Change Package verification failed")
+        except (OSError, json.JSONDecodeError) as exc:
+            result["errors"].append(f"invalid implementation package: {exc}")
+if target == "IMPLEMENTING" and not result["errors"]:
+    readiness_path_raw = data.get("readiness_path")
+    if package_path is not None and package_path.is_file():
+        try:
+            package = json.loads(package_path.read_text(encoding="utf-8"))
+            readiness_path_raw = readiness_path_raw or package.get("readiness_path")
+        except (OSError, json.JSONDecodeError):
+            pass
+    if not readiness_path_raw:
+        result["errors"].append("IMPLEMENTING requires a current implementation readiness record")
+    else:
+        readiness_path = pathlib.Path(readiness_path_raw)
+        if not readiness_path.is_absolute():
+            readiness_path = (policy_path.parent.parent / readiness_path).resolve()
+        readiness_validator = policy_path.parent.parent / "scripts" / "readiness-control.sh"
+        readiness_check = subprocess.run(["bash", str(readiness_validator), "verify", str(readiness_path)], capture_output=True, text=True)
+        if readiness_check.returncode != 0:
+            result["errors"].append(readiness_check.stderr.strip() or readiness_check.stdout.strip() or "implementation readiness verification failed")
+        else:
+            try:
+                readiness_result = json.loads(readiness_check.stdout)
+            except json.JSONDecodeError:
+                readiness_result = {}
+            if not readiness_result.get("ready"):
+                result["errors"].append("implementation readiness is not READY")
+if source in terminals:
+    result["errors"].append("terminal states have no outgoing transitions")
+elif target in transitions.get(source, []):
+    if source == "RECOVERY_REQUIRED" and target != "CANCELLED":
+        if not data.get("recovery_checkpoint_hash"):
+            result["errors"].append("recovery resume requires recovery_checkpoint_hash")
+        if not data.get("recovery_resolution_event"):
+            result["errors"].append("recovery resume requires a typed recovery resolution event")
+        if data.get("recovery_authority_status") != "PROTECTED":
+            result["errors"].append("recovery resume requires protected recovery authority")
+else:
+    result["errors"].append(f"illegal transition: {source} -> {target}")
+
+result["valid"] = not result["errors"]
+result["decision"] = "ALLOW" if result["valid"] else "DENY"
+
+def canonical(value: object) -> bytes:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
+
+def validate_existing_chain(events_path: pathlib.Path, state: dict) -> str | None:
+    rows = load_events(events_path)
+    error = validate_events(rows)
+    if error:
+        return error
+    sequence = len(rows)
+    previous_hash = rows[-1]["event_hash"] if rows else "0" * 64
+    if not rows and not state.get("event_sequence") and not state.get("event_hash"):
+        return None
+    if state.get("event_sequence") != sequence or state.get("event_hash") != previous_hash:
+        return "state event position does not match event chain"
+    last = rows[-1] if rows else None
+    if last and (last.get("run_id") != state.get("run_id") or last.get("task_id") != state.get("task_id") or last.get("to_state") != state.get("state")):
+        return "state lifecycle value does not match the final event"
+    return None
+
+chain_error = validate_existing_chain(state_path.parent / "events.jsonl", data)
+if chain_error:
+    result["errors"].append(chain_error)
+    result["valid"] = False
+    result["decision"] = "DENY"
+
+def fsync_directory(directory: pathlib.Path) -> None:
+    fd = os.open(directory, os.O_RDONLY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+def atomic_json(path: pathlib.Path, value: object) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, temp_name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            json.dump(value, handle, sort_keys=True, separators=(",", ":"))
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temp_name, path)
+        fsync_directory(path.parent)
+    finally:
+        try:
+            os.unlink(temp_name)
+        except FileNotFoundError:
+            pass
+
+def file_hash(path: pathlib.Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def write_journal(path: pathlib.Path, value: object) -> None:
+    atomic_json(path, value)
+
+if result["valid"] and apply_requested:
+    lock_path = state_path.with_name(state_path.name + ".lock")
+    journal_path = state_path.parent / "transition-journal.json"
+    try:
+        lock_path.mkdir()
+    except FileExistsError:
+        result["errors"].append("writer lock is held by another transition")
+        result["valid"] = False
+        result["decision"] = "DENY"
+    else:
+        try:
+            if journal_path.exists():
+                prior_journal = json.loads(journal_path.read_text(encoding="utf-8"))
+                if prior_journal.get("status") == "FINALIZING":
+                    current_hash = file_hash(state_path)
+                    if current_hash not in {prior_journal.get("expected_before_hash"), prior_journal.get("expected_after_hash")}:
+                        raise ValueError("transition journal observed state matches neither expected before nor after hash; RECOVERY_REQUIRED")
+                    if current_hash == prior_journal.get("expected_after_hash"):
+                        result["applied"] = True
+                        result["event_sequence"] = prior_journal.get("event_sequence")
+                        result["event_hash"] = prior_journal.get("event_hash")
+                        prior_journal["status"] = "FINALIZED"
+                        write_journal(journal_path, prior_journal)
+                        raise StopIteration
+            events_path = state_path.parent / "events.jsonl"
+            sequence = 0
+            previous_hash = "0" * 64
+            if events_path.exists():
+                for line_number, line in enumerate(events_path.read_text(encoding="utf-8").splitlines(), 1):
+                    if not line.strip():
+                        continue
+                    try:
+                        event = json.loads(line)
+                    except json.JSONDecodeError as exc:
+                        raise ValueError(f"invalid event JSON at line {line_number}: {exc}") from exc
+                    expected_sequence = sequence + 1
+                    if event.get("sequence") != expected_sequence:
+                        raise ValueError("event sequence is not contiguous")
+                    if event.get("previous_hash") != previous_hash:
+                        raise ValueError("event previous_hash does not match chain")
+                    event_hash = event.get("event_hash")
+                    unsigned = dict(event)
+                    unsigned.pop("event_hash", None)
+                    expected_hash = hashlib.sha256((previous_hash.encode() + canonical(unsigned))).hexdigest()
+                    if event_hash != expected_hash:
+                        raise ValueError("event hash mismatch")
+                    sequence = expected_sequence
+                    previous_hash = event_hash
+            sequence += 1
+            now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+            payload = {"from_state": source, "to_state": target, "active_function": function_for_state[target], "occurred_at": now}
+            if target == "SPEC_LOCKED":
+                payload["spec_hash"] = spec_hash
+                payload["lock_event"] = True
+            event = build_event(sequence, previous_hash, run_id=data["run_id"], task_id=data["task_id"], event_type="STATE_TRANSITION", payload=payload)
+            event_hash = event["event_hash"]
+
+            updated = dict(data)
+            updated["previous_state"] = source
+            updated["state"] = target
+            updated["active_function"] = function_for_state[target]
+            updated["updated_at"] = now
+            updated["event_sequence"] = sequence
+            updated["event_hash"] = event_hash
+            if target == "SPEC_LOCKED":
+                updated["spec_hash"] = spec_hash
+                updated["spec_lock_status"] = "VERIFIED"
+            expected_before_hash = file_hash(state_path)
+            expected_after_hash = hashlib.sha256((json.dumps(updated, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8")).hexdigest()
+            journal = {
+                "journal_schema_version": 1,
+                "status": "FINALIZING",
+                "run_id": data["run_id"],
+                "from_state": source,
+                "to_state": target,
+                "event_sequence": sequence,
+                "event_hash": event_hash,
+                "expected_before_hash": expected_before_hash,
+                "expected_after_hash": expected_after_hash,
+                "steps": {"event": "PENDING", "state": "PENDING", "projection": "PENDING"},
+            }
+            write_journal(journal_path, journal)
+            events_path.parent.mkdir(parents=True, exist_ok=True)
+            with events_path.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps(event, sort_keys=True, separators=(",", ":")) + "\n")
+                handle.flush()
+                os.fsync(handle.fileno())
+            fsync_directory(events_path.parent)
+            journal["steps"]["event"] = "DONE"
+            write_journal(journal_path, journal)
+            atomic_json(state_path, updated)
+            journal["steps"]["state"] = "DONE"
+            write_journal(journal_path, journal)
+
+            projection = state_path.parent / "current.md"
+            projection_text = "\n".join([
+                "---",
+                "generated: true",
+                "projection_source: state.json",
+                f"run_id: {updated['run_id']}",
+                f"task_id: {updated['task_id']}",
+                f"state: {updated['state']}",
+                f"previous_state: {updated['previous_state']}",
+                f"event_sequence: {sequence}",
+                "---",
+                "",
+                "# Generated Run Projection",
+                "",
+                "This file is read-only derived content. Edit state.json only through transition-state.",
+                "",
+            ])
+            projection.parent.mkdir(parents=True, exist_ok=True)
+            fd, temp_name = tempfile.mkstemp(prefix=f".{projection.name}.", dir=projection.parent)
+            try:
+                with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                    handle.write(projection_text)
+                    handle.flush()
+                    os.fsync(handle.fileno())
+                os.replace(temp_name, projection)
+                fsync_directory(projection.parent)
+            finally:
+                try:
+                    os.unlink(temp_name)
+                except FileNotFoundError:
+                    pass
+            journal["steps"]["projection"] = "DONE"
+            journal["status"] = "FINALIZED"
+            write_journal(journal_path, journal)
+            result["applied"] = True
+            result["event_sequence"] = sequence
+            result["event_hash"] = event_hash
+        except StopIteration:
+            pass
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            result["errors"].append(str(exc))
+            result["valid"] = False
+            result["decision"] = "DENY"
+        finally:
+            try:
+                lock_path.rmdir()
+            except OSError:
+                pass
+
+if output_format == "json":
+    print(json.dumps(result, sort_keys=True))
+else:
+    print(f"transition_validation_version: {result['validator_version']}")
+    print(f"policy_schema_version: {result['policy_schema_version']}")
+    print(f"from_state: {result['from_state']}")
+    print(f"to_state: {result['to_state']}")
+    print(f"decision: {result['decision']}")
+    print(f"valid: {'true' if result['valid'] else 'false'}")
+    print(f"applied: {'true' if result['applied'] else 'false'}")
+    if "event_sequence" in result:
+        print(f"event_sequence: {result['event_sequence']}")
+    for error in result["errors"]:
+        print(f"error: {error}")
+
+raise SystemExit(0 if result["valid"] else 1)
+PY

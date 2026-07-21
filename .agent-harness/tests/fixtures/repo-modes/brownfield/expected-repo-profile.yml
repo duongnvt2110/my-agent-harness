@@ -1,0 +1,5 @@
+repo:
+  mode: brownfield
+  confidence: high
+  brownfield_score: 80
+  greenfield_score: 20

@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-16T09:38:44.017745+00:00",
+  "finalized_at": "2026-07-16T09:38:45.758155+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-16T09:38:44.049906+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T09:38:44.085672+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T09:38:44.205427+00:00",
+      "expected_after_hash": "d51278edf0593577362dfe36fd9f224b0533431c8718ac3aa4bdd9843439041d",
+      "expected_before_hash": "90ec4b4ea3f99ac162d0043cc521b3de9990f059628073461a325206f07be1a9",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T09:38:44.307829+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T09:38:45.725340+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T09:38:45.758047+00:00",
+      "expected_after_hash": "d51278edf0593577362dfe36fd9f224b0533431c8718ac3aa4bdd9843439041d",
+      "expected_before_hash": "d51278edf0593577362dfe36fd9f224b0533431c8718ac3aa4bdd9843439041d",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "add_focused_tests_for_stale_artifact_rejection_lifecycle_transit",
+  "updated_at": "2026-07-16T09:38:45.758155+00:00"
+}

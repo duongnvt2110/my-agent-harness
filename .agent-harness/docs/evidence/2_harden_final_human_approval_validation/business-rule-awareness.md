@@ -1,0 +1,12 @@
+# Business Rule Awareness
+
+task_id: 2_harden_final_human_approval_validation
+result: pass
+recorded_at: 2026-07-16 17:31:16 +0700
+
+## Rules
+
+- The active plan is the source of truth for execution.
+- Repo mode must be explicit on the active plan.
+- Context packs should select repository intelligence by mode and impact.
+- Verification must run before finalization.

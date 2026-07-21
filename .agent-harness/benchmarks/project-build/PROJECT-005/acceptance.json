@@ -1,0 +1,1 @@
+{"project_id":"PROJECT-005","title":"Benchmark report generator CLI","commands":["bash tests/test.sh"],"expected_outputs":["report.md"]}

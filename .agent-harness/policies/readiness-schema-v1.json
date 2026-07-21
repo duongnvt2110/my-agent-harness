@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "artifact": "v3-implementation-readiness",
+  "required": [
+    "schema_version",
+    "canonicalization_version",
+    "readiness_id",
+    "task_id",
+    "run_id",
+    "version",
+    "status",
+    "input_manifest_hash",
+    "created_at",
+    "updated_at"
+  ],
+  "statuses": [
+    "COLLECTING",
+    "ANALYZING",
+    "REMEDIATING",
+    "RETHINK_REQUIRED",
+    "READY",
+    "LOCKED"
+  ],
+  "terminal_statuses": ["LOCKED"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "canonicalization_version": {"type": "integer", "const": 1},
+    "artifact": {"type": "string", "const": "v3-implementation-readiness"},
+    "readiness_id": {"type": "string", "min_length": 1},
+    "task_id": {"type": "string", "min_length": 1},
+    "run_id": {"type": "string", "min_length": 1},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"type": "string", "enum": ["COLLECTING", "ANALYZING", "REMEDIATING", "RETHINK_REQUIRED", "READY", "LOCKED"]},
+    "input_manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "package_hash": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "created_at": {"type": "string", "min_length": 1},
+    "updated_at": {"type": "string", "min_length": 1},
+    "locked_at": {"type": ["string", "null"]},
+    "blocking_issues": {"type": "array"},
+    "input_units": {"type": "array"},
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source_unit_ids", "acceptance_ids", "evidence", "interpretation_evidence", "positive_test", "negative_test"],
+        "properties": {
+          "interpretation_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source_unit_id", "locator", "interpretation", "confidence", "uncertainty", "excerpt_or_region"],
+              "description": "Each item must provide excerpt_or_region as an excerpt or visual region object. Confidence below high blocks readiness."
+            },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "understanding_review": {
+      "type": "object",
+      "required": ["restatement", "alternatives", "edge_cases", "positive_examples", "negative_examples", "requirement_reviews"],
+      "properties": {
+        "requirement_reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["requirement_id", "source_unit_ids", "restatement", "alternative_interpretations", "edge_cases", "scope", "non_scope", "assumptions", "positive_example", "negative_example"]
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "traceability": {"type": "object"},
+    "remediation_epochs": {"type": "array"}
+  },
+  "additional_properties": false
+}

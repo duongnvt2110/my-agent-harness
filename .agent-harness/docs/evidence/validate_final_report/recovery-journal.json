@@ -1,0 +1,15 @@
+{
+  "archive_hash": "062a4cf92b5a45dd072198f4ff8595413147a587620b642773fb84b06f8f5a69",
+  "archive_path": "docs/exec-plans/recovery/20260712T091148Z_validate_final_report.md",
+  "completed_at": "2026-07-12T09:11:48.296949+00:00",
+  "created_at": "2026-07-12T09:11:48.294787+00:00",
+  "expected_plan_hash": "b655a15e5fb77c685f0e2e8f9d87e063ffca350950f5336c7e79bb3ddf339ff3",
+  "observed_plan_hash": "062a4cf92b5a45dd072198f4ff8595413147a587620b642773fb84b06f8f5a69",
+  "schema_version": 1,
+  "source_journal_hash": "68975e7767db53c3966467b376c62567511b21536d46da6f5a9a41f485303e8b",
+  "source_task_id": "validate_final_report",
+  "status": "RECOVERED",
+  "successor_task_id": "validate_final_report_successor",
+  "task_store_after_hash": "46015c12b2d26c6e50bac372041ac470f8bc102497a277eaab5c6340489dd6da",
+  "task_store_before_hash": "fa3e1df16a2a6d9f39b9e164374170c2d50b2f08d04f14b5cc0abdfcbca48c7d"
+}

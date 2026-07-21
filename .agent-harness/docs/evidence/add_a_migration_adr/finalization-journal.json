@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-12T06:08:14.706948+00:00",
+  "finalized_at": "2026-07-12T06:08:15.823582+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-12T06:08:14.734611+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T06:08:14.765240+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T06:08:14.867388+00:00",
+      "expected_after_hash": "660acc560614d844aa118a0d857ffa2f70369ae8ce07bc5acf800bdc606bfefa",
+      "expected_before_hash": "6175c65722678c9cfe4c9001aed4e4c214b8a4881886fb0bd196e615088cabc7",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T06:08:14.933808+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T06:08:15.795976+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-12T06:08:15.823483+00:00",
+      "expected_after_hash": "660acc560614d844aa118a0d857ffa2f70369ae8ce07bc5acf800bdc606bfefa",
+      "expected_before_hash": "660acc560614d844aa118a0d857ffa2f70369ae8ce07bc5acf800bdc606bfefa",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "add_a_migration_adr",
+  "updated_at": "2026-07-12T06:08:15.823582+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-15T08:46:04.597585+00:00",
+  "finalized_at": "2026-07-15T08:46:05.333900+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-15T08:46:04.630561+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T08:46:04.663811+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T08:46:04.767692+00:00",
+      "expected_after_hash": "8e3a11afffae01a42e4ccdfcf814f7e59da28daca4ae4042c1ed9df10689113d",
+      "expected_before_hash": "33ec7cbad24e6e645325bc848587198288cc30fb7dc8143f201718178f2ea2fa",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T08:46:04.832454+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T08:46:05.304410+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T08:46:05.333795+00:00",
+      "expected_after_hash": "8e3a11afffae01a42e4ccdfcf814f7e59da28daca4ae4042c1ed9df10689113d",
+      "expected_before_hash": "8e3a11afffae01a42e4ccdfcf814f7e59da28daca4ae4042c1ed9df10689113d",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "finalize_remaining_toc_topics",
+  "updated_at": "2026-07-15T08:46:05.333900+00:00"
+}

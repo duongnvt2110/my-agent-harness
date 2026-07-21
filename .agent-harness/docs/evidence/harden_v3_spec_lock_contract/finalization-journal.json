@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-15T10:21:21.169507+00:00",
+  "finalized_at": "2026-07-15T10:21:21.971859+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-15T10:21:21.199136+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T10:21:21.230684+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T10:21:21.351293+00:00",
+      "expected_after_hash": "bd7f7153fe2cd3f7167b80d6a7b2f27c2eb7855a9a4b0eba9b01beff5c280067",
+      "expected_before_hash": "00acae03adb4e7b0ac9168b95d1730dfae7209fafb40b7b15ccb932acf7b2573",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T10:21:21.420653+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T10:21:21.941785+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-15T10:21:21.971765+00:00",
+      "expected_after_hash": "bd7f7153fe2cd3f7167b80d6a7b2f27c2eb7855a9a4b0eba9b01beff5c280067",
+      "expected_before_hash": "bd7f7153fe2cd3f7167b80d6a7b2f27c2eb7855a9a4b0eba9b01beff5c280067",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "harden_v3_spec_lock_contract",
+  "updated_at": "2026-07-15T10:21:21.971859+00:00"
+}

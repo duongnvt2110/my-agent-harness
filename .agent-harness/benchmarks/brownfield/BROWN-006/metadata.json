@@ -1,0 +1,21 @@
+{
+  "allowed_files": [
+    "src/url_store.py"
+  ],
+  "commands": {
+    "fail_to_pass": "bash tests/fail_to_pass.sh",
+    "pass_to_pass": "bash tests/pass_to_pass.sh"
+  },
+  "difficulty": "medium",
+  "id": "BROWN-006",
+  "language": "python",
+  "scoring": {
+    "allowed_files_only": 3,
+    "fail_to_pass_after_patch": 10,
+    "pass_to_pass_after_patch": 7,
+    "pre_patch_failure": 5
+  },
+  "timeout_seconds": 60,
+  "title": "URL shortener TTL expiration behavior",
+  "track": "brownfield"
+}

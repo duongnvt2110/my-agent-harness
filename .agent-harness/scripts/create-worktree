@@ -1,0 +1,261 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Worktree records are immutable identity anchors; lifecycle state remains
+# owned by transition-state.  This command only provisions and revalidates
+# isolated workspace artifacts.
+command_name="${1:-}"
+shift || true
+
+usage() {
+  cat >&2 <<'EOF'
+Usage:
+  create-worktree create ROOT RECORD TASK RUN SPEC_HASH POLICY_HASH SNAPSHOT_HASH SESSION VERIFIER_SESSION VERIFIER_HASH [ENFORCEMENT_MODE]
+  create-worktree inspect RECORD
+  create-worktree revalidate RECORD EXPECTED_PATCH_HASH VERIFIER_SESSION VERIFIER_HASH
+  create-worktree cleanup RECORD
+EOF
+  exit 2
+}
+
+python3 - "$command_name" "$@" <<'PY'
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import pathlib
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+import uuid
+
+
+def fail(message: str, code: int = 1) -> None:
+    print(message, file=sys.stderr)
+    raise SystemExit(code)
+
+
+def canonical_bytes(value) -> bytes:
+    return json.dumps(value, sort_keys=True, separators=(",", ":")).encode()
+
+
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def run(*args: str, cwd: pathlib.Path) -> str:
+    try:
+        return subprocess.check_output(args, cwd=cwd, text=True, stderr=subprocess.STDOUT).strip()
+    except subprocess.CalledProcessError as exc:
+        fail(exc.output.strip() or f"command failed: {' '.join(args)}")
+
+
+def file_manifest(root: pathlib.Path) -> tuple[list[dict], str]:
+    rows = []
+    if not root.exists():
+        fail(f"worktree missing: {root}")
+    for path in sorted(root.rglob("*")):
+        if not path.is_file() or ".git" in path.parts:
+            continue
+        relative = path.relative_to(root).as_posix()
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        rows.append({"path": relative, "sha256": digest, "mode": path.stat().st_mode & 0o777, "size": path.stat().st_size})
+    return rows, sha256_bytes(canonical_bytes(rows))
+
+
+def patch_hash(root: pathlib.Path, base_commit: str, manifest_hash: str) -> str:
+    diff = run("git", "diff", "--binary", base_commit, cwd=root) if base_commit else ""
+    cached = run("git", "diff", "--cached", "--binary", cwd=root)
+    status = run("git", "status", "--porcelain=v1", cwd=root)
+    return sha256_bytes(canonical_bytes({"base_commit": base_commit, "diff": diff, "cached": cached, "status": status, "manifest_hash": manifest_hash}))
+
+
+def atomic_write(path: pathlib.Path, value: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(fd, "w") as handle:
+            json.dump(value, handle, sort_keys=True, indent=2)
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(name, path)
+    finally:
+        if os.path.exists(name):
+            os.unlink(name)
+
+
+def load(path: pathlib.Path) -> dict:
+    if not path.exists():
+        fail(f"missing worktree record: {path}")
+    try:
+        value = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        fail(f"invalid worktree record: {exc}")
+    if value.get("schema_version") != 1 or value.get("canonicalization_version") != 1:
+        fail("unsupported worktree record schema")
+    return value
+
+
+cmd = sys.argv[1] if len(sys.argv) > 1 else ""
+if cmd == "create":
+    if len(sys.argv) not in {12, 13}:
+        usage()
+    _, _, root_arg, record_arg, task_id, run_id, spec_hash, policy_hash, snapshot_hash, session_id, verifier_session, verifier_hash, *mode_arg = sys.argv
+    root = pathlib.Path(root_arg).resolve()
+    record = pathlib.Path(record_arg).resolve()
+    mode = mode_arg[0] if mode_arg else "ENFORCED"
+    if mode not in {"ENFORCED", "AUDIT_ONLY"}:
+        fail("unsupported enforcement mode")
+    if mode == "AUDIT_ONLY":
+        fail("AUDIT_ONLY cannot authorize isolated high-risk mutation")
+    if not (root / ".git").exists() and not (root / ".git").is_file():
+        fail("isolated worktree creation requires a Git checkout")
+    if record.exists():
+        existing = load(record)
+        if existing.get("status") in {"ACTIVE", "VERIFIED", "CANONICALLY_REVALIDATED"}:
+            fail("worktree record already owns an active or verified worktree")
+    lock = record.with_suffix(record.suffix + ".lock")
+    try:
+        lock.mkdir(parents=True)
+    except FileExistsError:
+        fail("worktree provisioning journal busy", 75)
+    writer_lock = root / ".agent-harness" / "runtime" / "worktree-writer.lock"
+    try:
+        writer_lock.mkdir(parents=True)
+    except FileExistsError:
+        try:
+            lock.rmdir()
+        except OSError:
+            pass
+        fail("canonical checkout already has an active writer worktree", 75)
+    committed = False
+    try:
+        base_commit = run("git", "rev-parse", "HEAD", cwd=root)
+        if not base_commit:
+            fail("canonical checkout has no base commit")
+        parent = record.parent / "worktrees"
+        parent.mkdir(parents=True, exist_ok=True)
+        worktree = (parent / f"{task_id}-{run_id}-{uuid.uuid4().hex[:10]}").resolve()
+        run("git", "worktree", "add", "--detach", str(worktree), base_commit, cwd=root)
+        rows, manifest_hash = file_manifest(worktree)
+        current_patch_hash = patch_hash(worktree, base_commit, manifest_hash)
+        record_data = {
+            "schema_version": 1,
+            "canonicalization_version": 1,
+            "worktree_id": str(uuid.uuid4()),
+            "canonical_root": str(root),
+            "worktree": str(worktree),
+            "task_id": task_id,
+            "run_id": run_id,
+            "spec_hash": spec_hash,
+            "policy_hash": policy_hash,
+            "snapshot_hash": snapshot_hash,
+            "base_commit": base_commit,
+            "session_id": session_id,
+            "verifier_session_id": verifier_session,
+            "verifier_evidence_hash": verifier_hash,
+            "enforcement_mode": mode,
+            "status": "ACTIVE",
+            "manifest": rows,
+            "manifest_hash": manifest_hash,
+            "initial_patch_hash": current_patch_hash,
+            "created_epoch": time.time(),
+            "cleanup_journal": str(record.with_suffix(record.suffix + ".cleanup-journal.json")),
+            "writer_lock": str(writer_lock),
+        }
+        atomic_write(record, record_data)
+        atomic_write(writer_lock / "owner.json", {"worktree_id": record_data["worktree_id"], "task_id": task_id, "run_id": run_id, "record": str(record), "base_commit": base_commit})
+        committed = True
+        print(json.dumps({"worktree_id": record_data["worktree_id"], "worktree": str(worktree), "base_commit": base_commit, "manifest_hash": manifest_hash, "patch_hash": current_patch_hash, "enforcement_mode": mode}, sort_keys=True))
+    finally:
+        if not committed:
+            shutil.rmtree(writer_lock, ignore_errors=True)
+        try:
+            lock.rmdir()
+        except OSError:
+            pass
+elif cmd == "inspect":
+    if len(sys.argv) != 3:
+        usage()
+    data = load(pathlib.Path(sys.argv[2]).resolve())
+    worktree = pathlib.Path(data["worktree"])
+    rows, manifest_hash = file_manifest(worktree)
+    current_patch_hash = patch_hash(worktree, data["base_commit"], manifest_hash)
+    print(json.dumps({"worktree_id": data["worktree_id"], "status": data["status"], "base_commit": run("git", "rev-parse", "HEAD", cwd=worktree), "manifest_hash": manifest_hash, "patch_hash": current_patch_hash, "file_count": len(rows)}, sort_keys=True))
+elif cmd == "revalidate":
+    if len(sys.argv) != 6:
+        usage()
+    record = pathlib.Path(sys.argv[2]).resolve()
+    expected_patch, verifier_session, verifier_hash = sys.argv[3:6]
+    data = load(record)
+    errors = []
+    if data.get("status") != "ACTIVE":
+        errors.append("worktree verdict is not active")
+    if data.get("enforcement_mode") != "ENFORCED":
+        errors.append("worktree is not technically enforced")
+    worktree = pathlib.Path(data["worktree"])
+    canonical = pathlib.Path(data["canonical_root"])
+    if not worktree.exists():
+        errors.append("worktree missing")
+    else:
+        if run("git", "rev-parse", "HEAD", cwd=worktree) != data["base_commit"]:
+            errors.append("worktree base commit drift")
+        rows, current_manifest = file_manifest(worktree)
+        current_patch = patch_hash(worktree, data["base_commit"], current_manifest)
+        if current_patch != expected_patch:
+            errors.append("verified patch identity mismatch")
+    if run("git", "rev-parse", "HEAD", cwd=canonical) != data["base_commit"]:
+        errors.append("canonical base advanced; verdict is stale")
+    if verifier_session != data.get("verifier_session_id"):
+        errors.append("verifier session identity mismatch")
+    if verifier_hash != data.get("verifier_evidence_hash"):
+        errors.append("verifier evidence identity mismatch")
+    if errors:
+        data["status"] = "STALE"
+        data["revalidation_errors"] = errors
+        atomic_write(record, data)
+        print(json.dumps({"valid": False, "errors": errors, "status": "STALE"}, sort_keys=True))
+        raise SystemExit(1)
+    data["status"] = "CANONICALLY_REVALIDATED"
+    data["revalidated_epoch"] = time.time()
+    data["revalidated_patch_hash"] = expected_patch
+    atomic_write(record, data)
+    print(json.dumps({"valid": True, "status": data["status"], "worktree_id": data["worktree_id"], "base_commit": data["base_commit"], "patch_hash": expected_patch}, sort_keys=True))
+elif cmd == "cleanup":
+    if len(sys.argv) != 3:
+        usage()
+    record = pathlib.Path(sys.argv[2]).resolve()
+    data = load(record)
+    journal = pathlib.Path(data["cleanup_journal"])
+    if journal.exists():
+        try:
+            journal_data = json.loads(journal.read_text())
+        except (OSError, json.JSONDecodeError) as exc:
+            fail(f"invalid cleanup journal: {exc}")
+        if journal_data.get("schema_version") != 1 or journal_data.get("operation") != "cleanup":
+            fail("unsupported cleanup journal schema")
+    else:
+        journal_data = {"schema_version": 1, "operation": "cleanup", "worktree_id": data["worktree_id"], "status": "PENDING", "steps": {"remove_worktree": False, "mark_record": False}}
+        atomic_write(journal, journal_data)
+    if not journal_data["steps"].get("remove_worktree"):
+        worktree = pathlib.Path(data["worktree"])
+        if worktree.exists():
+            run("git", "worktree", "remove", "--force", str(worktree), cwd=pathlib.Path(data["canonical_root"]))
+        journal_data["steps"]["remove_worktree"] = True
+        atomic_write(journal, journal_data)
+    if not journal_data["steps"].get("mark_record"):
+        data["status"] = "CLEANED"
+        data["cleaned_epoch"] = time.time()
+        atomic_write(record, data)
+        shutil.rmtree(pathlib.Path(data["writer_lock"]), ignore_errors=True)
+        journal_data["steps"]["mark_record"] = True
+        journal_data["status"] = "COMPLETE"
+        atomic_write(journal, journal_data)
+    print(json.dumps({"status": "CLEANED", "worktree_id": data["worktree_id"], "manifest_hash": data["manifest_hash"], "journal": str(journal)}, sort_keys=True))
+else:
+    usage()
+PY

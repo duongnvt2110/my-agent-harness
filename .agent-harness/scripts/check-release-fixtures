@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+set -euo pipefail
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/harness-lib.sh"
+resolve_harness_paths
+cd "$HARNESS_ROOT"
+manifest="policies/release-fixtures-v1.json"; execute=false; format=text
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --manifest) manifest="${2:-}"; shift 2;;
+    --run) execute=true; shift;;
+    --json) format=json; shift;;
+    -h|--help) echo 'Usage: scripts/check-release-fixtures [--manifest PATH] [--run] [--json]'; exit 0;;
+    *) fail "Unknown argument: $1";;
+  esac
+done
+python3 - "$manifest" "$HARNESS_ROOT" "$execute" "$format" <<'PY'
+import hashlib, json, pathlib, subprocess, sys
+manifest=pathlib.Path(sys.argv[1]); root=pathlib.Path(sys.argv[2]); execute=sys.argv[3]=='true'; fmt=sys.argv[4]; errors=[]; executed=[]
+try: data=json.loads(manifest.read_text())
+except Exception as exc: data={}; errors.append(f'invalid manifest: {type(exc).__name__}')
+if data.get('schema_version')!=1 or data.get('canonicalization_version')!=1: errors.append('unsupported manifest schema')
+fixtures=data.get('fixtures',[]); ids=[row.get('id') for row in fixtures]
+if len(ids)!=len(set(ids)): errors.append('duplicate fixture IDs')
+missing=sorted(set(data.get('required_fixture_ids',[]))-set(ids))
+if missing: errors.append('missing required fixtures: '+','.join(missing))
+for row in fixtures:
+    prefix=row.get('id','fixture')
+    for key in ('id','category','evidence_class','producer','evaluator','command'):
+        if not row.get(key): errors.append(f'{prefix}: missing {key}')
+    command=root/str(row.get('command',''))
+    if not command.is_file() or (not command.stat().st_mode & 0o111 and command.suffix != '.sh'): errors.append(f'{prefix}: unavailable fixture command')
+    if execute and command.is_file():
+        argv=['bash',str(command)] if command.suffix == '.sh' else [str(command)]
+        proc=subprocess.run(argv,cwd=root,text=True,capture_output=True); executed.append({'id':prefix,'exit_code':proc.returncode})
+        if proc.returncode: errors.append(f'{prefix}: fixture failed')
+canonical=dict(data); canonical.pop('content_hash',None)
+expected=hashlib.sha256(json.dumps(canonical,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+if data.get('content_hash')!=expected: errors.append('manifest content_hash mismatch')
+result={'audit_version':1,'valid':not errors,'decision':'ALLOW' if not errors else 'DENY','manifest_hash':expected,'fixture_count':len(fixtures),'execution_mode':'RUN' if execute else 'AUDIT_ONLY','assurance_limitations':['fixture audit cannot self-authorize release'],'executed':executed,'errors':errors}
+if fmt=='json': print(json.dumps(result,sort_keys=True))
+else:
+    print('release_fixture_audit_version: 1'); print(f"manifest_hash: {expected}"); print(f"fixture_count: {len(fixtures)}"); print(f"execution_mode: {result['execution_mode']}"); print(f"decision: {result['decision']}")
+    for error in errors: print(f'error: {error}')
+raise SystemExit(0 if not errors else 1)
+PY

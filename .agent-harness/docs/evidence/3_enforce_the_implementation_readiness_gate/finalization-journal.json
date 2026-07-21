@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-16T08:49:00.153891+00:00",
+  "finalized_at": "2026-07-16T08:49:01.834363+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-16T08:49:00.185596+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T08:49:00.222086+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T08:49:00.346653+00:00",
+      "expected_after_hash": "05f5c5316c8fa2656bf82631c4cadcd0d54d6226b16f4c59309f2db3a8645c5d",
+      "expected_before_hash": "5facea7213123c51253d41157d5b129f8ba9a38b9c96ad1f7b299053edaafa6c",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T08:49:00.443644+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T08:49:01.799351+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T08:49:01.834206+00:00",
+      "expected_after_hash": "05f5c5316c8fa2656bf82631c4cadcd0d54d6226b16f4c59309f2db3a8645c5d",
+      "expected_before_hash": "05f5c5316c8fa2656bf82631c4cadcd0d54d6226b16f4c59309f2db3a8645c5d",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "3_enforce_the_implementation_readiness_gate",
+  "updated_at": "2026-07-16T08:49:01.834363+00:00"
+}

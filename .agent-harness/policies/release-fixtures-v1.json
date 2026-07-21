@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "policy_id": "release-fixtures-v1",
+  "required_fixture_ids": ["AMBIGUOUS-001", "AMBIGUOUS-002", "BUGFIX-001", "FEATURE-001", "BROWNFIELD-011", "SECURITY-001", "RECOVERY-001", "INTERACTION-001"],
+  "fixtures": [
+    {"id":"AMBIGUOUS-001","category":"requirement_governance","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_plan_decomposition_semantic.sh"},
+    {"id":"AMBIGUOUS-002","category":"requirement_governance","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_current_state_validator.sh"},
+    {"id":"BUGFIX-001","category":"behavior_regression","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_failure_injection.sh"},
+    {"id":"FEATURE-001","category":"workflow_behavior","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_workflow_dispatch.sh"},
+    {"id":"BROWNFIELD-011","category":"compatibility","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_v3_legacy_rejection.sh"},
+    {"id":"SECURITY-001","category":"negative_security","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_enforcement_gate.sh"},
+    {"id":"RECOVERY-001","category":"recovery","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_checkpoint_contract.sh"},
+    {"id":"INTERACTION-001","category":"interaction_control","evidence_class":"deterministic_fixture","producer":"prior_release_validator","evaluator":"control_plane","command":"tests/harness/test_completion_judge.sh"}
+  ],
+  "content_hash": "4121d54892af1d6116ee8bca2af18eb23e4229c5cd3d44e4030d5d422072b801"
+}

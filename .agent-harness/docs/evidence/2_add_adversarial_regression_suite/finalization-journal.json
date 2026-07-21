@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-16T12:27:06.668888+00:00",
+  "finalized_at": "2026-07-16T12:27:08.330801+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-16T12:27:06.697265+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T12:27:06.727595+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T12:27:06.835675+00:00",
+      "expected_after_hash": "6ca59c5607f96f28ee1ba0ff398bb767193ef7f18a37cf4b13d52f51dccf705c",
+      "expected_before_hash": "34dac6085e24f6c1504140b28013982bcca7580785bdcf72b56c528a55362856",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T12:27:06.933471+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T12:27:08.301931+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-16T12:27:08.330703+00:00",
+      "expected_after_hash": "6ca59c5607f96f28ee1ba0ff398bb767193ef7f18a37cf4b13d52f51dccf705c",
+      "expected_before_hash": "6ca59c5607f96f28ee1ba0ff398bb767193ef7f18a37cf4b13d52f51dccf705c",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "2_add_adversarial_regression_suite",
+  "updated_at": "2026-07-16T12:27:08.330801+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "archive_hash": "53809627acfd6c7902a31adfd54d2478a2e7caa7fb729eec81b03334acaeb713",
+  "archive_path": "docs/exec-plans/recovery/20260712T090320Z_validate_required_review.md",
+  "completed_at": "2026-07-12T09:03:20.581973+00:00",
+  "created_at": "2026-07-12T09:03:20.579527+00:00",
+  "expected_plan_hash": "4aba940454baf0ac8a4cf0ec271f830daa6ca10008983a58036611e79873a3c6",
+  "observed_plan_hash": "53809627acfd6c7902a31adfd54d2478a2e7caa7fb729eec81b03334acaeb713",
+  "schema_version": 1,
+  "source_journal_hash": "4f727a6e62a594ea7853af9b753a9259d32bd65a997fde50d7e3869801c57f71",
+  "source_task_id": "validate_required_review",
+  "status": "RECOVERED",
+  "successor_task_id": "validate_required_review_successor",
+  "task_store_after_hash": "b47bc50562dd9e011b79d08f81c0bd2a95c6d0b0c3bc853ce46c4aeb15a21c9d",
+  "task_store_before_hash": "d9aff150e4081679cebcf64132402a9d21f4be410194b29b5d928d7041dfd4b8"
+}

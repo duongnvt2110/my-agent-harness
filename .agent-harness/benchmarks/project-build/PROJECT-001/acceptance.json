@@ -1,0 +1,1 @@
+{"project_id":"PROJECT-001","title":"Static blog generator CLI","commands":["bash tests/test.sh"],"expected_outputs":["public/hello.html","public/index.html"]}

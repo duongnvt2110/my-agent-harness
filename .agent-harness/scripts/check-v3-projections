@@ -1,0 +1,178 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/harness-lib.sh"
+resolve_harness_paths
+cd "$HARNESS_ROOT"
+
+state_path=""
+task_store="docs/tasks/tasks.jsonl"
+projection_path=""
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --state) state_path="${2:-}"; shift 2 ;;
+    --task-store) task_store="${2:-}"; shift 2 ;;
+    --projection) projection_path="${2:-}"; shift 2 ;;
+    --json) format=json; shift ;;
+    -h|--help)
+      printf '%s\n' 'Usage: scripts/check-v3-projections --state PATH [--task-store PATH] [--projection PATH] [--json]'
+      exit 0
+      ;;
+    *) fail "Unknown argument: $1" ;;
+  esac
+done
+[ -n "$state_path" ] || fail "--state is required"
+
+python3 - "$state_path" "$task_store" "$projection_path" "${format:-text}" <<'PY'
+import hashlib, json, pathlib, re, sys
+
+state_path = pathlib.Path(sys.argv[1])
+task_store = pathlib.Path(sys.argv[2])
+projection = pathlib.Path(sys.argv[3]) if sys.argv[3] else state_path.with_name("current.md")
+output_format = sys.argv[4]
+errors = []
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode()
+
+result = {
+    "audit_version": 1,
+    "workflow_version": 3,
+    "implementation_version": "v3-projection-audit-1",
+    "enforcement_mode": "ENFORCED_READ_ONLY",
+    "state_path": str(state_path),
+    "projection_path": str(projection),
+    "task_store_path": str(task_store),
+    "state_hash": sha(state_path),
+    "projection_hash": sha(projection),
+    "task_store_hash": sha(task_store),
+    "valid": False,
+    "decision": "DENY",
+    "errors": errors,
+}
+
+try:
+    state = json.loads(state_path.read_text(encoding="utf-8"))
+except Exception as exc:
+    errors.append(f"invalid state.json: {type(exc).__name__}")
+    state = {}
+
+required = ("schema_version", "canonicalization_version", "run_id", "task_id", "state", "event_sequence", "event_hash")
+for key in required:
+    if key not in state or state.get(key) in (None, ""):
+        errors.append(f"state missing {key}")
+if state_path.name != "state.json":
+    errors.append("v3 authority must be state.json")
+if state.get("schema_version") != 1 or state.get("canonicalization_version") != 1:
+    errors.append("unsupported state schema or canonicalization version")
+allowed_states = {
+    "INTAKE", "UNDER_REVIEW", "CLARIFICATION_REQUIRED", "HUMAN_APPROVED",
+    "SPEC_LOCKED", "IMPLEMENTING", "VERIFYING", "REMEDIATING",
+    "RETHINK_REQUIRED", "HUMAN_FINAL_REVIEW", "CONFLICT_REVIEW_REQUIRED",
+    "RECOVERY_REQUIRED", "POST_APPROVAL_CHANGE_DETECTED", "FINALIZED", "CANCELLED",
+}
+if state.get("state") not in allowed_states:
+    errors.append("state is not a recognized v3 lifecycle state")
+
+events_path = state_path.with_name("events.jsonl")
+sequence = 0
+previous = "0" * 64
+last = None
+if not events_path.exists():
+    errors.append("missing immutable events.jsonl")
+else:
+    for line_no, raw in enumerate(events_path.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip():
+            continue
+        try:
+            event = json.loads(raw)
+        except json.JSONDecodeError:
+            errors.append(f"invalid event JSON at line {line_no}")
+            continue
+        expected_sequence = sequence + 1
+        if event.get("sequence") != expected_sequence:
+            errors.append(f"event sequence mismatch at line {line_no}")
+        if event.get("previous_hash") != previous:
+            errors.append(f"event previous_hash mismatch at line {line_no}")
+        unsigned = dict(event)
+        observed_hash = unsigned.pop("event_hash", None)
+        expected_hash = hashlib.sha256(previous.encode() + canonical(unsigned)).hexdigest()
+        if observed_hash != expected_hash:
+            errors.append(f"event hash mismatch at line {line_no}")
+        sequence = expected_sequence
+        previous = observed_hash or previous
+        last = event
+if state.get("event_sequence") != sequence:
+    errors.append("state event_sequence does not match event chain")
+if state.get("event_hash") != previous:
+    errors.append("state event_hash does not match event chain")
+if last and (last.get("to_state") != state.get("state") or last.get("run_id") != state.get("run_id")):
+    errors.append("terminal event does not match authoritative state")
+
+def frontmatter(path):
+    if not path.exists():
+        errors.append("missing generated current.md projection")
+        return {}
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---\n"):
+        errors.append("projection missing frontmatter")
+        return {}
+    match = re.search(r"\n---\n", text[4:])
+    if not match:
+        errors.append("projection frontmatter is unterminated")
+        return {}
+    fields = {}
+    for line in text[4:4 + match.start()].splitlines():
+        if ":" in line:
+            key, value = line.split(":", 1)
+            fields[key.strip()] = value.strip()
+    if fields.get("generated") != "true" or fields.get("projection_source") != "state.json":
+        errors.append("projection is not generated from state.json")
+    for key in ("run_id", "task_id", "state", "event_sequence"):
+        expected = str(state.get(key))
+        if fields.get(key) != expected:
+            errors.append(f"projection {key} does not match state")
+    return fields
+
+frontmatter(projection)
+
+if task_store.exists():
+    rows = []
+    for line_no, raw in enumerate(task_store.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip():
+            continue
+        try:
+            row = json.loads(raw)
+        except json.JSONDecodeError:
+            errors.append(f"invalid task-store JSON at line {line_no}")
+            continue
+        if row.get("id") == state.get("task_id"):
+            rows.append(row)
+    if len(rows) != 1:
+        errors.append("task-store must contain exactly one matching task projection")
+    elif state.get("state") in {"FINALIZED", "CANCELLED"}:
+        expected = {"FINALIZED": "DONE", "CANCELLED": "CANCELLED"}[state["state"]]
+        if rows[0].get("status") != expected:
+            errors.append(f"task-store status does not match terminal state; expected {expected}")
+else:
+    errors.append("missing task-store projection")
+
+result["valid"] = not errors
+result["decision"] = "ALLOW" if result["valid"] else "DENY"
+if output_format == "json":
+    print(json.dumps(result, sort_keys=True))
+else:
+    print(f"projection_audit_version: {result['audit_version']}")
+    print(f"workflow_version: {result['workflow_version']}")
+    print(f"implementation_version: {result['implementation_version']}")
+    print(f"enforcement_mode: {result['enforcement_mode']}")
+    print(f"decision: {result['decision']}")
+    print(f"valid: {'true' if result['valid'] else 'false'}")
+    for error in errors:
+        print(f"error: {error}")
+raise SystemExit(0 if result["valid"] else 1)
+PY

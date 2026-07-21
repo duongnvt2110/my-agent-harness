@@ -1,0 +1,15 @@
+{
+  "archive_hash": "b0d1325ba80b1caa790458ec7f69db66538d7cd48d28d0de9db9570c0688d3af",
+  "archive_path": "docs/recovery/20260716T125003Z_2_integrate_readiness_into_context_verification_and_finalization.md",
+  "completed_at": "2026-07-16T12:50:03.371628+00:00",
+  "created_at": "2026-07-16T12:50:03.368452+00:00",
+  "expected_plan_hash": "c05c5c02ac1bd6e0f162c9186cb018203bec72e16a561d21b45bd3903cb3936f",
+  "observed_plan_hash": "b0d1325ba80b1caa790458ec7f69db66538d7cd48d28d0de9db9570c0688d3af",
+  "schema_version": 1,
+  "source_journal_hash": "d2aaa6508a1c8668e4ee2c92894e1b71980b29d599849cd5bb23f0c1d17ae24e",
+  "source_task_id": "2_integrate_readiness_into_context_verification_and_finalization",
+  "status": "RECOVERED",
+  "successor_task_id": "2_integrate_readiness_into_context_verification_and_finalization_recovery_successor",
+  "task_store_after_hash": "c01b2575da19a7d8ceddaa41bccba3ed87f6ce479228592d532ecc4857ad3665",
+  "task_store_before_hash": "22325147eb7cd8e15514268f071d03dad4b6d4b6e7c52d098e95c170a618590a"
+}

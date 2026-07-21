@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cmd="${1:-}"; shift || true
+if [ "$cmd" = "issue" ]; then
+  out="${1:-}"; scope="${2:-}"; reason="${3:-}"; ttl="${4:-3600}"
+  [ -n "$out" ] && [ -n "$scope" ] && [ -n "$reason" ] || { echo 'Usage: emergency-revoke issue OUT SCOPE_JSON REASON TTL' >&2; exit 2; }
+  python3 - "$out" "$scope" "$reason" "$ttl" <<'PY'
+import hashlib,json,pathlib,sys,time,uuid
+out=pathlib.Path(sys.argv[1]);
+if out.exists(): raise SystemExit('revocation is immutable')
+try: scope=json.loads(sys.argv[2]); assert isinstance(scope,dict) and scope
+except Exception: raise SystemExit('scope must be a non-empty JSON object')
+if len(sys.argv[3]) > 500: raise SystemExit('revocation reason is too long')
+record={'schema_version':1,'canonicalization_version':1,'revocation_id':str(uuid.uuid4()),'scope':scope,'reason':sys.argv[3],'issued_epoch':int(time.time()),'expires_epoch':int(time.time())+int(sys.argv[4]),'effect':'DENY_ONLY','emergency':True}
+record['revocation_hash']=hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest(); out.parent.mkdir(parents=True,exist_ok=True); out.write_text(json.dumps(record,sort_keys=True,indent=2)+'\n'); print(json.dumps({'valid':True,'revocation_id':record['revocation_id'],'effect':'DENY_ONLY'},sort_keys=True))
+PY
+elif [ "$cmd" = "check" ]; then
+  rev="${1:-}"; artifact="${2:-}"; now="${3:-}"; [ -f "$rev" ] && [ -f "$artifact" ] && [ -n "$now" ] || { echo 'Usage: emergency-revoke check REVOCATION ARTIFACT NOW_EPOCH' >&2; exit 2; }
+  python3 - "$rev" "$artifact" "$now" <<'PY'
+import hashlib,json,pathlib,sys
+rev=json.loads(pathlib.Path(sys.argv[1]).read_text()); artifact=json.loads(pathlib.Path(sys.argv[2]).read_text()); scope=rev.get('scope',{}); errors=[]
+copy=dict(rev); observed=copy.pop('revocation_hash',None); expected=hashlib.sha256(json.dumps(copy,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+if observed!=expected: errors.append('revocation integrity mismatch')
+if int(sys.argv[3])>=int(rev.get('expires_epoch',0)): errors.append('revocation expired')
+matches=bool(scope.get('all_active')) or all(artifact.get(k)==v for k,v in scope.items() if k != 'all_active')
+if not matches: errors.append('revocation scope does not match artifact')
+if errors: print(json.dumps({'valid':False,'revoked':False,'errors':errors},sort_keys=True)); raise SystemExit(1)
+print(json.dumps({'valid':True,'revoked':True,'decision':'DENY','effect':'DENY_ONLY','assurance_limitations':['emergency revocation grants no authority']},sort_keys=True)); raise SystemExit(0)
+PY
+else
+  echo 'Usage: emergency-revoke issue|check ...' >&2; exit 2
+fi

@@ -1,0 +1,8 @@
+{
+  "canonicalization_version": 1,
+  "encoding": "UTF-8",
+  "object_keys": "lexicographic",
+  "whitespace": "compact",
+  "ensure_ascii": true,
+  "hash": "sha256"
+}

@@ -1,0 +1,9 @@
+{
+  "workflow_version": "v3",
+  "implementation_version": "v3-core",
+  "enforcement_mode": "AUDIT_ONLY",
+  "assurance_limitations": ["repository-local governance; OS-level isolation is outside scope"],
+  "state_path": "runtime/state.json",
+  "mixed_artifacts": false,
+  "migration_required": false
+}

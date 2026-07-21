@@ -1,0 +1,142 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root="."
+mode="clean-template"
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --root) root="${2:-}"; shift 2 ;;
+    --mode) mode="${2:-}"; shift 2 ;;
+    -h|--help) printf '%s\n' 'Usage: scripts/check-template-cleanliness --root DIR [--mode clean-template|source-snapshot|audit-snapshot]'; exit 0 ;;
+    *) echo "Unknown argument: $1" >&2; exit 1 ;;
+  esac
+done
+[ -d "$root" ] || { echo "Missing root: $root" >&2; exit 1; }
+case "$mode" in clean-template|source-snapshot|audit-snapshot) ;; *) echo "Unsupported mode: $mode" >&2; exit 1 ;; esac
+
+python3 - "$root" "$mode" <<'PY'
+import json
+import pathlib
+import sys
+
+root = pathlib.Path(sys.argv[1])
+mode = sys.argv[2]
+errors: list[str] = []
+manifest = root / "manifest.json"
+if not manifest.is_file():
+    errors.append("missing manifest.json")
+else:
+    try:
+        data = json.loads(manifest.read_text())
+        if data.get("mode") != mode:
+            errors.append("manifest mode does not match requested mode")
+    except Exception:
+        errors.append("invalid manifest.json")
+
+for path in root.rglob("*"):
+    rel = path.relative_to(root).as_posix()
+    name = path.name
+    if name == ".DS_Store" or name == "__MACOSX" or "__MACOSX/" in rel:
+        errors.append(f"forbidden metadata: {rel}")
+    if name == "__pycache__" or name.endswith(".pyc"):
+        errors.append(f"forbidden Python cache: {rel}")
+    if name.endswith(".lock") or name.endswith("-journal.json") or name == ".writer-lease.json":
+        errors.append(f"forbidden runtime lock/journal: {rel}")
+
+if mode == "clean-template":
+    required = [
+        root / ".agent-harness/runtime/v3-workflow.json",
+        root / ".agent-harness/runtime/state.json",
+        root / ".agent-harness/runtime/events.jsonl",
+        root / ".agent-harness/runtime/current.md",
+        root / ".agent-harness/policies/v3-contract.json",
+        root / ".agent-harness/recipes",
+    ]
+    for path in required:
+        if not path.exists():
+            errors.append(f"missing clean-template dependency: {path.relative_to(root).as_posix()}")
+
+    forbidden = [
+        root / ".git",
+        root / ".agent-harness/docs/exec-plans/active/current.md",
+    ]
+    for path in forbidden:
+        if path.exists():
+            errors.append(f"forbidden clean-template path: {path.relative_to(root).as_posix()}")
+
+    allowed_children = {
+        root / ".agent-harness/docs/exec-plans/completed": {".gitkeep"},
+        root / ".agent-harness/docs/evidence": {"README.md"},
+        root / ".agent-harness/docs/reviews": {"TEMPLATE.md"},
+        root / ".agent-harness/docs/epics": {"README.md"},
+        root / ".agent-harness/docs/reports": {"README.md"},
+    }
+    for base, allowed in allowed_children.items():
+        if not base.exists():
+            continue
+        for child in base.iterdir():
+            if child.name not in allowed:
+                errors.append(f"clean-template contains runtime content: {child.relative_to(root).as_posix()}")
+
+    for base in [
+        root / ".agent-harness/docs/exec-plans/recovery",
+        root / ".agent-harness/docs/recovery",
+    ]:
+        if base.exists():
+            for child in base.iterdir():
+                errors.append(f"clean-template contains recovery history: {child.relative_to(root).as_posix()}")
+
+    task_store = root / ".agent-harness/docs/tasks/tasks.jsonl"
+    if task_store.exists() and task_store.read_text().strip():
+        errors.append("clean-template task store is not empty")
+
+    exception_snapshots = root / ".agent-harness/policies/task-plan-exception-snapshots"
+    if exception_snapshots.exists():
+        errors.append("clean-template contains historical task-plan exception snapshots")
+    exception_registry = root / ".agent-harness/policies/task-plan-exceptions.json"
+    try:
+        exceptions = json.loads(exception_registry.read_text())
+        if exceptions.get("entries"):
+            errors.append("clean-template task-plan exception registry is not empty")
+    except Exception:
+        errors.append("clean-template task-plan exception registry is invalid")
+
+    benchmark_history = root / ".agent-harness/benchmarks/history"
+    if benchmark_history.exists():
+        for child in benchmark_history.iterdir():
+            if child.name != ".gitkeep":
+                errors.append(f"clean-template contains benchmark history: {child.relative_to(root).as_posix()}")
+
+    runtime = root / ".agent-harness/runtime"
+    if runtime.exists():
+        allowed_runtime = {"v3-workflow.json", "state.json", "events.jsonl", "current.md"}
+        for child in runtime.iterdir():
+            if child.name not in allowed_runtime:
+                errors.append(f"clean-template contains runtime residue: {child.relative_to(root).as_posix()}")
+        try:
+            state = json.loads((runtime / "state.json").read_text())
+            expected = {
+                "run_id": "bootstrap",
+                "task_id": "bootstrap",
+                "state": "INTAKE",
+                "event_sequence": 0,
+                "event_hash": "0" * 64,
+            }
+            for key, value in expected.items():
+                if state.get(key) != value:
+                    errors.append(f"clean-template bootstrap state mismatch: {key}")
+        except Exception:
+            errors.append("clean-template runtime state is invalid")
+        events = runtime / "events.jsonl"
+        if events.exists() and events.read_text().strip():
+            errors.append("clean-template event chain is not empty")
+
+if errors:
+    print("template_cleanliness: FAIL")
+    for error in errors:
+        print(f"error: {error}")
+    raise SystemExit(1)
+print("template_cleanliness: PASS")
+print(f"mode: {mode}")
+print("decision: ALLOW")
+PY

@@ -1,0 +1,1 @@
+{"project_id":"PROJECT-003","title":"JSON log analyzer CLI","commands":["bash tests/test.sh"],"expected_outputs":["summary.json"]}

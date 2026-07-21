@@ -1,0 +1,453 @@
+{
+  "benchmarks": [
+    {
+      "details": [
+        "per-test timeout detected"
+      ],
+      "id": "BENCH-001",
+      "max_score": 10,
+      "metrics": {
+        "detected_timeout": true,
+        "exit_code": 1
+      },
+      "name": "deterministic test runner with timeout",
+      "result": "pass",
+      "score": 10
+    },
+    {
+      "details": [
+        "PROJECT-001: pass",
+        "PROJECT-002: pass",
+        "PROJECT-003: pass",
+        "PROJECT-004: pass",
+        "PROJECT-005: pass"
+      ],
+      "id": "BENCH-002",
+      "max_score": 25,
+      "metrics": {
+        "projects": [
+          {
+            "commands": [
+              {
+                "command": "contract check",
+                "exit_code": 0,
+                "timed_out": false
+              }
+            ],
+            "id": "PROJECT-001",
+            "result": "pass",
+            "title": "Static blog generator CLI"
+          },
+          {
+            "commands": [
+              {
+                "command": "contract check",
+                "exit_code": 0,
+                "timed_out": false
+              }
+            ],
+            "id": "PROJECT-002",
+            "result": "pass",
+            "title": "Markdown-to-HTML CLI"
+          },
+          {
+            "commands": [
+              {
+                "command": "contract check",
+                "exit_code": 0,
+                "timed_out": false
+              }
+            ],
+            "id": "PROJECT-003",
+            "result": "pass",
+            "title": "JSON log analyzer CLI"
+          },
+          {
+            "commands": [
+              {
+                "command": "contract check",
+                "exit_code": 0,
+                "timed_out": false
+              }
+            ],
+            "id": "PROJECT-004",
+            "result": "pass",
+            "title": "URL shortener API"
+          },
+          {
+            "commands": [
+              {
+                "command": "contract check",
+                "exit_code": 0,
+                "timed_out": false
+              }
+            ],
+            "id": "PROJECT-005",
+            "result": "pass",
+            "title": "Benchmark report generator CLI"
+          }
+        ],
+        "projects_passed": 5,
+        "projects_total": 5
+      },
+      "name": "project-build benchmark suite",
+      "result": "pass",
+      "score": 25
+    },
+    {
+      "details": [
+        "BROWN-006: pass",
+        "BROWN-007: pass",
+        "BROWN-008: pass",
+        "BROWN-009: pass",
+        "BROWN-010: pass"
+      ],
+      "id": "BENCH-009",
+      "max_score": 25,
+      "metrics": {
+        "tasks": [
+          {
+            "allowed_files_only": true,
+            "changed_files": [
+              "src/url_store.py"
+            ],
+            "commands": {
+              "post_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-006/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:26:58 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:26:57 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "post_patch_pass_to_pass": {
+                "command": "bash -lc bash tests/pass_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-006/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:26:59 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:26:58 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "pre_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-006/repo",
+                "exit_code": 1,
+                "finished_at": "2026-07-18 14:26:57 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\nexpected expired link\n",
+                "started_at": "2026-07-18 14:26:55 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              }
+            },
+            "id": "BROWN-006",
+            "reasons": [],
+            "result": "pass",
+            "title": "URL shortener TTL expiration behavior"
+          },
+          {
+            "allowed_files_only": true,
+            "changed_files": [
+              "src/appctl.py"
+            ],
+            "commands": {
+              "post_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-007/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:00 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:26:59 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "post_patch_pass_to_pass": {
+                "command": "bash -lc bash tests/pass_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-007/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:01 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:00 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "pre_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-007/repo",
+                "exit_code": 1,
+                "finished_at": "2026-07-18 14:26:59 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:26:59 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              }
+            },
+            "id": "BROWN-007",
+            "reasons": [],
+            "result": "pass",
+            "title": "Nested command required-flag validation"
+          },
+          {
+            "allowed_files_only": true,
+            "changed_files": [
+              "src/statusctl.py"
+            ],
+            "commands": {
+              "post_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-008/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:03 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:02 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "post_patch_pass_to_pass": {
+                "command": "bash -lc bash tests/pass_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-008/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:04 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:03 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "pre_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-008/repo",
+                "exit_code": 2,
+                "finished_at": "2026-07-18 14:27:02 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\nusage: statusctl [-h] name\nstatusctl: error: unrecognized arguments: --json\n",
+                "started_at": "2026-07-18 14:27:01 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              }
+            },
+            "id": "BROWN-008",
+            "reasons": [],
+            "result": "pass",
+            "title": "CLI JSON output mode"
+          },
+          {
+            "allowed_files_only": true,
+            "changed_files": [
+              "src/report.py"
+            ],
+            "commands": {
+              "post_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-009/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:06 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:05 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "post_patch_pass_to_pass": {
+                "command": "bash -lc bash tests/pass_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-009/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:07 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:06 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "pre_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-009/repo",
+                "exit_code": 2,
+                "finished_at": "2026-07-18 14:27:05 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\nusage: report.py [-h] current output\nreport.py: error: unrecognized arguments: --previous previous.json\n",
+                "started_at": "2026-07-18 14:27:04 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              }
+            },
+            "id": "BROWN-009",
+            "reasons": [],
+            "result": "pass",
+            "title": "Benchmark report history comparison"
+          },
+          {
+            "allowed_files_only": true,
+            "changed_files": [
+              "src/repair_report.py"
+            ],
+            "commands": {
+              "post_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-010/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:08 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:07 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "post_patch_pass_to_pass": {
+                "command": "bash -lc bash tests/pass_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-010/repo",
+                "exit_code": 0,
+                "finished_at": "2026-07-18 14:27:09 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:08 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              },
+              "pre_patch_fail_to_pass": {
+                "command": "bash -lc bash tests/fail_to_pass.sh",
+                "cwd": "/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/harness-brownfield-bench-ph_hddcr/BROWN-010/repo",
+                "exit_code": 1,
+                "finished_at": "2026-07-18 14:27:07 +0700",
+                "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\n",
+                "started_at": "2026-07-18 14:27:07 +0700",
+                "timed_out": false,
+                "timeout_seconds": 60
+              }
+            },
+            "id": "BROWN-010",
+            "reasons": [],
+            "result": "pass",
+            "title": "Repair-loop metrics in report output"
+          }
+        ],
+        "tasks_passed": 5,
+        "tasks_total": 5
+      },
+      "name": "brownfield issue-resolution benchmark suite",
+      "result": "pass",
+      "score": 25
+    },
+    {
+      "details": [
+        "schema contains required top-level fields"
+      ],
+      "id": "BENCH-003",
+      "max_score": 10,
+      "metrics": {
+        "exists": true,
+        "schema_path": "/Users/exe-macbook/duong/ai/harness-scratch-template/.agent-harness/benchmarks/result-schema.json"
+      },
+      "name": "benchmark result schema",
+      "result": "pass",
+      "score": 10
+    },
+    {
+      "details": [
+        "validated clean installed harness fixture"
+      ],
+      "id": "BENCH-004",
+      "max_score": 10,
+      "metrics": {
+        "integrity_exit_code": 0,
+        "next_exit_code": 1
+      },
+      "name": "install fixture benchmark",
+      "result": "pass",
+      "score": 10
+    },
+    {
+      "details": [
+        "10/10 benchmark tasks passed",
+        "greenfield specs, acceptance contracts, and brownfield issue contracts checked"
+      ],
+      "id": "BENCH-005",
+      "max_score": 15,
+      "metrics": {
+        "acceptance_present": 5,
+        "brownfield_contracts_present": 5,
+        "specs_present": 5,
+        "success_rate": 1.0,
+        "task_passed": 10,
+        "task_total": 10
+      },
+      "name": "agent-task evaluator",
+      "result": "pass",
+      "score": 15
+    },
+    {
+      "details": [
+        "required context/control files present",
+        "missing active plan guard checked",
+        "failure routing tokens checked"
+      ],
+      "id": "BENCH-006",
+      "max_score": 15,
+      "metrics": {
+        "failure_routing_present": true,
+        "missing_plan_guard": true,
+        "required_files_present": true
+      },
+      "name": "context/control evaluator",
+      "result": "pass",
+      "score": 15
+    },
+    {
+      "details": [
+        "repair scripts present: 5/5"
+      ],
+      "id": "BENCH-007",
+      "max_score": 10,
+      "metrics": {
+        "diagnose_route": true,
+        "failure_packet_writer": true,
+        "repair_scripts_expected": 5,
+        "repair_scripts_present": 5,
+        "scope_remediation_route": true
+      },
+      "name": "repair-loop metrics",
+      "result": "pass",
+      "score": 10
+    },
+    {
+      "details": [
+        "long plan workflow contract checked"
+      ],
+      "id": "BENCH-010",
+      "max_score": 15,
+      "metrics": {
+        "long_plan_classifier_ok": true,
+        "missing_plan_router_updated": true,
+        "workflow_regression_contract_present": true,
+        "workflow_scripts_present": true
+      },
+      "name": "long-plan decomposition workflow",
+      "result": "pass",
+      "score": 15
+    },
+    {
+      "details": [
+        "trend: first_run"
+      ],
+      "id": "BENCH-008",
+      "max_score": 5,
+      "metrics": {
+        "delta_total_score": null,
+        "history_path": "/Users/exe-macbook/duong/ai/harness-scratch-template/.agent-harness/benchmarks/history/benchmark-history.jsonl",
+        "previous_total_score": null,
+        "trend": "first_run"
+      },
+      "name": "benchmark history comparison",
+      "result": "pass",
+      "score": 5
+    }
+  ],
+  "generated_at": "2026-07-18 14:27:10 +0700",
+  "history_comparison": {
+    "delta_total_score": null,
+    "previous_total_score": null,
+    "trend": "first_run"
+  },
+  "schema_version": 1,
+  "summary": {
+    "max_score": 140,
+    "result": "pass",
+    "total_score": 140
+  }
+}

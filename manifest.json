@@ -1,0 +1,1688 @@
+{
+  "canonicalization_version": 1,
+  "export_root": ".",
+  "exported_at": "2026-07-17 15:29:08 +0000",
+  "files": [
+    {
+      "path": ".agent-harness/benchmarks/README.md",
+      "sha256": "7131c599cce819bbd2ba00db29dee77a7ed13db3c9bc0cf1a2900eb6885ff66b"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/expected.patch",
+      "sha256": "b7a7efe2c62886e2de8c51f4df260d79d67654d96f6b8d06b011a1808b240bb4"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/metadata.json",
+      "sha256": "dd366bda04756ef46e56682b258a2fd8eaa4dc80fd144ae243b46ee941ea5fa5"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/repo/src/url_store.py",
+      "sha256": "0f984017237184feda5e329775fdbd90e738e176ca421bf79a817d95230b73d5"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/solution/src/url_store.py",
+      "sha256": "e7e475ce162bcb94097b17a195aac037d75b4d8bcc424fc2d367eea3ac38e1e4"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/task.md",
+      "sha256": "6b62e368d370fc2b6a2e0fae1118fc7031aff245cb3c20517f7385c393c28037"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/tests/fail_to_pass.sh",
+      "sha256": "141a8e04df9d474b94def04ea629c7c31101ca6b78ba38bfadd0bf1076d86884"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-006/tests/pass_to_pass.sh",
+      "sha256": "6f0bfc26dd58ad3c63173db9f0f2ee77f1573aeb77a8750f0ce3a696e9e2f18b"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/expected.patch",
+      "sha256": "295a5280895fe2273327c69e5559053b23e29bd1aac5dd5906a374065d9949da"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/metadata.json",
+      "sha256": "ea74e8897ddcaf299eae5ee3a0f1f90b8398d9e26764f10e6b8b73589276f823"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/repo/src/appctl.py",
+      "sha256": "7475393a9e5618305ef6578fd2e6c202fb5277d1a6ed437da068fdb42f989466"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/solution/src/appctl.py",
+      "sha256": "c1ed02f97fcb9b81aeba7a5ccb25710c7deaf150caed75e06f0523bfbe1360b8"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/task.md",
+      "sha256": "36c7b2bad16e193de6b54b1c43d07277ddcfef4056eb17ff1597c4d18454862b"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/tests/fail_to_pass.sh",
+      "sha256": "b35457525d71d677a5fa29ee0e6425da8261e8087e288b883a84f269782ed95a"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-007/tests/pass_to_pass.sh",
+      "sha256": "179d6ac899309696e85aa1db270d5fb05db78df400a38c65a42977497a815c35"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/expected.patch",
+      "sha256": "80529ab17c7acbc7befbd699d2ac6ac6094ecc782257cf65c852895a90283607"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/metadata.json",
+      "sha256": "a7a822ed1738cf21d19a291da585cc167f10f0ada6f25753e3948aaf708d9464"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/repo/src/statusctl.py",
+      "sha256": "a82793bdec7a0df31f25b0faa04be477a258ddac2950fe644798fb2f39bf6840"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/solution/src/statusctl.py",
+      "sha256": "5e6a1a84ea32c2b0dc8bfcd26f048f2993310cbb79f8900c4677d2f989146ec1"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/task.md",
+      "sha256": "cfebf07d09a9fbfb6d91af834223c27360e23570cd1084a38da3b14b64d6376c"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/tests/fail_to_pass.sh",
+      "sha256": "1e444b4a3ed0035609e482cf72386708cdb4cddadaf493a42526561394517fad"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-008/tests/pass_to_pass.sh",
+      "sha256": "693eb666b6cb68792e54020388c550a95e7aa4f0900f202b0236854e2874ad87"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/expected.patch",
+      "sha256": "8fee0d66020217e7c8aef9b5ddb5fb538948b3a41899fbefa4495eba431885b6"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/metadata.json",
+      "sha256": "3567ca272e1b76d3336af26fd94a3b199f2063909d5948ab3abc1cee52e71458"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/repo/src/report.py",
+      "sha256": "935c5bc8c83d698d895a9d29859d7e169b793fdfd31f9cb8bc0004cdceaeed23"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/solution/src/report.py",
+      "sha256": "6812cf71a463f30cdfe6c150ed5fc86dfba31f65d9a0b676e93e0da82b08af78"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/task.md",
+      "sha256": "718336ea3999e8a73aec2cbf0fb836c8cb516085c4555eae6a6b5ea3d17911d4"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/tests/fail_to_pass.sh",
+      "sha256": "8151d775069d0716221e439916a2743121aaac29562eceede0dca6c595b5487e"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-009/tests/pass_to_pass.sh",
+      "sha256": "5be7e94ed8f612e51dac4d9176ca91ce71d9df9055d83e252f4b3a5d1b705cad"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/expected.patch",
+      "sha256": "55fb15ef6e97a935f3237dc91b5edfb672e59abd664693f750e987295fe7eba5"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/metadata.json",
+      "sha256": "7f23afb878943877171c38f49ac5b6233152dde92fe5834963f384fce83de4d0"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/repo/src/repair_report.py",
+      "sha256": "e8959de222a1749448732445f5568517695f021cffd8444632846437e9b99cff"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/solution/src/repair_report.py",
+      "sha256": "6b933e5a5ed04743fc4879388e20aa7141770b14f177d5e1d0af47a886412654"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/task.md",
+      "sha256": "9018db683ad66c6afd9f293c93dae9b5a224900021ea1f18b741dbedf063b08c"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/tests/fail_to_pass.sh",
+      "sha256": "2b14104dde492b4accdace9bcc896a8370da749b745e75d3e2cb9f8fdcf93595"
+    },
+    {
+      "path": ".agent-harness/benchmarks/brownfield/BROWN-010/tests/pass_to_pass.sh",
+      "sha256": "f55ac7272889e2cf14449bec4476076441922a8cf00764171ab5c693b322697c"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/acceptance.json",
+      "sha256": "c4db2d15e9b837da2ebd20417dfbb1441f1d12f3ca5df1d7d3789dddae137bfd"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/src/bloggen.py",
+      "sha256": "e300d1bb1ee4b718a033dfe5aa2268047d19b8c91f185ace8848cb20c56da67f"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/task-spec.md",
+      "sha256": "16c366ad0cbb0146c6511d9146f0cb4891e872125c0b9334724f6202efec4e53"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-001/tests/test.sh",
+      "sha256": "fdc28a0f562fd54dcc4dc695369380f7d6ef631a67354bfcbada5eb62fc9f79e"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/acceptance.json",
+      "sha256": "7beac1c0622e6bf7c386ab394808c906cdfb027b57c7b5ccdf993f7dc40bdb29"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/src/md2html.py",
+      "sha256": "c95e78ad6012c9d7bb65ee5823cbc179d4073b9de362194893128e5d44244fd6"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/task-spec.md",
+      "sha256": "45615ee3c4e641139753b5d6174d9b5b25d7a3c0431b270d7273f81ec9ca570b"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-002/tests/test.sh",
+      "sha256": "f7d95cef106f9347e1f41801ca17f92fd08e525861d485c1e500a993a4ee3f61"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/acceptance.json",
+      "sha256": "38f4e7564edfa7adb174e3a305c553d6d575d56ec152ec883c26f99f698a39e8"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/src/log_analyzer.py",
+      "sha256": "6c5b8a29013278bf86649ec326339153fb7eaf3bea7132e7fd991b7f78c4877a"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/task-spec.md",
+      "sha256": "1d2367f99237700b8cdc6100f65b0b68088e005ba393547acb5d4978a99eac57"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-003/tests/test.sh",
+      "sha256": "1af2d10f5ad6219075f29970d54e8e05a3fe0344033a5ef1efdf804ea3c9e97d"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/acceptance.json",
+      "sha256": "fb85cad198b81d4654b2291f9596aad87d95e69f7648ad56e82b04d997575883"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/src/url_shortener_api.py",
+      "sha256": "57bc081b8c0a858044866cecdaf805886c7c7143e4c41a90942c38ba7c470154"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/task-spec.md",
+      "sha256": "f79560e36ba19f33c71d081dd6ea6c9f752913b1db05bf11454305b226317da1"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-004/tests/test.sh",
+      "sha256": "a3ff3c00b6037122f94e21647ae7e2a351588b35f130a4cc2b34c3eee56a9948"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/acceptance.json",
+      "sha256": "5684ee06f7f191d046fce1a45f205dc4433139c67488f59b2dc6b38c87041f7d"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/src/benchmark_report.py",
+      "sha256": "16ea2a33b53fc1da3ecc134dce4779f1bb5a6819905cfa95a6c552831bf5285d"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/task-spec.md",
+      "sha256": "f381b10b83945991301beeaf39b8b1565111ddb24698687103c82ff122034ed8"
+    },
+    {
+      "path": ".agent-harness/benchmarks/project-build/PROJECT-005/tests/test.sh",
+      "sha256": "4f2a21155cf6868db57cb7a2599a8c608cf3e108d3d15201df4de99ad254968a"
+    },
+    {
+      "path": ".agent-harness/benchmarks/result-schema.json",
+      "sha256": "31997e8ef9c3573d3a8752c676770cc81cd26986eabfa18187f3fcdd06828016"
+    },
+    {
+      "path": ".agent-harness/docs/PLANS.md",
+      "sha256": "6e96fb18a9dc76d214a497106b4469b63e980ca4e2c4160d06ed4cad7edd0443"
+    },
+    {
+      "path": ".agent-harness/docs/TEST_MATRIX.md",
+      "sha256": "628aee4ac6eecfa78283510721d7439e547fd34c8e3139e2a5a4096f860afd58"
+    },
+    {
+      "path": ".agent-harness/docs/adr/README.md",
+      "sha256": "a5325400a7ada290c2973cdc6f1fc8eb2dfcb00f16f6407fe9893dd72d198629"
+    },
+    {
+      "path": ".agent-harness/docs/context/README.md",
+      "sha256": "0b3a4abc2a461f7083e107f575e2d42db80af7cd8a18ac0243e67010eba25470"
+    },
+    {
+      "path": ".agent-harness/docs/context/boundaries.md",
+      "sha256": "4c6aa053406436d7720ef5b07bf67958485c51f7411b31c6f478ffcd1499113d"
+    },
+    {
+      "path": ".agent-harness/docs/context/commands.md",
+      "sha256": "4a7ac7b98c4d9fd88198effd74fc9bc18fe38723f6b3563654bb8bd752fdb8f4"
+    },
+    {
+      "path": ".agent-harness/docs/context/conventions.md",
+      "sha256": "8e87fba805d6c1c88df812c7f049eb246dff203752b97d5e4865544555107e71"
+    },
+    {
+      "path": ".agent-harness/docs/context/discussions.md",
+      "sha256": "ad54ef04d6aad9bef56b72e69a157f903c00277bb5ecc61e48c1151cf19fce6e"
+    },
+    {
+      "path": ".agent-harness/docs/context/known-errors.md",
+      "sha256": "957097c9fcb39a53fd9f229fe976fc925a0974af72594153c356da491673e225"
+    },
+    {
+      "path": ".agent-harness/docs/context/memory-index.json",
+      "sha256": "4640d04b1f81f79ba1bb7450fb5cb1e8e6478f46c98197dbfa7dbfb3afdd3f85"
+    },
+    {
+      "path": ".agent-harness/docs/context/repo-profile.md",
+      "sha256": "81ee7fcc9c60c1d2f00aa5163ebb6e3524318e59a8738997324fd0c9a150df47"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/README.md",
+      "sha256": "4eaea98c0dc3c6d19ed822368f0e2d72ab462bb913941c8495dbeefdffcdf197"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/api-contracts.md",
+      "sha256": "25b3b58262f4f34f1d381dd574031e7324c6dd563536f0103185c0e42fbc7db4"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/architecture-map.md",
+      "sha256": "87b67ced7b383477c384c4a09e96c3de6c7312e982e89005969f2c1ca792540f"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/brownfield-observations.md",
+      "sha256": "d6057a238f350c5faacc103202442760b2a807609bb0232316701b8c2f3bb349"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/business-rules.md",
+      "sha256": "40a995f8c3bf3cb7c6feb48e68007fe0fe3efa8a2dbeb4a10bf9a887af1cbe84"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/dangerous-areas.md",
+      "sha256": "a3d16f5ae2821a3a26779aa76f19c6a27cc04e3703f3d40b8e5cd272455faac3"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/data-flow.md",
+      "sha256": "910ba4d1e2dbdef15fe89208c528a6d3862c130acdf9229a9980b6d0517a649f"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/database-model.md",
+      "sha256": "33815b50f73710703c0cf773edbe65730ea5e03dd1016693cc8be91c8c5c1878"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/dependency-map.md",
+      "sha256": "ee751ff41b7c9b77fb55b4664001496d4edf604e64fa3c3dcbe40639b620d0e2"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/domain-model.md",
+      "sha256": "ce18b9365ecb7095e3d82327ec973dd5748cb355331bfe64f8a24e980abe7ded"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/error-handling-style.md",
+      "sha256": "7eef1f4373a13ee754b9516f81fa591a5c5b9b55103e13c23919ed811aee93cc"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/greenfield-decisions.md",
+      "sha256": "e1d59bfe84d00f8623388af1acc8e656cf21131956d8e5546519811fc91bd211"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/implementation-patterns.md",
+      "sha256": "2f815fb12f0bc726af12e2367cdf7be43f8955bd1167e7b6073dff5f0b774588"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/knowledge-index.json",
+      "sha256": "e8b212cf10bd274d33de24b54218a8d22c51882f6b21c5f6bb756a2b3538e010"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/legacy-constraints.md",
+      "sha256": "2dede2e5727d535ec5aeec676ed74394826a1a98a49a898f4d1e056e81a5e63e"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/logging-style.md",
+      "sha256": "dce21280ae55076664912c1b26ae5c9e11888fc0663068c36644aa2f71f594d5"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/module-boundaries.md",
+      "sha256": "6d414b92f78f4c839c8a7ec30aba0b2e69ec00cf2b2f0308233b43a305302828"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/repo-map.md",
+      "sha256": "c1ada9b76f844aad468608889cdf6d17aff548897f348ee560648b8a89f26154"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/repo-profile.yml",
+      "sha256": "c634affb227c43eacab0ed2d579e0f6f5859064b1273969b68a9a221d155ccfa"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/testing-style.md",
+      "sha256": "f0d4e35eae052255d573aa636cd8b4d1f84b00cd1ea0732633b21124e47d0358"
+    },
+    {
+      "path": ".agent-harness/docs/context/repository-intelligence/transaction-patterns.md",
+      "sha256": "e90e141ed05e69da365a2575ae3e905bdd29c8ca14ceab92ee7f210614b8027f"
+    },
+    {
+      "path": ".agent-harness/docs/context/runbooks.md",
+      "sha256": "81329ce4ce18ce97c548fa12c63bff1362eb4430b389d279b891b5e021a8c808"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0001-define-scratch-harness-lifecycle-terminology.md",
+      "sha256": "fd5c24ee3bdf0e88ea6c284ff57fa3c1419d19d95a4c643288f0ba41f573d04b"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0002-remove-harness-skill-selection-contract.md",
+      "sha256": "b1d1b89c03a63245e011fa1341eb2cf8f87d302c4dd26b4483f5c664d8aa588a"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0003-brownfield-agent-ready-execution-harness.md",
+      "sha256": "aebca397534bc744062dfdc6fbc632a38d59dd0d8c4f0ed97ef40c4b7c8a39fe"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/0004-agent-harness-vnext-authority-model.md",
+      "sha256": "b6cde0431dbce0fc497e3aa9eb4945e613a64752d37bbf0ed85380418c2974b5"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/README.md",
+      "sha256": "6ed4b8fe5e72b1fc9127533a9298fbc70f05f98832230d09cbf522a36b01ea7a"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/adr-index.json",
+      "sha256": "88c27d7cae5488f4984bbac2eb04d76e7ced08458c8b6e0160320f60e36188bf"
+    },
+    {
+      "path": ".agent-harness/docs/decisions/authority-model-v3.md",
+      "sha256": "66743bfc7dfbe1053bd1196439a4ca4f5a4b284190467948906eadba20285dfd"
+    },
+    {
+      "path": ".agent-harness/docs/design-docs/TEMPLATE.md",
+      "sha256": "921cbb702211c6d9bf9ba155a7c294d751b6dfe84dee176e09159256dac3f1c3"
+    },
+    {
+      "path": ".agent-harness/docs/design-docs/index.md",
+      "sha256": "f497f8e6937bf573b909c825da8562115536a9c5a2d28c7648146aade12d6447"
+    },
+    {
+      "path": ".agent-harness/docs/epics/README.md",
+      "sha256": "318c3b6eec7c17d12d39fa83faae2adcc49528bf5bf5244395446779cab4bf80"
+    },
+    {
+      "path": ".agent-harness/docs/evidence/README.md",
+      "sha256": "84b4d69c594d386b29df9501b9f5c6f229008f377b0deb795fdeece43e147e88"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/TEMPLATE.md",
+      "sha256": "a62c94880762efb245cba5a6836f7884e9c453191fbd4d6f9f807044abec8e97"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/active/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".agent-harness/docs/exec-plans/completed/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".agent-harness/docs/intake/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".agent-harness/docs/product-contracts/TEMPLATE.md",
+      "sha256": "4440b7c17b55f8b35d9aaf50bcd9243ade06e63431e7e5a65294659ed876300f"
+    },
+    {
+      "path": ".agent-harness/docs/product-contracts/index.md",
+      "sha256": "8799af67099fb20c53c97615b74042b1e3990d5c1407bbce685aea84e60329b0"
+    },
+    {
+      "path": ".agent-harness/docs/product-specs/TEMPLATE.md",
+      "sha256": "f627d42e38a7022d1bc7898809633e78e0c506cb53a1e549f0d8e232fa85b017"
+    },
+    {
+      "path": ".agent-harness/docs/product-specs/index.md",
+      "sha256": "feb572f0ae4dfd2d948e63f5492e7fbfec6525ba7f61b155189b8f4b189cb901"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/01-plan.md",
+      "sha256": "7216777635c859a203040c269dc716edb9b299584c703bf10bd8d457f7540723"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/02-execute.md",
+      "sha256": "d00a3d06dec6282fd751b7082d4c44eab7bef5f451533ab7adc1b225175c3896"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/03-verify.md",
+      "sha256": "7694db73c2ea060a2f8ad9cdb1305084e43330ae44a8f5d928cb3365418d6711"
+    },
+    {
+      "path": ".agent-harness/docs/prompts/04-review.md",
+      "sha256": "e741384f10395f4343376847683712f7469be1f7904843f29478841d604702cd"
+    },
+    {
+      "path": ".agent-harness/docs/reference/README.md",
+      "sha256": "2af41b4aa7da8b03725db2ac976c1f2cc11e2be41c53626611b3cbea64500128"
+    },
+    {
+      "path": ".agent-harness/docs/reports/README.md",
+      "sha256": "7791f6e45dea85887b99fc19e7b97009c61461a668da7a877cd2fadb39d8f418"
+    },
+    {
+      "path": ".agent-harness/docs/reviews/TEMPLATE.md",
+      "sha256": "0fe2db74541dcb71559adc9fc4be9e1535e26b29de7c35f95542c102b78f1444"
+    },
+    {
+      "path": ".agent-harness/docs/tasks/tasks.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".agent-harness/harness.sh",
+      "sha256": "3a81738356423e7a39355c76faf8f0e59f354cb454b2b17ce6694bfcd1a4ad2d"
+    },
+    {
+      "path": ".agent-harness/policies/canonicalization-v1.json",
+      "sha256": "15805158b569a5bf051f8fd4cdedee3e1a66710b4e9e6c7831452cfd8e3509fa"
+    },
+    {
+      "path": ".agent-harness/policies/policy-bundle-v1.json",
+      "sha256": "f087bacde09aa946742503d857c1249deae7a59d8d84dfe5ee6764bac6b647a8"
+    },
+    {
+      "path": ".agent-harness/policies/readiness-schema-v1.json",
+      "sha256": "c83f69c728c5e5522befe8770c382036abdf14994fbce6ec05e1c65d7cb62be3"
+    },
+    {
+      "path": ".agent-harness/policies/readiness-transitions.yaml",
+      "sha256": "dfa2256e9b4ee4f6c0fa1106cb17e9d506df8cae34551d7c8d3b20fb1d24471c"
+    },
+    {
+      "path": ".agent-harness/policies/release-fixtures-v1.json",
+      "sha256": "8e8e066b13524af8ee609351563ed350396b372a5434d19d5a97cd598bcfe753"
+    },
+    {
+      "path": ".agent-harness/policies/risk-classification-v1.json",
+      "sha256": "0c79092a0c9217b14cd7941ea3709bd28279c81db147f3f5569a437e4027e7c6"
+    },
+    {
+      "path": ".agent-harness/policies/run-budget-v1.json",
+      "sha256": "2035654f73f12626a3fe63639813fe7c26979e06838c8e27641de44e32058e7e"
+    },
+    {
+      "path": ".agent-harness/policies/state-schema-v1.json",
+      "sha256": "e178ebe837106db31b8e56bde8de1b338d3d3832d4ee7fbed76c2c56066c148b"
+    },
+    {
+      "path": ".agent-harness/policies/state-transitions.yaml",
+      "sha256": "5270e36ad84e19b129df87b387ba4bd9de9bdfa02de90367ed9b1ae6ce1d16b0"
+    },
+    {
+      "path": ".agent-harness/policies/task-plan-exceptions.json",
+      "sha256": "00538e8b19902e58af32afab0bcafabd94d72b141cf548cef9ab214bd190e634"
+    },
+    {
+      "path": ".agent-harness/policies/task-schema-v1.json",
+      "sha256": "e5fabbb20b075aad1b4f48bae445f553e5d61a8a9f332d36ad73d20945976fb3"
+    },
+    {
+      "path": ".agent-harness/policies/v3-contract.json",
+      "sha256": "af065222c0673cc86256a6220a48beaf0594cc173a7806a3ea22e6a9c8e9c904"
+    },
+    {
+      "path": ".agent-harness/recipes/bugfix.yaml",
+      "sha256": "871d458323980c8699cf9de1d81e60876391dbc81f8610d05b45152fc25b5e5f"
+    },
+    {
+      "path": ".agent-harness/recipes/feature.yaml",
+      "sha256": "201fc7cd6c49044871102906b2d8da9c4078ce57a0bf703a5f3bf4393f4ae8cf"
+    },
+    {
+      "path": ".agent-harness/recipes/harness-change.yaml",
+      "sha256": "03150013cac046f9028bba9b830134e97e8cae7ca278f23045459007900a92be"
+    },
+    {
+      "path": ".agent-harness/recipes/migration.yaml",
+      "sha256": "7623ef4934e9bfc3087b95ddde67cf97800a307ef33a159c7e51d766e02159dc"
+    },
+    {
+      "path": ".agent-harness/recipes/refactor.yaml",
+      "sha256": "044389efb9e000625f10f8f4b1c505e4198cc6fc88601894a5bf35a9fe348875"
+    },
+    {
+      "path": ".agent-harness/recipes/review-only.yaml",
+      "sha256": "3fb63b5b53032c7a25df42c99f4d0a13223f31be78321c18cef98f472da14e1c"
+    },
+    {
+      "path": ".agent-harness/runtime/current.md",
+      "sha256": "8bc6021c4aa05497495f95869ee81d27d5ba26938a93d11c075a06fc83d96a3a"
+    },
+    {
+      "path": ".agent-harness/runtime/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".agent-harness/runtime/state.json",
+      "sha256": "de2a54a8c3ca3a13e01c107a8f9ca2f43d62ff79189d8f9f008c13f8b5777e5c"
+    },
+    {
+      "path": ".agent-harness/runtime/v3-workflow.json",
+      "sha256": "720448e879e65b57d9345f1bacdfd49ec6c7fe85fded6023e5df4275ec42e5c0"
+    },
+    {
+      "path": ".agent-harness/scripts/adr.sh",
+      "sha256": "1f98985c810ef32b3a1a30149f0b61f0f5f2e043c8e645e0e80af9b8c4a35a65"
+    },
+    {
+      "path": ".agent-harness/scripts/agent-interface.sh",
+      "sha256": "f3d2cb1b95c2450991632b53e4327edfb1496eb440b8e4fc1f6d2ac2cda76588"
+    },
+    {
+      "path": ".agent-harness/scripts/approval.sh",
+      "sha256": "4797ddc742820843f5c620c670083414ee0e4a931a1bcfe4ce48a595eb6c3ce1"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-active-task.sh",
+      "sha256": "499c22e974ca42aa1483a158690c5e7210bb4a6145d76b254139d847e315b67a"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-decomposition.sh",
+      "sha256": "d812d9d8758c64579d8541b5085995707138da236993c18fe98589c431d21725"
+    },
+    {
+      "path": ".agent-harness/scripts/approve-plan.sh",
+      "sha256": "fffb30f3de067c76c9f1c3d0258346eaa8b2b7a5392c78dfd4b3e253ab005e61"
+    },
+    {
+      "path": ".agent-harness/scripts/batch-control.sh",
+      "sha256": "c7a36a86a38a4c9f75fe0db36d2e1701f24803abd81942db6d304a437f373257"
+    },
+    {
+      "path": ".agent-harness/scripts/benchmark.py",
+      "sha256": "f7e08c761b1731580c501dcbf56e1ec60fa72d09a0f577f092af3921b00570db"
+    },
+    {
+      "path": ".agent-harness/scripts/benchmark.sh",
+      "sha256": "4eaaa911b337e99e3c8d3129a0222e0b8c578c6deb8c3aca3a07ae7c4eebc8e8"
+    },
+    {
+      "path": ".agent-harness/scripts/bind-policy.sh",
+      "sha256": "32043d39d226c00d84638e8c1de458d892089087c3dcb2d31a6bf66167439de3"
+    },
+    {
+      "path": ".agent-harness/scripts/budget-guard.sh",
+      "sha256": "ffa99ce552398c54214e8c6796504a6213ec217d8905ceff31599061d02d4766"
+    },
+    {
+      "path": ".agent-harness/scripts/calculate-run-budget",
+      "sha256": "ca543ef876a770129ef66861ddc1c5e399d985e50547fda41a4d8204dceb7abf"
+    },
+    {
+      "path": ".agent-harness/scripts/capability.sh",
+      "sha256": "82837942a869f9165a9f76464b82c3d00ce9dd7bac381594b193f5c59c4ad8cd"
+    },
+    {
+      "path": ".agent-harness/scripts/check-ac-coverage.sh",
+      "sha256": "48b5ddc6555f945e25f7365d9ba19c288a45c5666cc03a5b680acdaa96729e5b"
+    },
+    {
+      "path": ".agent-harness/scripts/check-ac-evidence.sh",
+      "sha256": "95be42441fe44ec30fe85a1cd1c05917b37399788b702da06638fdccd3970324"
+    },
+    {
+      "path": ".agent-harness/scripts/check-active-plan-contract.sh",
+      "sha256": "307a4be7351811df98d8b51eeb06abca3db7d850ce8f47609803e4ea40b15a1c"
+    },
+    {
+      "path": ".agent-harness/scripts/check-adr-awareness.sh",
+      "sha256": "adc70f2ba1d567477149c6ebeb0ee1af613d0360499bd83bc9d1e9b5ff63e786"
+    },
+    {
+      "path": ".agent-harness/scripts/check-adr-impact.sh",
+      "sha256": "f0e2b4469cf41708bce9714ea7e82a9b15495062ee1c5afcf10f00dbab908de7"
+    },
+    {
+      "path": ".agent-harness/scripts/check-baseline-contract.sh",
+      "sha256": "e2edebe26831a60172d5fe0ba3f340c0d687a79a048afda61202673944a8819f"
+    },
+    {
+      "path": ".agent-harness/scripts/check-baseline-snapshot.sh",
+      "sha256": "52cfc073c04517c5fa5669b713a51c5d5317b4ddd1a5043c185dcf4975d8fd9e"
+    },
+    {
+      "path": ".agent-harness/scripts/check-batch-approval.sh",
+      "sha256": "8a94882071bafd3edc1bbbf82d9960c13359f0a9b87ef61c704bb08b51eb6461"
+    },
+    {
+      "path": ".agent-harness/scripts/check-behavior-baseline.sh",
+      "sha256": "bd3fd9c107d84eabd43573eef7792f135be7ab961c217edcd3e810d669b002be"
+    },
+    {
+      "path": ".agent-harness/scripts/check-change-baseline.sh",
+      "sha256": "308350abe958082a03ea8fa61615fc4a4b3d6720e113feeadf211b994e476630"
+    },
+    {
+      "path": ".agent-harness/scripts/check-completion-judge.sh",
+      "sha256": "95aa6cf5038fd01ac6606d0100747dc2815ce13623b45715cc907053f379fa7e"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-adr-exact-match.sh",
+      "sha256": "7901a580eebddcc940c27127d1796b818f5fe26740ee6e73f198df09da86c0fe"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-budget.sh",
+      "sha256": "f764e56fdd9eaec17932fcbfa3199f531d76183ae91bcd7dc183c73b0d42117e"
+    },
+    {
+      "path": ".agent-harness/scripts/check-context-pack.sh",
+      "sha256": "54e440b40dd7c4f0eecbe329d44e814aca72a9bb295196675342578a35c124d2"
+    },
+    {
+      "path": ".agent-harness/scripts/check-evidence.sh",
+      "sha256": "7d1dfcc3dd0db309e8357bbcaee862241871410c1a9e065d66d67f6a36aee251"
+    },
+    {
+      "path": ".agent-harness/scripts/check-failure-history.sh",
+      "sha256": "b6b952a30e61f83125343e0c9775f6ab86b400c084a8a0f28b6a2d1701068f7f"
+    },
+    {
+      "path": ".agent-harness/scripts/check-file-map.sh",
+      "sha256": "558981287d022c0721517e19cf584eef891c76c98b8fd8917d3fb562da723056"
+    },
+    {
+      "path": ".agent-harness/scripts/check-final-report.sh",
+      "sha256": "f3a41977cd2c977ba277cb9942cae0e5089b544336bb725a635be1deb89f8c69"
+    },
+    {
+      "path": ".agent-harness/scripts/check-finalization-authority.sh",
+      "sha256": "6e8af8db0ebea271db6290e223b69b7f5ea8314ccbed93e47b217767b3d27ec5"
+    },
+    {
+      "path": ".agent-harness/scripts/check-full-context.sh",
+      "sha256": "b2fe0e6e48162cbc24cc41d6916a8217a8a3e476783cbe0d87c0189f5de537d6"
+    },
+    {
+      "path": ".agent-harness/scripts/check-install-integrity.sh",
+      "sha256": "01b9e3ba941940118e5a3b5df88b17861ab909e23d2b3a8d2154ddec3227a320"
+    },
+    {
+      "path": ".agent-harness/scripts/check-package-integrity.sh",
+      "sha256": "bcfeb9847a31bfa73b5e96f3b59c8d59c0a6f92b61d698e7de98a0978387a1cd"
+    },
+    {
+      "path": ".agent-harness/scripts/check-plan-decomposition-semantic.sh",
+      "sha256": "e61a1795822b970a779906c01f5c0f1d7692257c5bacb93b5104bcf5c4d7c278"
+    },
+    {
+      "path": ".agent-harness/scripts/check-plan-decomposition.sh",
+      "sha256": "f96e061cabe85105efedbcaab8fdc9d3a66511113b50f5be86166c58c6aa66d3"
+    },
+    {
+      "path": ".agent-harness/scripts/check-release-fixtures",
+      "sha256": "bad50f1d1aaafda44cc908b1a9c6d180120a7f59b3aa58ab72fe16831ed8ee76"
+    },
+    {
+      "path": ".agent-harness/scripts/check-remediation-epochs.sh",
+      "sha256": "5cfbc85f5aef1a49e76479b9d8f2f9c82fdd68ce23880050ad5aa2bf6b023ca7"
+    },
+    {
+      "path": ".agent-harness/scripts/check-remediation-trace.sh",
+      "sha256": "b5c35dabb614e38b82874ae8f2c3f2152e73041adf3a9784f52e2af91e458c64"
+    },
+    {
+      "path": ".agent-harness/scripts/check-reviews.sh",
+      "sha256": "2eb6640c25b26a37e6c4f68986a09187d1e2da29e2716f49b98a683513eebc51"
+    },
+    {
+      "path": ".agent-harness/scripts/check-rollup-projection.sh",
+      "sha256": "5e129a087b073d370273ce60d43727b87df491025bee47b90f160c396481cf38"
+    },
+    {
+      "path": ".agent-harness/scripts/check-script-interface.sh",
+      "sha256": "39ceadb7f48ca4ec7393587442ef1e1fc223a8a3087f5eedc0b6d6d85a0be7c5"
+    },
+    {
+      "path": ".agent-harness/scripts/check-spec-clarification.sh",
+      "sha256": "827d322d58b2f95a39e7ebabfce37d7346b5775cbb44d4d7d141a680a2ddd62c"
+    },
+    {
+      "path": ".agent-harness/scripts/check-state-schema.sh",
+      "sha256": "f4b1d9c0f214e187bb9daf7eed74b809229e088519f19758caa46e1425bb7e2f"
+    },
+    {
+      "path": ".agent-harness/scripts/check-target-safety.sh",
+      "sha256": "ca2cb31e47d2eec8aa6d9d4cc54ee74df08aafd09fd701b66eab046e953534c3"
+    },
+    {
+      "path": ".agent-harness/scripts/check-task-plan-consistency.sh",
+      "sha256": "808b22099364444e2630d09725e85152022832c4e74be569b5d4bdcd5412edd7"
+    },
+    {
+      "path": ".agent-harness/scripts/check-task-schema.sh",
+      "sha256": "9b0e9b3576e8661323fdd001c9d5eb103b465bfc381bbc2525075afd58549a82"
+    },
+    {
+      "path": ".agent-harness/scripts/check-template-cleanliness",
+      "sha256": "f513ead34fefc7ec5fb67944eae9ac0a76b3f01763ca71fdedde4d625de986f4"
+    },
+    {
+      "path": ".agent-harness/scripts/check-test-contract.sh",
+      "sha256": "ab7ab14faa60c4e4b26dfc1175af88a6a20cc2464de1fb63a73ecb7099b55499"
+    },
+    {
+      "path": ".agent-harness/scripts/check-test-report.sh",
+      "sha256": "8f411d1677908349f415ce0cbf2d529c43cc4efbcabaf8bb14f9a3ad6a1be363"
+    },
+    {
+      "path": ".agent-harness/scripts/check-v3-contract-coverage.sh",
+      "sha256": "c66cb3611e11e3ddd163799bf28ca581cfd44a61aac78a2fb3c5df5b6edd3190"
+    },
+    {
+      "path": ".agent-harness/scripts/check-v3-projections",
+      "sha256": "ae4c4ccf0db3743f7a3d9e531c450e862fed13d999343133ade2a22917bfbee7"
+    },
+    {
+      "path": ".agent-harness/scripts/check-verifier-verdict.sh",
+      "sha256": "afdf5659053ddbbc93f75efcf5924f539cfad50f94ec6665d6903b998ae5eb5d"
+    },
+    {
+      "path": ".agent-harness/scripts/check-work-alignment.sh",
+      "sha256": "26dbe869b2c2b5ed6a957ce98ad3ad16e0f50f442fe23e3c9b16d7dff132a395"
+    },
+    {
+      "path": ".agent-harness/scripts/classify-plan-size.sh",
+      "sha256": "85d6818c9ad47cb6ea93326f46728c780b66b493dfe0877c8f0c434789abf47e"
+    },
+    {
+      "path": ".agent-harness/scripts/classify-risk.sh",
+      "sha256": "0d50d61681553a86c6d8ffc963f32c191d567e5b2a5899fc67464bb37079ae00"
+    },
+    {
+      "path": ".agent-harness/scripts/consume-plan.sh",
+      "sha256": "209f5a056b435e69ba0337f2ef2a260c1c45ddb5c763bc301642451c9e9a8a96"
+    },
+    {
+      "path": ".agent-harness/scripts/context.sh",
+      "sha256": "ab8705aad76596e63833c33ef345f4695a42592b4cda868da01c5519109e5fb9"
+    },
+    {
+      "path": ".agent-harness/scripts/create-active-plan.sh",
+      "sha256": "2824a69ac19f6994840a7a2efe254c923daaf7cbb54e65c69b18555ed3b30a15"
+    },
+    {
+      "path": ".agent-harness/scripts/create-baseline-snapshot.sh",
+      "sha256": "122b5f67b69801c24dadae05848913d00086deaca743e974f885362a98f0afc6"
+    },
+    {
+      "path": ".agent-harness/scripts/create-behavior-baseline.sh",
+      "sha256": "82cce9988d4b83aaa04dc6f060ede596696954669d752c9c627e5a1b363496fd"
+    },
+    {
+      "path": ".agent-harness/scripts/create-checkpoint.sh",
+      "sha256": "a11cfda8a13fb167761b2c24c46cb33780d9a154ad069c9443f534d9b7c2318f"
+    },
+    {
+      "path": ".agent-harness/scripts/create-full-context.sh",
+      "sha256": "2ff7c25f639c4424637e11584c20faf25a8541bc92bf654b1fbfd7d61895b9c1"
+    },
+    {
+      "path": ".agent-harness/scripts/create-repair-plan.sh",
+      "sha256": "ae2b173fc2ce6873818cc5b00ed9280d1903161b48bb20a9a043d82a1f778d84"
+    },
+    {
+      "path": ".agent-harness/scripts/create-worktree",
+      "sha256": "4111b36eb0f9b27d1e2a9b8c75243c8f3aaa105330b90fed0cf783dc1d540998"
+    },
+    {
+      "path": ".agent-harness/scripts/decompose-plan.sh",
+      "sha256": "533b10a0ad1ae130e7bb6ccd825e1a5cce62b0549e53c2dc792f203f4dd31bb2"
+    },
+    {
+      "path": ".agent-harness/scripts/detect-behavior-baseline.sh",
+      "sha256": "8c5a7267aae9b1d27558dca25e8e9388a668f9edc90c331f4159b9d7666636cf"
+    },
+    {
+      "path": ".agent-harness/scripts/detect-change-baseline.sh",
+      "sha256": "5245cd55ad6c3aee91641dc81f521e909541388e3388ecb5a381cc688367de7d"
+    },
+    {
+      "path": ".agent-harness/scripts/diagnose-failure.sh",
+      "sha256": "f0b5b4a95160ca04f5ae6e1b69b69e4116cbd2baabbf8c20709b40bcf73e8e6e"
+    },
+    {
+      "path": ".agent-harness/scripts/emergency-revoke",
+      "sha256": "bbc1f71f30c2646899a3f6e34cac4d507fdff1cc0a1243c83be4a11bc987e4bb"
+    },
+    {
+      "path": ".agent-harness/scripts/enforcement-gate.sh",
+      "sha256": "f61b5102ad4796f8f6eff0de8735af327d151e0fb055ac76f46244aef076dec5"
+    },
+    {
+      "path": ".agent-harness/scripts/epic.sh",
+      "sha256": "43387476f735cdfb01c989d8f7b33c80119b0f30035cdb7a204674d9e2b6cc8d"
+    },
+    {
+      "path": ".agent-harness/scripts/event_store.py",
+      "sha256": "782b156066a14410fc929fff9e6db794682f7596bf659e0dc3958b46945aab0f"
+    },
+    {
+      "path": ".agent-harness/scripts/export-harness-package.sh",
+      "sha256": "c196b4c1e7cf61bdefbbaf78e2285d16ff2737dd3dec2be47f18dfb3cb08aeb6"
+    },
+    {
+      "path": ".agent-harness/scripts/finalize-task.sh",
+      "sha256": "92e32cb0724a1ddfe013e8d1a511c0522736e7820fbb5ce5056f08417b8ca97e"
+    },
+    {
+      "path": ".agent-harness/scripts/finalize-v3-run",
+      "sha256": "ceb0afa11900cf0b4e2cce09668feb1ad8657776840a40ac0f847364e8438455"
+    },
+    {
+      "path": ".agent-harness/scripts/generate-autonomous-run-report.sh",
+      "sha256": "5b2de4a4ef6bf0dc1690b4936e209c5a29dc4511971ee524fe31671e984e807c"
+    },
+    {
+      "path": ".agent-harness/scripts/generate-test-report.sh",
+      "sha256": "274c2bd3ee7077e7238e86ffd7b69cf820be147dbe168707385f583b348ead50"
+    },
+    {
+      "path": ".agent-harness/scripts/harness-lib.sh",
+      "sha256": "5734bdcea5db066c21e2492194cf462aa19ccbfa101d8ce34daa74891376e8b7"
+    },
+    {
+      "path": ".agent-harness/scripts/harness.sh",
+      "sha256": "54a58c1b17eff66db3d70cda4c4dccea93aafaec3d2ad42241107b5db39b0767"
+    },
+    {
+      "path": ".agent-harness/scripts/install-harness.sh",
+      "sha256": "daa1f7dae66302baf87388ca5d76ceb2e6e45eba93334ae7353918f9c0c61274"
+    },
+    {
+      "path": ".agent-harness/scripts/intake-control.sh",
+      "sha256": "0b249856b8a5c7ed9dcc57919b55e2a1d551487d8a5ea98f23e198b4d1a142fc"
+    },
+    {
+      "path": ".agent-harness/scripts/intake-graph.sh",
+      "sha256": "08784c1c4a825694cefb2835daa546d0d7e7c60a6bc23f30c46e51a6a4a1f4e7"
+    },
+    {
+      "path": ".agent-harness/scripts/list-baseline-changes.sh",
+      "sha256": "58d7d51aa6b2483f9aab4ec7a450650aaf78fbf1964cb5d1276391e687ea616f"
+    },
+    {
+      "path": ".agent-harness/scripts/load-recipe",
+      "sha256": "f438bccaf087f0156a94945d50805e15616c6436f46b3f7a0031d3bff4962dc8"
+    },
+    {
+      "path": ".agent-harness/scripts/offline-capability",
+      "sha256": "a8b508a1126b31c5fc3b89f26da73594db52f87253d500a88c15944307280bea"
+    },
+    {
+      "path": ".agent-harness/scripts/provenance.py",
+      "sha256": "d661d2ee1790546af8a23b2824baff266a4f324d05ba7fabe8feb823ac9b4136"
+    },
+    {
+      "path": ".agent-harness/scripts/readiness-control.sh",
+      "sha256": "0adac109f859cf955732f4bd1a4141bf203ab48844b35b84b31e6f2f4ad535bc"
+    },
+    {
+      "path": ".agent-harness/scripts/record-decision.sh",
+      "sha256": "443b5cf7361c9989de31933c75882f29435f891dc1052cc9fdfd7171ff8380d6"
+    },
+    {
+      "path": ".agent-harness/scripts/record-failure.sh",
+      "sha256": "e80379b76fa470874d30eb28a8425ca4fba063aabf6d5544427b050ad144c55b"
+    },
+    {
+      "path": ".agent-harness/scripts/recover-finalization.sh",
+      "sha256": "67947a5dec9c5984ac1d033573cadbb78f5282373021ad717e7a0efd6f603b10"
+    },
+    {
+      "path": ".agent-harness/scripts/release-check.sh",
+      "sha256": "2788d0e23834d8ccd1e42ed11b1c3f2f07e4cd9cf490d43f3ebf4e65f0752ae2"
+    },
+    {
+      "path": ".agent-harness/scripts/release-invariants.sh",
+      "sha256": "d12c21cd760ec146859d38ad4aeaf19b68bac59c929b882966a2693bba342e2c"
+    },
+    {
+      "path": ".agent-harness/scripts/remediate.sh",
+      "sha256": "176b751793e74c41040937c26a79ca9828b5e6c7b271841c9d08f7feddc059ea"
+    },
+    {
+      "path": ".agent-harness/scripts/remediation-epoch.sh",
+      "sha256": "34232fb3e033908ed92b17f289ce9add693b837f47052e6e5b3e24bf20054718"
+    },
+    {
+      "path": ".agent-harness/scripts/repository-intelligence.sh",
+      "sha256": "1a485e60de0fc471d01f9a608f3849fd655e513b85c8215492a0ee0c4c833e2f"
+    },
+    {
+      "path": ".agent-harness/scripts/resolve-file-map-violation.sh",
+      "sha256": "e5a687a59f313a8b081ef7eedb70b0727a9ace877316a1e18415c99a1b0d2bd5"
+    },
+    {
+      "path": ".agent-harness/scripts/restore-checkpoint.sh",
+      "sha256": "3a9957dccc5ceeeeafad4e0326d80010b97c41df9f117dbf52d15df6e34039a1"
+    },
+    {
+      "path": ".agent-harness/scripts/rethink.sh",
+      "sha256": "33a66691127ec5e967830d2d12063c295740cac207232dfbf340cb2d51b69296"
+    },
+    {
+      "path": ".agent-harness/scripts/run-events.sh",
+      "sha256": "db5f1f00c581e8eafa7f9a9fbc27d5722c667115fb30e3f68eab8df76f29025b"
+    },
+    {
+      "path": ".agent-harness/scripts/run-in-env.sh",
+      "sha256": "329d9bef2bd753b082b8bfd8b9c9e7d080f0c9de2426c62ec4987fcb502d65d8"
+    },
+    {
+      "path": ".agent-harness/scripts/run-required-checks.sh",
+      "sha256": "381ce65785cf4c1b71d949fa4fbfbcf0bf85365b9877cab524bbdd4000b65468"
+    },
+    {
+      "path": ".agent-harness/scripts/run-targeted-checks.sh",
+      "sha256": "96625ecd5998cf1acc4e53a3e1e1ffd9b94c8d14cd3d2b8ab76cd5e1a07ad7ce"
+    },
+    {
+      "path": ".agent-harness/scripts/score-harness.sh",
+      "sha256": "27c450b5d25deedb4009d0a5bc027ade186b282bb4f33c5d6547f207618ccef0"
+    },
+    {
+      "path": ".agent-harness/scripts/setup-env.sh",
+      "sha256": "0ab059ea9ad93906607bededabb76f6eeccf6da795306b8ca36f951559b10bee"
+    },
+    {
+      "path": ".agent-harness/scripts/spec-lock.sh",
+      "sha256": "0320673709340f47a766e1cd014441b1aacba8a2d489a5a91160ecd47406e872"
+    },
+    {
+      "path": ".agent-harness/scripts/story.sh",
+      "sha256": "39544ac949c231453c00c578e3766288192567c4374a698fc59d081d355bb465"
+    },
+    {
+      "path": ".agent-harness/scripts/task.sh",
+      "sha256": "459482aa505d0150734a8b21c4aa187172a3c242b0adbb837eec944c6a6c32cc"
+    },
+    {
+      "path": ".agent-harness/scripts/transition-state",
+      "sha256": "f52c5d1c874d893fd1cb13174db4f8cd71e7c651a2dfcf8a961a4a1cfb7c2d08"
+    },
+    {
+      "path": ".agent-harness/scripts/trusted-time.sh",
+      "sha256": "638c6d199761b5caf5476df338b770e4efcf79372f20e5ee8994b161149546b1"
+    },
+    {
+      "path": ".agent-harness/scripts/update-epic-progress.sh",
+      "sha256": "170977b6c5f3fd6d36c6c0b9f57969830384caff47d6b351c81bd1a85c42dee7"
+    },
+    {
+      "path": ".agent-harness/scripts/validate-current-state.sh",
+      "sha256": "844bceb38f807f88941af7a8ebc6fd11d53d71a406442babc6889d321f6f882b"
+    },
+    {
+      "path": ".agent-harness/scripts/verify-checkpoint.sh",
+      "sha256": "d255b7834eb93f93aff65833b6ae1149afbc45e8be310db1bb49df08871c0a9b"
+    },
+    {
+      "path": ".agent-harness/scripts/verify.sh",
+      "sha256": "b76ebff535e9b512b1716a5b4b9f05d953227063b39e2bba475490e43a67bf1f"
+    },
+    {
+      "path": ".agent-harness/scripts/workflow-dispatch.sh",
+      "sha256": "16904a198c916ffb6326b221c75abfd7ad968d38ffcd99598241c806d6a20f3b"
+    },
+    {
+      "path": ".agent-harness/scripts/workspace-guard.sh",
+      "sha256": "ee0441a42503f817d028c202069723f635798082f04996eae7254d89c7b4d4a9"
+    },
+    {
+      "path": ".agent-harness/scripts/writer-lease.sh",
+      "sha256": "2f101abcd1016261c2b8fa67b93b62f2e2f0be0d33a3677cef976eeee10b5b1c"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/approval-snapshot/README.md",
+      "sha256": "2179d62ad98ffa12529ce11abc892c72771aa62b281c7cb76716dbebd264ebf6"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/approval-snapshot/output.json",
+      "sha256": "6489d6d7a33c5d40e18fc61eeb6c34c341279ee61816394dde5189aa4ad8fae5"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-no-tests/README.md",
+      "sha256": "b3844d64b927ad844356e68c7f6d8b470c8b1e07cc3fcdbe77cb4ebf328f3cb3"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-no-tests/src/app.txt",
+      "sha256": "052e8ba2f09cfa869570582b61a3710c39dd1bd43d8718bee3fa565568e09c61"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/README.md",
+      "sha256": "07e3e2cdb0dec37306f7e61565180b2bd26a8bd388dd166ba46962561ba738c5"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/src/app.txt",
+      "sha256": "b00982b2ccb6fc391ac221bcfeee39c541f74090d0c06ec52636c9935eadead3"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/brownfield-with-tests/tests/service_test.go",
+      "sha256": "dcc85a4b4969dba433128ecf0b967cfcd0764ff2ab8c9635a1392282ad0a9645"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/git-repo/README.md",
+      "sha256": "792d97b5bbf1a3527d810cb3526a6e0e291f2e974a800c34766db48af641a09f"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/git-repo/src/app.txt",
+      "sha256": "8c0f0f99ab9162a28a6fc226b65d02f32167791cb45f1790c0a45fa37a8ed15f"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/greenfield/README.md",
+      "sha256": "7ec6ed048bac5d9e4a5630e0ec27e4fd23c850598663e50b2e44a93373d54aa3"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/greenfield/src/app.txt",
+      "sha256": "f0ede7692891118d522d54602a294f4005c682550148c964859761909c1b8b09"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/no-git-repo/README.md",
+      "sha256": "87ba404497e94ac6b837bde3fff4f77bdb412320f50cf4fb0db212b4f3d5fe36"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/baseline/no-git-repo/src/app.txt",
+      "sha256": "7daf0f5533516bcd4ea6db1396da9231869437231c5e516b205c23471d92fc09"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/context-retrieval/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/failure-injection/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/lifecycle/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/.github/workflows/ci.yml",
+      "sha256": "a50fa4267ee2d0b154eb373894e539acc529cc0250e53f12c1ac3061bfd603a7"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/Dockerfile",
+      "sha256": "399c98da6fe3e39c63f902fdd192a6e931b60e2f4496dd6f1c2aee6fac62929c"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/cmd/server/main.go",
+      "sha256": "55a60bb97151b2b4b680462447ce60ec34511b14fa10d77440c97b9777101566"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/docs/decisions/ADR-0001-brownfield-notes.md",
+      "sha256": "c2bdd7bfcbed1864b2122c86a441759037af32fa345f2b2ebad1e055a08c2cd8"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/expected-repo-profile.yml",
+      "sha256": "29af967d9834907ae178c7289cb79185e104bf289f5bd17560617d351bb007fd"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/repository.go",
+      "sha256": "8a92597fec1260e3cac36e03cb6629636e395c0cf51e4292a07e08c59e20d3db"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/service.go",
+      "sha256": "c9e44bb436b42067737ca63b9f013c34effcdd7350bc79e404df66f086ed819a"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/internal/order/service_test.go",
+      "sha256": "68aa3acf9908fa1fe19f7acb4b3090f9c1e2e2bf1529ec32b4e6aa61e1b485f0"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/brownfield/migrations/001_create_orders.sql",
+      "sha256": "9e531187827caebc897099d210909070e16bf5cb83d515e9cafc0a811e9ac9c0"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/README.md",
+      "sha256": "a26a92e373e320cf79a5da8ae6a340e0bbc464042d8e065a63503f238d9b5a46"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/docs/decisions/ADR-0001-initial-architecture.md",
+      "sha256": "7668209df9a813ee71999476a91439fc09ca86c051439647d4dd37cbe85d3cce"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/greenfield/expected-repo-profile.yml",
+      "sha256": "590005519fee7a2e81211317f5f0c8ebf69145387453fb2036a1affca5842a68"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/docs/decisions/ADR-0001-hybrid-note.md",
+      "sha256": "23ee71aa11b1dee0667811bf1a72cdba4a9a8b93b384ab8e99fa7846716cd805"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/docs/epics/new-worker/epic.md",
+      "sha256": "efb212a5e30adf518f219458b86a0d2624d74386e235b59d3ed58ff739fab073"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/expected-repo-profile.yml",
+      "sha256": "48f055deda1d08c4d2f481a9f2b324a252eccd2e630a305ab96fe969634c8aef"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/internal/user/service.go",
+      "sha256": "89c1cf5f37a8f80c0ef4d4fbbb69c1c87649b5eb8b47193e3050696b2c5cc120"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/repo-modes/hybrid/internal/user/service_test.go",
+      "sha256": "99b480350479bc2c67f503b0db203e64f8e8a00888135db2352784e8a13c06e7"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/clarifications.md",
+      "sha256": "dfed136c0e2258db48508c368f9baa0de01ccde63fae7258d7782eda275b093c"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/epic-memory.md",
+      "sha256": "6c4ba034e7908fc1bf390077ae417aacbcb24077618b7c4e5275fc92f4462575"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/epic.md",
+      "sha256": "9c444cea014c039b089f041e82b104d8b1e28a1046c2b794f33a09d883c8cb40"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/integration-contract.md",
+      "sha256": "47fba39edb6c28f2d373b50e5b0e915d9cf72abeaf36567f8555d216679e4ddc"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/progress.md",
+      "sha256": "952b82036225d65606f059d448a968b122c60db84785c3e7ea9c54040307538a"
+    },
+    {
+      "path": ".agent-harness/tests/fixtures/sample_harness_testing_tasks/stories.jsonl",
+      "sha256": "bba6881523fd7129dd19fd813f5ede6d262b73a96cee66283e52bfb6900c5c30"
+    },
+    {
+      "path": ".agent-harness/tests/harness/run_all.sh",
+      "sha256": "0b087b358705f4ca27ff307c192a79fb87e150fbc7b99c5728fd639dcf26abed"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_ac_coverage.sh",
+      "sha256": "7fd5cc76d7d20af8b163e4ce5f00efa74a27cffc3beeac454dad4ce6ce24cbbe"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_ac_evidence.sh",
+      "sha256": "d9884e7df6d0b96ebf6c385519c41771508f777fd5e5a0c24d56e545d297c80d"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_adr_registry_integrity.sh",
+      "sha256": "fc2ee5bf621f84546786cded9d97fd59fc94855f1e1d0934d9ff7aab731f7272"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_adr_review_binding.sh",
+      "sha256": "fb802e553c37a0b4f89b5220fc72e4a8872e4c9430d4c37e12886302388937ec"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_approval.sh",
+      "sha256": "fb99e6cd0411f4d506ea14c3e29c7050f2e7b453d9954abea9d14e688cc9ed66"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_authority_integrity_followup.sh",
+      "sha256": "04876924714e3c47698e613b08047c2f67597172ca76c1c0d18f1783e9ff399d"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_automatic_rethink.sh",
+      "sha256": "94c309039b7f7e4daa2c6a36658158562bb07c35f30e6f60502422daa42fbaea"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_baseline_contract.sh",
+      "sha256": "f14ab26e00b3d190b498397182ad8637ba03047c65cbb7e291a768d09ee5e8ec"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_batch_finalization_approval.sh",
+      "sha256": "de1409336e6f851597ff67cc1da27c08604f6fbc400c74b068ea97365f25e847"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_approval_snapshot.sh",
+      "sha256": "e109ebadb65c39a9c3f9e751684a4c96b4d384d30c82439303670c4929ea8a2f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_brownfield_characterization.sh",
+      "sha256": "ad3429e933e164218efaa1ed290ef0a850aad625c275bff5fe9d9e50e52d0b84"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_brownfield_existing_tests.sh",
+      "sha256": "ea64ef94eb3f9989eea0f8c2aa86ce48bca1479c9dd05ed6a83085887c558ab6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_behavior_baseline_greenfield_none.sh",
+      "sha256": "bee431318e096b3a93330426c860c20d75d50a572d188a860d8e0b84c9d96950"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_benchmark_suite.sh",
+      "sha256": "74d786325def6d2b2252dfb752059e35aa2a8029f4f113d571750c724610da8d"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_binary_artifact_capture.sh",
+      "sha256": "ee4980834d78ae8cac7377231a862e13ede19e34b21927f31870fc361a22b5f5"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_brownfield_benchmark_suite.sh",
+      "sha256": "7de6d0804009ba4cbfb30332b661cd562fbbe53bc282cf0190e4bac703995b0e"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_budget_guard.sh",
+      "sha256": "2295979fd8c7f27e807e42c871bb72e424ce5e9ea321facbbe6ec1ca80c8c0a6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_budget_routing.sh",
+      "sha256": "082403b7a1881bcca11367c3029aa16ec4f0018e39dde3031952305e7f6a8c62"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_capability.sh",
+      "sha256": "724a92600cf2a1127ad644649b6d4f92cfbf7bd9765982debd1a95578e5eaef6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_check_file_map_snapshot.sh",
+      "sha256": "b249c57e75acf476148a7044e9d0c7fbd9f0424a5e2feff9baeaf5ba9be43a37"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_check_final_report.sh",
+      "sha256": "14dbe35aad4cbb3f70dcec4227dcaf446a8f85d46448bf11449476b4e9ed5b9a"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_check_rollup_projection.sh",
+      "sha256": "09c6567986ec86b6a018d7d04cc97786a86c233debfa7c6de205bc5aeabb8533"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_check_test_report.sh",
+      "sha256": "48958490b21e67a7fa21194dd18a9fe772a6a2274ed1d62621207cca3db99ab7"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_checkpoint_contract.sh",
+      "sha256": "944b6bcb5786bb01fb7802e56a1e5ca6445b692de703e0fabd4a144c4cb0f2f1"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_brownfield.sh",
+      "sha256": "403fded43b559d4f15da5cd74282914fc6ff944511256ccda1211b1750725599"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_greenfield.sh",
+      "sha256": "d0ca71890550ecc1b32a8f2002310be3e918e7446a208131443932ad3f439f0e"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_classify_repo_hybrid.sh",
+      "sha256": "c36576f6c0e64f3e42e40671ab356073f44826def981ba354d34dbc3511325c6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_completion_judge.sh",
+      "sha256": "c2e0e96ca39a6d379ab82bd1d9d3d8d41ef2f2859abbe2b2ccc3ac04f992fb49"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_consume_plan_and_rollup.sh",
+      "sha256": "a37d4026bf8dfd4e40750ade306cc5d1888d8e6ef599547745b35ae6fc31d518"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_context_adr_exact_match.sh",
+      "sha256": "ba0ca90a9270c5a2303f6ea6edb53a1058cb0cafb91525e023a73b7f9130f76f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_context_retrieval_quality.sh",
+      "sha256": "f5fd16e058a91f3cb7f6a49d660edfd9d6e8fbc2f0b7a7435e66e621b5e7560c"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_create_baseline_snapshot.sh",
+      "sha256": "2f30c673dbe67ec07daa3b0f3f76ef0b0d7299054726edbadc9eb625f1a41302"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_current_state_event_chain.sh",
+      "sha256": "4303abe8c028d02535823bee0c61442b49c50bb9c62d58a986f25bac42f92ff6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_current_state_validator.sh",
+      "sha256": "a34b6aea3c16bcf7db61608927ecbaa197bfd663a5446031968f17f03897bcd6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dependency_artifact_contract.sh",
+      "sha256": "eca806b33e1a6e01accbe0fae6c8c0cfc8382a959f2b497376ca679b6d5d42bb"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_detect_change_baseline_git.sh",
+      "sha256": "1d740005f38654b4aa3439569ffbc1863858eeda3665f88d3e968aa68e1e6898"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_detect_change_baseline_snapshot.sh",
+      "sha256": "ea323d049daa5e1fa0323aa49b6d50c4968fae7db113e11fc1144cf9977fb93f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dirty_git_active_plan_baseline.sh",
+      "sha256": "2bc97c17f1e09ad207bf004229816ffb7a414ca31577b13835d2a1bf1ab967ff"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_dirty_git_baseline_snapshot.sh",
+      "sha256": "726658572d723914090c102fe38ce1a675a23d7d48d5f86201cfd9e1cf48a4c5"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_emergency_revocation.sh",
+      "sha256": "b6c8d9f9e5a374f2fe60f57774499019ec0e6fcabea05693ea64377a30fd039e"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_enforcement_gate.sh",
+      "sha256": "0cd354a45ba65b3529853f0a65140f88b084f9f54fe5c5ad288c01291e7a78f4"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_epic_story_task_lifecycle.sh",
+      "sha256": "17cf1dd06624b5db02ac781eb16f23f87197945d8f6dce78699fb99809f074fc"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_excluded_capability_adapters.sh",
+      "sha256": "f0e4b0a65953fb172e5cfb020d36a8a4a83847f538700df0353269208621aa17"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_excluded_release_deployment_surface.sh",
+      "sha256": "0e435bddb30be97eff9ad3bfac0c0429012a289478c12f0851fd4d1abb90ec7f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_export_harness_package.sh",
+      "sha256": "73ab77302bac1ed65c36600950b0bd79ed24388ce3792ad8b0ee28b9137a2b7c"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_export_install_integrity.sh",
+      "sha256": "a91cd85fd362f15fcbbb4f9f1ed18eaca231cd67b6ad8521c05147e4654d66ac"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_failure_history_contract.sh",
+      "sha256": "c70b76c6e3be52fdf1d1810ed8968cc6986fa874d7b2428fa8921ee874b78e69"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_failure_injection.sh",
+      "sha256": "0eaccc83bcd8b68d364239d67f2d301dc5af9aa52e6f09b9d1543a37329614e3"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_finalization_authority_contract.sh",
+      "sha256": "803ea791cc1effb97a7856a556467e21794349265fde610cbbf506badfaec297"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_finalize_unique_completed_file.sh",
+      "sha256": "a40807b011902ddb8e47951cd4a1dabf783812c779d1e87d2cea164d63da2713"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_finalize_updates_epic_progress.sh",
+      "sha256": "09e04c30b3cbe76accafc49848072ab501e5bbf3711c9f0160f500b158f2a180"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_harness_execution.sh",
+      "sha256": "1f6f9c93fc1f4a56316a519dfc609d2e567a5625688bc4d63431c0795d85e590"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_harness_regressions.sh",
+      "sha256": "df69cbf2fc6457b0475fc575db4e09bf5147271920fa931d94e6386c0a0eb9ec"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_intake_backlog_report.sh",
+      "sha256": "d038d886e4854190783c1c7f32fac87851d36281793c166bb027288ba5addfe2"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_intake_control_plane.sh",
+      "sha256": "e89cfcf6ce12835918008203bf3e90454eeb0e7186cc7599c9584b602ddcd1d1"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_intake_graph.sh",
+      "sha256": "a1f56a6bdbf93fe63df6395026adccb6ede73b388ee05f4d09068ea13195b7c6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_long_plan_workflow.sh",
+      "sha256": "ecefeeff7d8ca96e238ea299046c3964196aad5965b3ed5ba01746c4352416a0"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_mode_aware_context_pack.sh",
+      "sha256": "f850d99f8fb94973a80428ab0393e450fc1a57e6b75469da255ad42f53bce384"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_mode_aware_verification.sh",
+      "sha256": "1c68c521acaddc01e9ffc294d73454683c7c081fb6d0abd367eae76c04569147"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_offline_capability_guard.sh",
+      "sha256": "dad92804f70c262826f169c1371a48fe4956baf70db952ff98dff269d0e6556a"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_plan_decomposition.sh",
+      "sha256": "946a438fcc7515691ff97c81538882a36bd6212693937af80fbe2c494181be82"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_plan_decomposition_semantic.sh",
+      "sha256": "3376b38179825ed26adbe8e3f7cd56a6d295a8cc396c21bca344fb6d9f1aec4d"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_policy_binding_artifact.sh",
+      "sha256": "160ab905843d48d0d442d831cba57bb639b5c886dffe6318a5277ac2f6e4207f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_policy_risk_binding.sh",
+      "sha256": "b1612a34af9267afbf31a96b4f2192d3dcaeb798ccfe677d89c41c2bc135dc78"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_public_cli_compatibility.sh",
+      "sha256": "6e81cfa6b09394357fd9e68c7f2ea2512078b329c218ff6741e7ceac6f5037f3"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_readiness_control.sh",
+      "sha256": "ba95ebdba1fefab595d27568946b81bacf0b0d18f07646a3da11f7b4b5105600"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_readiness_gate_parity.sh",
+      "sha256": "7acb797d923ad8402e269b0b5a75349787fee6b5127e24aa16e78dd47a355771"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_readiness_schema_contract.sh",
+      "sha256": "03c558d1a1771852771cb8766fbddf04112716be86dc5ca029aeae1114294132"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_recipe_loader.sh",
+      "sha256": "5c3bc7b16781d225a138227a90c322294e601494bb56ab6b4a088060f9d91f56"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_recover_finalization.sh",
+      "sha256": "e9f07bf8bd4775eb45ca4a48996c5a4fa28280440c35729631e82b2d3a2471a2"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_release_fixture_inventory.sh",
+      "sha256": "71b845871ad1131bac43e11f5a34b73370cff93a91cd41b200ce1fe10cda0d3b"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_release_invariant_fixture_gate.sh",
+      "sha256": "820cb3906cd11e69172786571e21ca981b95588eb0ca0b2b6e2cfb799cd53ce0"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_remediation_epochs.sh",
+      "sha256": "5d90d0210978a539d856d690d061e734791defcecdc82cf652b3226c8bff285d"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_remediation_trace_contract.sh",
+      "sha256": "21dce152d7b47e143a536e5c4ddb6996ce8e99391f4fb5daa796f32029c454b5"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_repository_intelligence.sh",
+      "sha256": "b24a9474829fd29b05a65c55312322c3831e512c1231f6dcccbe26e88a102639"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_required_review_contract.sh",
+      "sha256": "244503f39e280f557c031020bc8aa8c93f44fd8b3ec13ce951f9b38b8027b1f6"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_role_neutral_verification.sh",
+      "sha256": "bd178b5e7f01d0e62cdf97f9b20fa6816e547c7548a33be0b5eeede46ab19cc0"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_run_events.sh",
+      "sha256": "2de90afb835f0d45256e0783d319c66b0ab22fe9cbdddd140486f9c85516c196"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_run_successor_lineage.sh",
+      "sha256": "d9bb4e87eba173dc0e1cb83379061b7536fc3de807ee5ef6d9c67fcc3e0ae275"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_spec_lock.sh",
+      "sha256": "e6340eb211e93c5455b1d8fe01e05607b185a15560a6d039027fdb1d2bc4e4e7"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_stale_artifact_lifecycle_paths.sh",
+      "sha256": "0804fa1e76b5790b3d6decb012dda06107c30a413886100167d14aea9b7552bf"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_stale_milestone_artifacts.sh",
+      "sha256": "1bf5369a7f94d01ae874121e6848339cc0857de8e6bdf00d9ed482212430118b"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_task_plan_consistency.sh",
+      "sha256": "a4d5bc63407cc18123ce654f4b4347aca40e09a7eb6238ce537233b76045d5d7"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_task_schema.sh",
+      "sha256": "c796ceda346c383b16460e27d128ffd25e56f56a487475ac50da54abef612022"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_template_cleanliness.sh",
+      "sha256": "3e3d14d1e3ed9db3e19a9df1ed863b3a8ab388d4fabe1a973be4e1cf6644aa61"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_test_report_contract.sh",
+      "sha256": "67999e65afec1687983124d6aeb60235832f4586e5faf4e11bc1314dc4773969"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_test_runner_timeout.sh",
+      "sha256": "0419cb9033d1888012a9da10d8263f287096915f442cf337fc7ea0d27b0536d9"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_transition_state_chain_guard.sh",
+      "sha256": "e5a3e28e26b9d2ac4f5a1fc69090d3b6a98a86bbbf82580d8ffb3f672903d976"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_transition_state_validation.sh",
+      "sha256": "c3454ce7c019d11b6102ecc22aba0576c657cc964ded73a56bbb46d2142b2e95"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_trusted_time.sh",
+      "sha256": "d530c8755514fd690a0ee793549b072ae7bf9cb8ac9ad3206734dc97ed14f6fd"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_agent_interface.sh",
+      "sha256": "4c6eef2ce8a718235ee3caad8ebb2019d344b1c2f5face04fbdec99abe42770b"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_artifact_selection.sh",
+      "sha256": "93a0055d7c326fffddac82e05e71d594f92ad604026cea19d33948704fe275f9"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_authoritative_docs.sh",
+      "sha256": "fcb4eaffea6fbeae855e67e2030e0486365363d969929d44404c44bb118c6756"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_authority_exclusivity.sh",
+      "sha256": "bfe6c143d9f08070f791dda94002b381f099c783f5eb7ff32d0fb0d2b8af6066"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_contract_coverage.sh",
+      "sha256": "56471685a7523cdaadccf0554ce4cbb44fca6a361cfe26150f9f4f557f005dc5"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_finalization_transaction.sh",
+      "sha256": "f31d501f675b5d07e4be32984b10438b6844321c64ae41d2eeabfec235078a98"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_legacy_rejection.sh",
+      "sha256": "39c35bae7937d14ba890bcc442c0b526695b26cbd68864e30029c7793ff47826"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_lifecycle_state_alignment.sh",
+      "sha256": "1561eaf92219553f984e87e2784fd589b89308e34df28d263ac053e3b6a08e51"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_plan_review_authority.sh",
+      "sha256": "6fe6cc6484cfeaec6851c0dc53d150a00d4ea521c05e8dc418af7fca94addd62"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_role_authority_removal.sh",
+      "sha256": "3e20c2b9a96d8d7d8d2822d1cd47d186be0c35404a2bfae04f53809d4018fd8a"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_v3_scope_exclusions.sh",
+      "sha256": "40994acea8ca0b0533604ba89c6c172f38a8e067ef3b7150667130e7350107f5"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verification_pass_contract.sh",
+      "sha256": "6a72cb4fe3daee7882a54d7e1a192c931f54e154029cd5ab0fe3396a5582eb49"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verifier_verdict.sh",
+      "sha256": "4f4a2f7f2b12694e3d91d5efb940f923febb2aae60af32e28c5fe4539eb6d56a"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_verify_routing.sh",
+      "sha256": "6805e2f0efcaf9f90e277233e038a4a7f5f2ad71703650e0d88e613bcc50c806"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_workflow_dispatch.sh",
+      "sha256": "74106348bc4db948a26c037dfd1e395054b7cb830c671bba68440759b6fc8d89"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_workspace_guard.sh",
+      "sha256": "20d3cafd539478a4d6504e0cef99fefe5678e9e374c6387d6cc59438d85fee4f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_worktree_integration.sh",
+      "sha256": "dfaf96b6eb9004770cc1ebae1ac3246f11e06d8765401171bb11430443e6229f"
+    },
+    {
+      "path": ".agent-harness/tests/harness/test_writer_lease.sh",
+      "sha256": "89c6582512c392848f1b34a17768d1152d8e566631115eaf008bcdc4c7fdcb43"
+    },
+    {
+      "path": ".agent-harness/tests/test_v3_projection_replay_audit.sh",
+      "sha256": "6378ca70fc2dd88d7546002cf8681fe2a2e461d3b8973d8e47243aa0d9f8c079"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7e2c607f01147c8d0bad4a44244c7ad57fbdf5c8e0cec62d71f0bd4a7c49cba7"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "deda8fff49b330374eaaf0e146ed3ea96189dc2d3f7a14077617c01712b1aa24"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "7ebf931fafe18b5ccc901b32612283df1d1f156b7a5a74c17e694b3473ff4155"
+    },
+    {
+      "path": "README.md",
+      "sha256": "901a02d94150b40e0e7901164a62c0a0ae556534ac10738dfddeed9c7d6c7663"
+    },
+    {
+      "path": "WORKFLOW.md",
+      "sha256": "89729ab6fc6506a9c718ca078b83c2f3d7ec31abe04c56895a27c1169a9d19b2"
+    }
+  ],
+  "git_status_before_export": [],
+  "manifest_schema_version": 1,
+  "mode": "clean-template",
+  "package_hash": "bda7130a73a270218301f3b7a0da08749369e970426ec0fab40582b75e795ce0",
+  "placeholder_files": [
+    ".agent-harness/runtime/state.json",
+    ".agent-harness/runtime/events.jsonl",
+    ".agent-harness/runtime/current.md",
+    ".agent-harness/runtime/v3-workflow.json",
+    ".agent-harness/docs/epics/README.md",
+    ".agent-harness/docs/exec-plans/TEMPLATE.md",
+    ".agent-harness/docs/exec-plans/active/.gitkeep",
+    ".agent-harness/docs/exec-plans/completed/.gitkeep",
+    ".agent-harness/docs/evidence/README.md",
+    ".agent-harness/docs/reviews/TEMPLATE.md",
+    ".agent-harness/docs/tasks/tasks.jsonl"
+  ],
+  "repo": "agent-harness-package-enhanced-clean",
+  "source_commit": "not-available",
+  "template_files": [
+    "AGENTS.md",
+    "README.md",
+    "WORKFLOW.md",
+    "CONTEXT.md",
+    ".gitignore",
+    ".agent-harness/scripts",
+    ".agent-harness/docs",
+    ".agent-harness/tests",
+    ".agent-harness/runtime",
+    ".agent-harness/policies",
+    ".agent-harness/recipes",
+    ".agent-harness/benchmarks"
+  ]
+}

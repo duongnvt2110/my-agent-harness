@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-11T09:33:55.135314+00:00",
+  "finalized_at": "2026-07-11T09:33:55.678999+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-11T09:33:55.164335+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T09:33:55.195050+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T09:33:55.280785+00:00",
+      "expected_after_hash": "2d3ce996f38f09dedffef1621e3c0b7b71bfd7f3f320eb0f3c91b937059a821a",
+      "expected_before_hash": "c3cb9a3712e6611affd2840d6cdfaaa94323673f20532b6f99dd53476fe2d51f",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T09:33:55.334847+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T09:33:55.650361+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T09:33:55.678891+00:00",
+      "expected_after_hash": "2d3ce996f38f09dedffef1621e3c0b7b71bfd7f3f320eb0f3c91b937059a821a",
+      "expected_before_hash": "2d3ce996f38f09dedffef1621e3c0b7b71bfd7f3f320eb0f3c91b937059a821a",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "implement_workspace_writer_guard",
+  "updated_at": "2026-07-11T09:33:55.678999+00:00"
+}

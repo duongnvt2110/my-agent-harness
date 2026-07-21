@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "workflow_versions": {
+    "v3": {
+      "required": [
+        "schema_version",
+        "canonicalization_version",
+        "id",
+        "title",
+        "goal",
+        "depends_on",
+        "acceptance_criteria",
+        "approved_scopes",
+        "approved_files",
+        "approved_deletions",
+        "verification_checks",
+        "risk",
+        "source_spec_hash"
+      ],
+      "acceptance_criteria": "structured"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+repo:
+  mode: hybrid
+  confidence: high
+  brownfield_score: 55
+  greenfield_score: 45

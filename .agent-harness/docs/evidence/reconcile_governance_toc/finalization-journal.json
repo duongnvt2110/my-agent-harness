@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-14T14:23:58.829865+00:00",
+  "finalized_at": "2026-07-14T14:23:59.609990+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-14T14:23:58.861879+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T14:23:58.893999+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T14:23:59.011337+00:00",
+      "expected_after_hash": "2eed4c6352d0b212a8356a35e6344de12fe5158851c541017cd47c06af4073ea",
+      "expected_before_hash": "60197805be83a7f964191aeb01570580e82cf846d12bfbec8b284c0d32fa6b1f",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T14:23:59.077356+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T14:23:59.578929+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T14:23:59.609857+00:00",
+      "expected_after_hash": "2eed4c6352d0b212a8356a35e6344de12fe5158851c541017cd47c06af4073ea",
+      "expected_before_hash": "2eed4c6352d0b212a8356a35e6344de12fe5158851c541017cd47c06af4073ea",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "reconcile_governance_toc",
+  "updated_at": "2026-07-14T14:23:59.609990+00:00"
+}

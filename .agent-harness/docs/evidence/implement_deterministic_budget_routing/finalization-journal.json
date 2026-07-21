@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-11T12:17:05.217096+00:00",
+  "finalized_at": "2026-07-11T12:17:06.812203+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-11T12:17:05.297832+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:17:05.385837+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:17:06.181641+00:00",
+      "expected_after_hash": "c79641d7274b3234b47dd8a1aeac84f7828e5f466ce06d5e5d2a6aabba7dae17",
+      "expected_before_hash": "07a7437eca7c2c1c4176ba0a98fae403de8f25842b3a144a60abfbdd794f8938",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:17:06.349428+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:17:06.780567+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:17:06.812082+00:00",
+      "expected_after_hash": "c79641d7274b3234b47dd8a1aeac84f7828e5f466ce06d5e5d2a6aabba7dae17",
+      "expected_before_hash": "c79641d7274b3234b47dd8a1aeac84f7828e5f466ce06d5e5d2a6aabba7dae17",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "implement_deterministic_budget_routing",
+  "updated_at": "2026-07-11T12:17:06.812203+00:00"
+}

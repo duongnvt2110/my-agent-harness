@@ -1,0 +1,10 @@
+[
+  {
+    "id": "ADR-0004",
+    "title": "Adopt the Agent Harness vNext Authority Model",
+    "path": "docs/decisions/0004-agent-harness-vnext-authority-model.md",
+    "status": "Accepted",
+    "tags": ["harness", "v3", "lifecycle", "state", "recovery"],
+    "summary": "Makes state.json the sole v3 lifecycle authority and current.md a generated projection."
+  }
+]

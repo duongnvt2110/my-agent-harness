@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+set -euo pipefail
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/harness-lib.sh"
+resolve_harness_paths
+cd "$HARNESS_ROOT"
+state=""; spec=""; evidence=""; verifier=""; failures=""; approval=""; task_store="docs/tasks/tasks.jsonl"; risk="normal"; mode="AUDIT_ONLY"
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --state) state="${2:-}"; shift 2;;
+    --spec) spec="${2:-}"; shift 2;;
+    --evidence) evidence="${2:-}"; shift 2;;
+    --verifier) verifier="${2:-}"; shift 2;;
+    --failures) failures="${2:-}"; shift 2;;
+    --approval) approval="${2:-}"; shift 2;;
+    --task-store) task_store="${2:-}"; shift 2;;
+    --risk) risk="${2:-}"; shift 2;;
+    --mode) mode="${2:-}"; shift 2;;
+    -h|--help) echo 'Usage: finalize-v3-run --state PATH --spec PATH --evidence PATH --verifier PATH --failures PATH --approval PATH'; exit 0;;
+    *) fail "Unknown argument: $1";;
+  esac
+done
+for required in "$state" "$spec" "$evidence" "$verifier" "$failures" "$approval"; do
+  [ -n "$required" ] || fail "all v3 finalization paths are required"
+done
+
+python3 - "$state" "$task_store" "$risk" "$mode" "$spec" "$evidence" "$verifier" "$failures" "$approval" "$script_dir" <<'PY'
+import datetime as dt, hashlib, json, os, pathlib, subprocess, sys, tempfile
+state_path, task_store, risk, mode, spec, evidence, verifier, failures, approval, script_dir = [pathlib.Path(x) for x in sys.argv[1:]]
+journal_path = state_path.with_name("v3-finalization-journal.json")
+lock_path = state_path.with_name("v3-finalization.lock")
+def read(path):
+    value=json.loads(path.read_text())
+    if not isinstance(value,dict): raise ValueError(f"object required: {path}")
+    return value
+def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path,value):
+    path.parent.mkdir(parents=True,exist_ok=True); fd,tmp=tempfile.mkstemp(dir=path.parent,prefix=f".{path.name}.")
+    try:
+        with os.fdopen(fd,"w") as h: json.dump(value,h,sort_keys=True,indent=2); h.write("\n"); h.flush(); os.fsync(h.fileno())
+        os.replace(tmp,path)
+    finally:
+        if os.path.exists(tmp): os.unlink(tmp)
+try: state=read(state_path); human=read(approval)
+except Exception as exc: print(json.dumps({"valid":False,"decision":"DENY","errors":[str(exc)]})); raise SystemExit(1)
+errors=[]
+for key in ("task_id","run_id","spec_hash","policy_hash","snapshot_hash"):
+    if not state.get(key): errors.append(f"state must bind {key}")
+if state_path.name != "state.json": errors.append("v3 authority must be state.json")
+if state.get("state") not in {"HUMAN_FINAL_REVIEW","FINALIZED"}: errors.append("v3 finalization requires HUMAN_FINAL_REVIEW or FINALIZED")
+if human.get("task_id") != state.get("task_id") or human.get("run_id") != state.get("run_id"): errors.append("human approval identity does not match run")
+if human.get("snapshot_hash") != state.get("snapshot_hash"): errors.append("human approval snapshot does not match state")
+if errors: print(json.dumps({"valid":False,"decision":"DENY","errors":errors})); raise SystemExit(1)
+if human.get("approved") is True:
+    authority_check = subprocess.run(["bash", str(script_dir / "check-finalization-authority.sh"), str(approval), str(state_path), str(evidence)], capture_output=True, text=True)
+    if authority_check.returncode:
+        print(json.dumps({"valid":False,"decision":"DENY","errors":[authority_check.stderr.strip() or authority_check.stdout.strip() or "finalization authority validation failed"]}))
+        raise SystemExit(1)
+try: lock_path.mkdir()
+except FileExistsError: print(json.dumps({"valid":False,"decision":"DENY","errors":["v3 finalization lock is held"]})); raise SystemExit(1)
+journal=read(journal_path) if journal_path.exists() else {"schema_version":1,"status":"PREPARING","task_id":state["task_id"],"run_id":state["run_id"],"steps":{"approval":"PENDING","validation":"PENDING","task_projection":"PENDING","transition":"PENDING"}}
+if journal.get("status")=="FINALIZED" and journal.get("task_projection_hash") and digest(task_store)!=journal["task_projection_hash"]:
+    journal["status"]="RECOVERY_REQUIRED"; journal.setdefault("errors",[]).append("finalized task projection hash drifted"); write(journal_path,journal)
+    print(json.dumps({"valid":False,"decision":"RECOVERY_REQUIRED","errors":journal["errors"]})); raise SystemExit(1)
+def transition(target):
+    proc=subprocess.run(["bash",str(script_dir/"transition-state"),"--state",str(state_path),"--to",target,"--apply"],capture_output=True)
+    return proc.returncode==0
+try:
+    if human.get("approved") is not True:
+        if state.get("state")=="HUMAN_FINAL_REVIEW" and not transition("IMPLEMENTING"): raise SystemExit(1)
+        print(json.dumps({"valid":True,"decision":"REJECTED","task_id":state["task_id"],"run_id":state["run_id"]})); raise SystemExit(0)
+    approval_marker = state_path.with_name("final-approval-consumed.json")
+    if approval_marker.exists():
+        print(json.dumps({"valid":False,"decision":"DENY","errors":["final approval has already been consumed"]}))
+        raise SystemExit(1)
+    journal["status"]="FINALIZING"; journal["steps"]["approval"]="DONE"; journal["approval_hash"]=digest(approval); write(journal_path,journal)
+    checks=[
+      ["bash",str(script_dir/"check-ac-evidence.sh"),str(evidence),state["spec_hash"],state["policy_hash"],state["run_id"],risk],
+      ["bash",str(script_dir/"check-verifier-verdict.sh"),str(verifier),state["spec_hash"],state["policy_hash"],state["run_id"],risk,state["snapshot_hash"]],
+      ["bash",str(script_dir/"check-completion-judge.sh"),str(spec),str(evidence),str(verifier),str(failures),risk,mode],
+    ]
+    for command in checks:
+        if subprocess.run(command,capture_output=True).returncode:
+            journal["status"]="DENIED"; journal.setdefault("errors",[]).append(f"validation failed: {pathlib.Path(command[1]).name}"); write(journal_path,journal); print(json.dumps({"valid":False,"decision":"DENY","errors":journal["errors"]})); raise SystemExit(1)
+    readiness_path = os.environ.get("HARNESS_READINESS_PATH", "")
+    if readiness_path:
+        readiness_check = subprocess.run(["bash", str(script_dir / "readiness-control.sh"), "verify", readiness_path], capture_output=True, text=True)
+        if readiness_check.returncode:
+            journal["status"]="DENIED"; journal.setdefault("errors",[]).append("implementation readiness validation failed"); write(journal_path,journal); print(json.dumps({"valid":False,"decision":"DENY","errors":journal["errors"]})); raise SystemExit(1)
+        try: readiness_result = json.loads(readiness_check.stdout)
+        except json.JSONDecodeError: readiness_result = {}
+        if not readiness_result.get("ready"):
+            journal["status"]="DENIED"; journal.setdefault("errors",[]).append("implementation readiness is not ready"); write(journal_path,journal); print(json.dumps({"valid":False,"decision":"DENY","errors":journal["errors"]})); raise SystemExit(1)
+    journal["steps"]["validation"]="DONE"; write(journal_path,journal)
+    if journal["steps"].get("task_projection")!="DONE":
+        env = dict(os.environ)
+        env["HARNESS_INTERNAL_FINALIZATION"] = "1"
+        env["HARNESS_FINALIZATION_JOURNAL"] = str(journal_path)
+        if subprocess.run(["bash",str(script_dir/"task.sh"),"mark-done",state["task_id"]],capture_output=True,env=env).returncode: raise SystemExit(1)
+        journal["steps"]["task_projection"]="DONE"; journal["task_projection_hash"]=digest(task_store); write(journal_path,journal)
+    if state.get("state")=="HUMAN_FINAL_REVIEW" and not transition("FINALIZED"): raise SystemExit(1)
+    write(approval_marker, {"approval_hash": digest(approval), "task_id": state["task_id"], "run_id": state["run_id"]})
+    journal["steps"]["transition"]="DONE"; journal["status"]="FINALIZED"; journal["finalized_at"]=dt.datetime.now(dt.timezone.utc).isoformat(); write(journal_path,journal)
+    print(json.dumps({"valid":True,"decision":"FINALIZED","task_id":state["task_id"],"run_id":state["run_id"],"journal":str(journal_path)}))
+finally:
+    try: lock_path.rmdir()
+    except OSError: pass
+PY

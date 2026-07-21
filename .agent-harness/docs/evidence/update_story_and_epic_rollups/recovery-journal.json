@@ -1,0 +1,15 @@
+{
+  "archive_hash": "742cc6654bea946d51706e548107aa1d6f51d735b109fb3025743e0cf78169c4",
+  "archive_path": "docs/exec-plans/recovery/20260712T092154Z_update_story_and_epic_rollups.md",
+  "completed_at": "2026-07-12T09:21:54.259780+00:00",
+  "created_at": "2026-07-12T09:21:54.258177+00:00",
+  "expected_plan_hash": "98b69f2cabae3f4d46bcda2210a2da35103ef99f3e29146fe0d7d2d904ae9a10",
+  "observed_plan_hash": "742cc6654bea946d51706e548107aa1d6f51d735b109fb3025743e0cf78169c4",
+  "schema_version": 1,
+  "source_journal_hash": "76779454e0824e9a196be21b3bd67d2e1101f1e0e3a5b6ce2cb598a67f7b0cf1",
+  "source_task_id": "update_story_and_epic_rollups",
+  "status": "RECOVERED",
+  "successor_task_id": "update_story_and_epic_rollups_successor",
+  "task_store_after_hash": "a1e690e1f6878b185cad5ef9f1b3b38717e1598fb3be5874a8bc95688decb85e",
+  "task_store_before_hash": "9989979e7c1f481437587dcdf83f640d3361a028c0ef0d6de687e0db18be0e32"
+}

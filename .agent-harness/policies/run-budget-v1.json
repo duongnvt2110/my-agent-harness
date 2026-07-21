@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "policy_id": "run-budget-v1",
+  "budgets": {
+    "tiny": {"time": [60, 120, 180], "tokens": [4000, 8000, 12000], "commands": [10, 20, 30], "tests": [2, 4, 6], "disk": [10485760, 20971520, 52428800], "network": [0, 0, 0], "remediation": [1, 2, 2], "subagents": [0, 1, 1]},
+    "normal": {"time": [300, 600, 900], "tokens": [12000, 24000, 40000], "commands": [30, 60, 90], "tests": [5, 10, 15], "disk": [52428800, 104857600, 209715200], "network": [0, 0, 0], "remediation": [2, 3, 3], "subagents": [1, 2, 3]},
+    "high_risk": {"time": [600, 1200, 1800], "tokens": [24000, 48000, 80000], "commands": [40, 70, 100], "tests": [10, 20, 30], "disk": [104857600, 209715200, 314572800], "network": [0, 0, 0], "remediation": [1, 2, 2], "subagents": [2, 3, 4]}
+  },
+  "exhaustion": {"action": "AUTO_RENEW_REMEDIATION_EPOCH", "changes_model": false, "weakens_verification": false, "expands_scope": false, "resets_failure_history": false, "requires_human_review": false}
+}

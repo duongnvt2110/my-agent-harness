@@ -1,84 +1,86 @@
 # Scratch Harness
 
-Updated: 2026-05-27 09:25
-Updated: 2026-05-26 20:56
+This repository is a lightweight, repository-local control harness for
+agent-assisted software work. It turns a human request into one active execution
+contract, bounded file changes, required checks, evidence, review when needed,
+and script-owned finalization.
 
-This repository is a minimal scratch harness for local coding agents.
-
-The harness turns a human request into one active plan, bounded source changes,
-required checks, evidence, review, and script-owned finalization.
-
-This template starts clean: no active task, no completed task history, no task
-evidence, no concrete reviews, and no example fixtures.
-
-Use `my_docs/` for human-owned input files you want to reference with file
-mentions. Agent-generated artifacts stay under `docs/` by default; a task may
-write selected `my_docs/` paths only when the active plan explicitly lists them
-in `approved_files`.
-
-## Mental Model
-
-```text
-Human request
-  -> active plan contract
-  -> scripts/harness.sh next
-  -> bounded Codex work
-  -> scripts/verify.sh
-  -> evidence and review
-  -> scripts/finalize-task.sh
-```
-
-The Worker Agent owns implementation inside the approved scope. The harness owns
-lifecycle transitions, gates, evidence, and completion.
-
-## Core Files
-
-| File | Purpose |
-|---|---|
-| `AGENTS.md` | Short agent entrypoint. |
-| `CONTEXT.md` | Canonical harness glossary. |
-| `WORKFLOW.md` | Global state machine and policy. |
-| `docs/adr/` | Accepted architecture and terminology decisions. |
-| `docs/PLANS.md` | Active plan schema and lane rules. |
-| `docs/TEST_MATRIX.md` | Generic harness acceptance mapping. |
-| `docs/exec-plans/active/current.md` | The single current task contract. |
-| `my_docs/` | Human-owned input files for context. |
-| `scripts/create-active-plan.sh` | Guarded active plan creation. |
-| `scripts/harness.sh` | Prints the current task packet and routes commands. |
-| `scripts/verify.sh` | Runs the hard verification gate. |
-| `scripts/finalize-task.sh` | Completes and archives the active plan. |
-
-## Start
+## Start Here
 
 ```bash
-rtk ./scripts/harness.sh next
+bash .agent-harness/harness.sh next
 ```
 
-If no active plan exists, create one from `docs/exec-plans/TEMPLATE.md`.
-Use the guarded command:
+Use the task packet printed by `next` as the source of truth. Do not implement
+from chat alone when a repo edit is required.
+
+## Public Commands
 
 ```bash
-rtk ./scripts/create-active-plan.sh <task_id> "<title>"
+bash .agent-harness/harness.sh status
+bash .agent-harness/harness.sh next
+bash .agent-harness/harness.sh verify
+bash .agent-harness/harness.sh finalize
+bash .agent-harness/harness.sh test
+bash .agent-harness/harness.sh benchmark --no-history
+bash .agent-harness/harness.sh release-check
+bash .agent-harness/harness.sh export --output /path/to/export --zip /path/to/harness.zip
 ```
 
-The command refuses to create a second active plan while
-`docs/exec-plans/active/current.md` exists.
+Internal scripts under `.agent-harness/scripts/` are implementation details.
+Prefer the public dispatcher above unless a task packet explicitly tells you to
+run a specific internal script.
 
-## Verify
+## What This Harness Checks and Gates
+
+- one active plan: `.agent-harness/docs/exec-plans/active/current.md`
+- approved scopes, file exceptions, and deletion rules
+- baseline and behavior checks for brownfield work
+- required check execution with evidence files
+- review gate when the active plan requires review
+- remediation flow after blocking verification failures
+- finalization through the harness, not manual status edits
+
+## Assurance Boundary
+
+The shipped v3-core implementation reports `enforcement_mode: AUDIT_ONLY`. Its
+driver and gate scripts reject invalid operations when they are invoked and
+produce auditable evidence, but they are not an OS-level sandbox and cannot stop
+a process from bypassing the harness, writing outside approved paths, or using
+the network. Strong prevention requires an external execution boundary such as a
+container, sandbox, CI policy, or restricted agent adapter.
+
+## Workflow Docs
+
+- `AGENTS.md` — agent entry rules
+- `WORKFLOW.md` — lifecycle and lane rules
+- `CONTEXT.md` — glossary and repo-local context
+- `.agent-harness/docs/PLANS.md` — active-plan schema
+- `.agent-harness/docs/TEST_MATRIX.md` — generic acceptance criteria
+- `.agent-harness/docs/context/README.md` — context system
+
+Advanced folders such as product specs, contracts, design docs, ADRs, and
+repository-intelligence artifacts are lane-triggered. They are not required for
+every small task.
+
+<!-- BEGIN AGENT-HARNESS -->
+## Agent Harness
+
+This repository exposes the harness through `.agent-harness/harness.sh`.
+Use `bash .agent-harness/harness.sh status` to inspect the current task.
+Use `bash .agent-harness/harness.sh next` to continue the active task.
+Use `bash .agent-harness/harness.sh verify` before finalization.
+<!-- END AGENT-HARNESS -->
+
+## Benchmarking
+
+Run the built-in harness benchmark suite with:
 
 ```bash
-rtk ./scripts/verify.sh
+bash .agent-harness/harness.sh benchmark --no-history
 ```
 
-Verification requires an active plan and checks the plan contract, file map,
-required checks, evidence, review, and test-matrix references.
-
-## Finalize
-
-```bash
-rtk ./scripts/finalize-task.sh
-```
-
-Finalization runs fresh verification, writes completion metadata, and moves the
-plan from `docs/exec-plans/active/current.md` to
-`docs/exec-plans/completed/YYYY_MM_DD_<task_id>.md`.
+The benchmark suite includes project-build and brownfield fixtures. The runner
+writes JSON and Markdown reports under `.agent-harness/docs/reports/benchmark/`.
+Use the default command without `--no-history` only when you want to append a
+historical benchmark sample.

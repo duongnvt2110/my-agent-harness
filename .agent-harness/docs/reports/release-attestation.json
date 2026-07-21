@@ -1,0 +1,17 @@
+{
+  "assurance": "LOCAL_TRUSTED_PRIOR",
+  "assurance_limitations": [
+    "prior validator is locally trusted; no external signature or anchor was supplied"
+  ],
+  "attestation_hash": "bc46b7936dcb0cdaee83d108512119c54a77f2c9a841bc221d90b9ed9143881c",
+  "attestation_version": 1,
+  "candidate_package_hash": "cff3d5e36bf56eddb6b0bdf673b0337cb37900f38076af957eb9e910876da77b",
+  "candidate_root": "/Users/exe-macbook/duong/ai/harness-scratch-template",
+  "canonicalization_version": 1,
+  "prior_validator_output_hash": "f1af5422aba387eb19f420c37e89e27f3032c5b14d8e2533369c3f4f3dcd98a6",
+  "prior_validator_result": "PASS",
+  "schema_version": 1,
+  "trusted_prior_package_hash": "cff3d5e36bf56eddb6b0bdf673b0337cb37900f38076af957eb9e910876da77b",
+  "trusted_prior_root": "/private/var/folders/t7/snp9w8v11sx7fqks93ygw8nr0000gq/T/tmp.SFQ6hxL0/prior",
+  "validated_epoch": 1783848334.208128
+}

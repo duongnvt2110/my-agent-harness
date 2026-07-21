@@ -1,0 +1,1 @@
+{"schema_version":1,"canonicalization_version":1,"name":"review-only","version":1,"required_states":["INTAKE","UNDERSTANDING_GATE","SPEC_LOCKED","VERIFYING","FINALIZED"],"verification_profile":"read_only","checkpoint_policy":"before_edit","oracle_policy":"never","human_approval_policy":"on_scope_expansion"}

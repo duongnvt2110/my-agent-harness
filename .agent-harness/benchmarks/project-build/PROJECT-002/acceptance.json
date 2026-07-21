@@ -1,0 +1,1 @@
+{"project_id":"PROJECT-002","title":"Markdown-to-HTML CLI","commands":["bash tests/test.sh"],"expected_outputs":["out.html"]}

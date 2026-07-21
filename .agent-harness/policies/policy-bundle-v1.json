@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "policy_bundle_id": "v3-default-policy-bundle",
+  "policy_bundle_version": 1,
+  "enforcement_mode": "AUDIT_ONLY",
+  "risk_policy": "policies/risk-classification-v1.json",
+  "state_transition_policy": "policies/state-transitions.yaml",
+  "state_schema": "policies/state-schema-v1.json",
+  "unknown_trust": "UNTRUSTED",
+  "unknown_retention": "temporary",
+  "high_risk_mutation_without_controls": "deny"
+}

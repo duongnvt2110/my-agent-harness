@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Harness Benchmark Result",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "summary", "benchmarks", "history_comparison"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "generated_at": {"type": "string"},
+    "summary": {
+      "type": "object",
+      "required": ["total_score", "max_score", "result"],
+      "properties": {
+        "total_score": {"type": "integer"},
+        "max_score": {"type": "integer"},
+        "result": {"type": "string", "enum": ["pass", "fail"]}
+      }
+    },
+    "benchmarks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "score", "max_score", "result", "metrics"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "score": {"type": "integer"},
+          "max_score": {"type": "integer"},
+          "result": {"type": "string", "enum": ["pass", "fail", "warning"]},
+          "metrics": {"type": "object"},
+          "details": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "history_comparison": {
+      "type": "object",
+      "required": ["previous_total_score", "delta_total_score", "trend"],
+      "properties": {
+        "previous_total_score": {"type": ["integer", "null"]},
+        "delta_total_score": {"type": ["integer", "null"]},
+        "trend": {"type": "string", "enum": ["first_run", "improved", "regressed", "unchanged"]}
+      }
+    }
+  }
+}

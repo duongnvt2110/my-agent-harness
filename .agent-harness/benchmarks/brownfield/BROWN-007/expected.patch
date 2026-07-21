@@ -1,0 +1,11 @@
+--- a/src/appctl.py
++++ b/src/appctl.py
+@@ -8,7 +8,7 @@
+     deploy_sub = deploy.add_subparsers(dest="resource")
+     service = deploy_sub.add_parser("service")
+     service.add_argument("name")
+-    service.add_argument("--env")
++    service.add_argument("--env", required=True)
+     args = parser.parse_args(argv)
+     if args.command == "deploy" and args.resource == "service":
+         print(f"deploying service={args.name} env={args.env}")

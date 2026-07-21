@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "canonicalization_version": 1,
+  "policy_id": "v3-risk-classification-default",
+  "baseline_high_risk_categories": [
+    "agent_harness_authority",
+    "legal_document_validity",
+    "distributed_identity_idempotency",
+    "subscription_entitlement_calculation",
+    "authoritative_etl_aggregation"
+  ],
+  "mandatory_high_risk_signals": [
+    "lifecycle_authority", "policy_enforcement", "verification_authority",
+    "finalization", "legal_extraction", "legal_citation",
+    "answer_generation_from_law", "distributed_identity", "idempotency",
+    "event_ordering", "saga_behavior", "subscription_calculation",
+    "entitlement_calculation", "renewal_calculation", "authoritative_etl",
+    "aggregate_calculation", "operational_report_calculation"
+  ],
+  "ambiguous_or_missing_evidence": "normal",
+  "clear_low_risk_with_tiny_evidence": "tiny",
+  "high_risk_sticky": true
+}

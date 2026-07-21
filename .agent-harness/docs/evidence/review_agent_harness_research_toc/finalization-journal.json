@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-07-14T07:34:34.825413+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZING",
+  "steps": [
+    {
+      "completed_at": "2026-07-14T07:35:21.428573+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T07:35:21.481752+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T07:35:21.631152+00:00",
+      "expected_after_hash": "dd2a98a0b796741afd7a244c3ec2d7e23945df13d04b5aaea2f68d29963979e8",
+      "expected_before_hash": "0a94abf0ae4aecd072eba806510984ba4f997637f0a16c404ed4bb42a997f95e",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T07:35:21.728183+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "name": "reports",
+      "status": "PENDING"
+    },
+    {
+      "name": "move_plan",
+      "status": "PENDING"
+    }
+  ],
+  "task_id": "review_agent_harness_research_toc",
+  "updated_at": "2026-07-14T07:35:21.728260+00:00"
+}

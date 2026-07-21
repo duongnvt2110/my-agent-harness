@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "workflow_version": "v3",
+  "rules": [
+    {
+      "id": "AUTH-FINAL-001",
+      "name": "Finalization requires complete human approval",
+      "entry_points": ["scripts/finalize-task.sh", "scripts/finalize-v3-run"],
+      "validators": ["scripts/check-finalization-authority.sh", "scripts/check-reviews.sh"],
+      "positive_tests": ["tests/harness/test_v3_finalization_transaction.sh"],
+      "negative_tests": ["tests/harness/test_finalization_authority_contract.sh"],
+      "recovery_tests": ["tests/harness/test_v3_finalization_transaction.sh"]
+    },
+    {
+      "id": "AUTH-FINAL-002",
+      "name": "Only validated finalization may mark a task done",
+      "entry_points": ["scripts/finalize-task.sh", "scripts/finalize-v3-run"],
+      "validators": ["scripts/task.sh"],
+      "forbidden_paths": ["scripts/task.sh mark-done"],
+      "positive_tests": ["tests/harness/test_v3_finalization_transaction.sh"],
+      "negative_tests": ["tests/harness/test_finalization_authority_contract.sh"],
+      "recovery_tests": ["tests/harness/test_v3_finalization_transaction.sh"]
+    },
+    {
+      "id": "AUTH-FINAL-003",
+      "name": "All finalization entry points enforce v3 provenance",
+      "entry_points": ["scripts/harness.sh", "scripts/workflow-dispatch.sh", "scripts/finalize-v3-run"],
+      "validators": ["scripts/check-finalization-authority.sh", "scripts/check-ac-evidence.sh", "scripts/check-verifier-verdict.sh"],
+      "positive_tests": ["tests/harness/test_v3_finalization_transaction.sh"],
+      "negative_tests": ["tests/harness/test_finalization_authority_contract.sh"],
+      "recovery_tests": ["tests/harness/test_v3_finalization_transaction.sh"]
+    },
+    {
+      "id": "STATE-INV-001",
+      "name": "Terminal state is written after projection and journal validation",
+      "entry_points": ["scripts/finalize-task.sh", "scripts/finalize-v3-run", "scripts/transition-state"],
+      "validators": ["scripts/check-state-schema.sh", "scripts/check-finalization-authority.sh"],
+      "positive_tests": ["tests/harness/test_v3_finalization_transaction.sh"],
+      "negative_tests": ["tests/harness/test_finalization_authority_contract.sh"],
+      "recovery_tests": ["tests/harness/test_v3_finalization_transaction.sh"]
+    },
+    {
+      "id": "COVERAGE-001",
+      "name": "Every blocking rule has executable coverage",
+      "entry_points": ["scripts/check-v3-contract-coverage.sh"],
+      "validators": ["scripts/check-v3-contract-coverage.sh"],
+      "positive_tests": ["tests/harness/test_v3_contract_coverage.sh"],
+      "negative_tests": ["tests/harness/test_v3_contract_coverage.sh"],
+      "recovery_tests": ["tests/harness/test_v3_contract_coverage.sh"]
+    },
+    {
+      "id": "AUTH-INTAKE-001",
+      "name": "Only the canonical Change Package can lock and bind authority",
+      "entry_points": ["scripts/intake-control.sh", "scripts/harness.sh"],
+      "validators": ["scripts/intake-control.sh", "scripts/check-task-schema.sh"],
+      "positive_tests": ["tests/harness/test_authority_integrity_followup.sh", "tests/harness/test_intake_control_plane.sh"],
+      "negative_tests": ["tests/harness/test_spec_lock.sh", "tests/harness/test_intake_graph.sh"],
+      "recovery_tests": ["tests/harness/test_authority_integrity_followup.sh"]
+    },
+    {
+      "id": "STATE-TRANS-001",
+      "name": "Lifecycle transitions are v3 validated and journaled",
+      "entry_points": ["scripts/transition-state", "scripts/run-events.sh"],
+      "validators": ["scripts/check-state-schema.sh", "scripts/validate-current-state.sh"],
+      "positive_tests": ["tests/harness/test_transition_state_validation.sh", "tests/harness/test_run_events.sh"],
+      "negative_tests": ["tests/harness/test_transition_state_validation.sh"],
+      "recovery_tests": ["tests/harness/test_v3_finalization_transaction.sh"]
+    },
+    {
+      "id": "EVIDENCE-001",
+      "name": "Verification evidence is fresh, bound, and harness-evaluated",
+      "entry_points": ["scripts/check-ac-evidence.sh", "scripts/check-verifier-verdict.sh", "scripts/check-completion-judge.sh"],
+      "validators": ["scripts/check-ac-evidence.sh", "scripts/check-verifier-verdict.sh", "scripts/check-completion-judge.sh"],
+      "positive_tests": ["tests/harness/test_v3_finalization_transaction.sh"],
+      "negative_tests": ["tests/harness/test_finalization_authority_contract.sh"],
+      "recovery_tests": ["tests/harness/test_authority_integrity_followup.sh"]
+    },
+    {
+      "id": "RECOVERY-001",
+      "name": "Control failures enter explicit recovery and preserve history",
+      "entry_points": ["scripts/record-failure.sh", "scripts/check-failure-history.sh", "scripts/recover-finalization.sh"],
+      "validators": ["scripts/check-failure-history.sh", "scripts/check-remediation-trace.sh"],
+      "positive_tests": ["tests/harness/test_failure_history_contract.sh"],
+      "negative_tests": ["tests/harness/test_failure_history_contract.sh"],
+      "recovery_tests": ["tests/harness/test_authority_integrity_followup.sh", "tests/harness/test_recover_finalization.sh"]
+    },
+    {
+      "id": "READINESS-001",
+      "name": "Implementation readiness covers every input unit and blocks incomplete work",
+      "entry_points": ["scripts/readiness-control.sh"],
+      "validators": ["scripts/readiness-control.sh", "policies/readiness-schema-v1.json", "policies/readiness-transitions.yaml"],
+      "positive_tests": ["tests/harness/test_readiness_control.sh", "tests/harness/test_readiness_schema_contract.sh"],
+      "negative_tests": ["tests/harness/test_readiness_control.sh"],
+      "recovery_tests": ["tests/harness/test_readiness_control.sh"]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-11T12:05:13.519809+00:00",
+  "finalized_at": "2026-07-11T12:05:14.286801+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-11T12:05:13.554550+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:05:13.598421+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:05:13.723427+00:00",
+      "expected_after_hash": "201471badb0ab04bfee6729ee8e38784a4c6ef854bbdddfaaa94615c4c4e2d32",
+      "expected_before_hash": "935585b08b7fe2ed05954271e1e9d6c5c8f55b7b5862310f9356b98d1a5dbdc2",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:05:13.804840+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:05:14.253045+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-11T12:05:14.286650+00:00",
+      "expected_after_hash": "201471badb0ab04bfee6729ee8e38784a4c6ef854bbdddfaaa94615c4c4e2d32",
+      "expected_before_hash": "201471badb0ab04bfee6729ee8e38784a4c6ef854bbdddfaaa94615c4c4e2d32",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "implement_declarative_workflow_recipes",
+  "updated_at": "2026-07-11T12:05:14.286801+00:00"
+}

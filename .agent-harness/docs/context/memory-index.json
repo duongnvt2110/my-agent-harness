@@ -1,0 +1,51 @@
+[
+  {
+    "id": "repo_profile",
+    "type": "document",
+    "path": "docs/context/repo-profile.md",
+    "summary": "Repo purpose and major harness areas.",
+    "tags": ["harness", "repo", "overview"]
+  },
+  {
+    "id": "commands",
+    "type": "document",
+    "path": "docs/context/commands.md",
+    "summary": "Common commands for plan, verify, finalize, intake, and context.",
+    "tags": ["harness", "commands", "workflow"]
+  },
+  {
+    "id": "boundaries",
+    "type": "document",
+    "path": "docs/context/boundaries.md",
+    "summary": "Operational and file-scope boundaries.",
+    "tags": ["harness", "boundaries", "scope"]
+  },
+  {
+    "id": "conventions",
+    "type": "document",
+    "path": "docs/context/conventions.md",
+    "summary": "Documentation and evidence conventions.",
+    "tags": ["harness", "conventions", "evidence"]
+  },
+  {
+    "id": "runbooks",
+    "type": "document",
+    "path": "docs/context/runbooks.md",
+    "summary": "Recurring harness workflows.",
+    "tags": ["harness", "runbooks", "workflow"]
+  },
+  {
+    "id": "known_errors",
+    "type": "document",
+    "path": "docs/context/known-errors.md",
+    "summary": "Common harness failures and fixes.",
+    "tags": ["harness", "errors", "triage"]
+  },
+  {
+    "id": "discussions",
+    "type": "document",
+    "path": "docs/context/discussions.md",
+    "summary": "Reusable discussion summaries.",
+    "tags": ["harness", "discussion", "memory"]
+  }
+]

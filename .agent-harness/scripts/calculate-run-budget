@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+evidence="${1:-}"
+manifest="${2:-}"
+[ -n "$evidence" ] || { echo "Usage: calculate-run-budget EVIDENCE_JSON [RUN_MANIFEST_JSON]" >&2; exit 2; }
+classification="$($script_dir/classify-risk.sh "$evidence" --json)"
+python3 - "$classification" "$script_dir/../policies/run-budget-v1.json" "$manifest" "$evidence" <<'PY'
+from __future__ import annotations
+import hashlib, json, pathlib, sys, time
+classification = json.loads(sys.argv[1])
+policy = json.loads(pathlib.Path(sys.argv[2]).read_text())
+manifest_path = pathlib.Path(sys.argv[3]) if sys.argv[3] else None
+evidence_path = pathlib.Path(sys.argv[4])
+if policy.get("schema_version") != 1 or policy.get("canonicalization_version") != 1:
+    raise SystemExit("unsupported run budget policy")
+risk = classification.get("risk")
+if risk not in policy.get("budgets", {}):
+    raise SystemExit("classifier returned unknown risk")
+if manifest_path:
+    if manifest_path.exists():
+        prior = json.loads(manifest_path.read_text())
+        copy = dict(prior); expected = copy.pop("manifest_hash", None)
+        if expected != hashlib.sha256(json.dumps(copy, sort_keys=True, separators=(",", ":")).encode()).hexdigest():
+            raise SystemExit("existing run manifest integrity mismatch")
+        if prior.get("risk") == "high_risk" and risk != "high_risk":
+            if not json.loads(evidence_path.read_text()).get("human_reclassification_approval"):
+                raise SystemExit("high-risk lane is sticky; human reclassification approval required")
+budgets = policy["budgets"][risk]
+result = {"budget_router_version": 1, "policy_id": policy["policy_id"], "risk": risk, "risk_sticky": risk == "high_risk", "classification": classification, "budgets": {metric: {"warn": values[0], "pause": values[1], "deny": values[2]} for metric, values in budgets.items()}, "exhaustion": policy["exhaustion"], "authority": {"changes_model": False, "weakens_verification": False, "expands_scope": False, "resets_failure_history": False}, "evidence_hash": hashlib.sha256(evidence_path.read_bytes()).hexdigest(), "created_epoch": time.time()}
+result["manifest_hash"] = hashlib.sha256(json.dumps(result, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+if manifest_path:
+    if manifest_path.exists():
+        raise SystemExit("run manifest is immutable")
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps(result, sort_keys=True, indent=2) + "\n")
+print(json.dumps(result, sort_keys=True))
+PY

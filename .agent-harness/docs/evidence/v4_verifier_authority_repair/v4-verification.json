@@ -1,0 +1,23 @@
+{
+  "accepted_for_finalization": true,
+  "agent_session_id": "agent-v4-repair",
+  "artifact_hash": "569cd48602930261a8f05e008fb3e31e6c602e112dd389adf603005ed446526e",
+  "authority": "HARNESS_VERIFICATION",
+  "checks": [
+    {
+      "command": "cd /Users/exe-macbook/duong/ai/harness-scratch-template/.agent-harness && bash harness.sh next",
+      "exit_code": 0,
+      "id": "plan-check",
+      "output": "bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory\nworkflow_version: v3\nimplementation_version: v3-core\nenforcement_mode: AUDIT_ONLY\nassurance_limitations: repository-local governance; OS-level isolation is outside scope\nHARNESS TASK PACKET\n\nTask ID: v4_verifier_authority_repair\nStatus: VERIFIED\nLifecycle phase: FINALIZE\nLane: tiny\nRepo mode: brownfield\nTask mode:\n- change_type: extend_existing\n- touches_existing_behavior: true\n- backward_compatibility_required: true\nActive plan: /Users/exe-macbook/duong/ai/harness-scratch-template/.agent-harness/docs/exec-plans/active/current.md\n\nActive plan lock:\n- current.md exists and is authoritative.\n- Do not create another active plan.\n- Continue this task only until it is verified and finalized.\n\nImplementation plan snapshot:\n- docs/tasks/v4_verifier_authority_repair/implementation-plan.md\n\nNext allowed action:\nRun rtk .agent-harness/scripts/finalize-task.sh.\n\nApproved scopes:\n- harness_core\n- harness_docs\n- app_tests\n\nApproved file exceptions:\n- .agent-harness/scripts/verify-proposal.sh\n- .agent-harness/scripts/check-v4-verification.sh\n- .agent-harness/scripts/harness.sh\n- .agent-harness/scripts/finalize-task.sh\n- .agent-harness/tests/harness/test_v4_slice_4_independent_verification.sh\n- .agent-harness/tests/harness/test_v4_finalization_authority.sh\n\nApproved deletions:\n- (none)\n\n\n\nRelevant ADRs:\n- result: reviewed\n- id: ADR-0004 | path: docs/decisions/0004-agent-harness-vnext-authority-model.md | hash: b6cde0431dbce0fc497e3aa9eb4945e613a64752d37bbf0ed85380418c2974b5 | status: Accepted | tags: harness, v3, lifecycle, state, recovery | reason: Makes state.json the sole v3 lifecycle authority and current.md a generated projection.\n\nContext pack:\n- docs/evidence/v4_verifier_authority_repair/context-pack.md\n\nWorking memory:\n- docs/evidence/v4_verifier_authority_repair/working-memory.md\n\nFull context:\n- docs/evidence/v4_verifier_authority_repair/full-context.md\n\nVerification mode: required_checks\nTesting required: true\n\nDecision policy:\n- allow_safe_revert: true\n- allow_test_fix: true\n- allow_source_fix: true\n- allow_scope_expansion: false\n- allow_dependency_change: false\n- allow_environment_change: false\n- allow_test_skip: false\n- allow_timeout_increase: false\n\nRequired checks:\n- plan-check: cd /Users/exe-macbook/duong/ai/harness-scratch-template/.agent-harness && bash harness.sh next (timeout: 180)\n\nDo-not-read:\n- docs/exec-plans/completed/*\n- docs/evidence/*/autonomous-run-report.md unless it belongs to this task\n- docs/evidence/*/verification-pass.md unless it belongs to this task\n- docs/evidence/*/test-report.md unless it belongs to this task\n\nForbidden:\n- Do not change files outside approved scopes or approved file exceptions.\n- Do not delete files outside approved scopes or approved deletions.\n- Do not mark completion manually.\n- Do not skip required checks.\n- Do not treat direct chat as approval to bypass the harness lifecycle."
+    }
+  ],
+  "errors": [],
+  "plan_hash": "fed9fa5c0fa011fe6a85fef0713cbb2d0ec841ffe8e855dc120c2b55459605d1",
+  "run_id": "v4-authority-repair",
+  "schema_version": 1,
+  "task_id": "v4_verifier_authority_repair",
+  "verdict": "PASSED",
+  "verification_function": "harness_verification",
+  "verification_id": "e7bfd5cf-9d7a-4752-b2fa-83da4fe9eb56",
+  "workspace_hash": "7ec2fc6da622304bcaf362911b8f381756327a6724564974f6dd6a7c02dd6cca"
+}

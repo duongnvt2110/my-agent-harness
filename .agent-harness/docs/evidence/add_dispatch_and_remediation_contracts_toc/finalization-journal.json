@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-14T15:31:53.041416+00:00",
+  "finalized_at": "2026-07-14T15:31:53.789280+00:00",
+  "journal_schema_version": 1,
+  "status": "FINALIZED",
+  "steps": [
+    {
+      "completed_at": "2026-07-14T15:31:53.073507+00:00",
+      "name": "verify",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T15:31:53.104818+00:00",
+      "name": "review",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T15:31:53.219163+00:00",
+      "expected_after_hash": "aa02b9f93aea0f8b3e8784ca35126cebc7ecfb42925969c8fc24e4d49b84add0",
+      "expected_before_hash": "307d3242d3d5402d2e3695ddb75030541a0f7093e77d55f9686ec4956069641c",
+      "name": "mark_terminal",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T15:31:53.282444+00:00",
+      "name": "task_projection",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T15:31:53.758907+00:00",
+      "name": "reports",
+      "status": "DONE"
+    },
+    {
+      "completed_at": "2026-07-14T15:31:53.789160+00:00",
+      "expected_after_hash": "aa02b9f93aea0f8b3e8784ca35126cebc7ecfb42925969c8fc24e4d49b84add0",
+      "expected_before_hash": "aa02b9f93aea0f8b3e8784ca35126cebc7ecfb42925969c8fc24e4d49b84add0",
+      "name": "move_plan",
+      "status": "DONE"
+    }
+  ],
+  "task_id": "add_dispatch_and_remediation_contracts_toc",
+  "updated_at": "2026-07-14T15:31:53.789280+00:00"
+}
